@@ -1,4 +1,4 @@
-# Virtual environment
+# Virtual environment (lives at C:\venvs\qrc_venv, NOT inside repo)
 venv/
 .venv/
 env/
@@ -14,7 +14,7 @@ __pycache__/
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 
-# Generated dataset CSVs (reproducible from notebooks)
+# Generated dataset CSVs and plots (reproducible from notebooks)
 datasets/*.csv
 datasets/*.png
 

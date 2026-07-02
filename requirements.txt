@@ -4,10 +4,20 @@ scipy==1.18.0
 matplotlib==3.10.9
 pandas==2.3.3
 
-# Machine learning (readout layer)
+# Machine learning (readout layer + baselines)
 scikit-learn==1.9.0
+
+# Database
+sqlalchemy==2.0.41
+pymysql==1.1.1
+cryptography==45.0.3
 
 # Jupyter environment
 jupyterlab==4.6.0
 notebook==7.6.0
 ipykernel==7.3.0
+
+# Quantum computing
+qiskit>=1.0,<2.0
+qiskit-aer>=0.15
+qiskit-ibm-runtime>=0.20
