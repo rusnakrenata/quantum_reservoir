@@ -17,6 +17,9 @@ __pycache__/
 # Generated dataset CSVs and plots (reproducible from notebooks)
 datasets/*.csv
 datasets/*.png
+results/*.csv
+results/*.png
+results/*.npz
 
 # Distribution / packaging
 dist/

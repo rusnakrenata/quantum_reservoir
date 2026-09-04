@@ -1,0 +1,29 @@
+STEP 4.4A - GRU ARCHITECTURE SCREENING
+======================================================================
+
+Target standardization: YES
+Within chronological CV, target scaling is fitted independently on each fold's training targets only.
+2025 validation was not used for architecture selection.
+2026 test set was not used.
+
+Feature set: F4
+Window: 1
+Hidden size: 1
+Parameters: 26
+Learning rate: 0.001
+L2: 0.0001
+Batch size: 64
+Maximum epochs: 2000
+Patience: 30
+Median best epoch: 986
+CV RMSE: 3.392277 +/- 0.338961
+
+Full-training target scaler
+Mean: 8.864841
+Std: 3.999543
+
+Official 2025 validation
+MAE: 3.928557
+RMSE: 4.920860
+NRMSE: 0.906248
+Bias: -0.887161

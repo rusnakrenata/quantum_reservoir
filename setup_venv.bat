@@ -38,10 +38,26 @@ if exist "%VENV%" (
 
 REM Create venv outside OneDrive
 if not exist "C:\venvs" mkdir "C:\venvs"
-echo Creating virtual environment...
-python -m venv "%VENV%"
+REM Find a supported Python (3.13, 3.12, or 3.11 - in that order).
+REM Python 3.14 is intentionally excluded: no numpy 2.2.6 wheel for it.
+set PYEXE=
+for %%V in (3.13 3.12 3.11) do (
+    if not defined PYEXE (
+        py -%%V -c "import sys" >nul 2>&1 && set PYEXE=py -%%V
+    )
+)
+if not defined PYEXE (
+    echo ERROR: No supported Python found.
+    echo Install Python 3.11, 3.12, or 3.13 ^(64-bit^) from https://www.python.org/downloads/
+    echo Note: Python 3.14 is NOT supported yet ^(packages have no 3.14 wheels^).
+    pause
+    exit /b 1
+)
+
+echo Creating virtual environment with: %PYEXE%
+%PYEXE% -m venv "%VENV%"
 if errorlevel 1 (
-    echo ERROR: python not found. Install Python 3.10+ and try again.
+    echo ERROR: Could not create the virtual environment.
     pause
     exit /b 1
 )

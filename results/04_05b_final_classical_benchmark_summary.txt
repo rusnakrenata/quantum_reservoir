@@ -1,0 +1,41 @@
+WEEK 4 - STEP 4.5B: FINAL CLASSICAL BENCHMARK
+================================================================================
+
+Temporal architectures selected using 2022-2024 chronological CV only.
+2025 used only for official validation.
+2026 test set not used.
+
+2025 target mean: 12.731507
+2025 target std:  5.429924
+Common NRMSE = RMSE / std(y_2025)
+
+FINAL RANKING
+ rmse_rank             model feature_set window capacity  parameter_count      mae     rmse  nrmse_common_2025_std      bias  rmse_improvement_vs_seasonal_pct
+         1               ESN          F4      7    N=100       101.000000 3.870615 4.869006               0.896699 -0.266393                         23.989373
+         2             Ridge          F4      -        -         6.000000 3.894183 4.874844               0.897774 -0.201055                         23.898240
+         3           Poisson          F4      -        -         6.000000 3.896949 4.879339               0.898602  0.503739                         23.828058
+         4 Negative Binomial          F4      -        -         7.000000 3.899527 4.882955               0.899268  0.526638                         23.771618
+         5               GRU          F4      1      H=1        26.000000 3.928557 4.920860               0.906248 -0.887161                         23.179870
+         6       Vanilla RNN          F4      2     H=64      4609.000000 3.948176 5.027691               0.925923 -1.206917                         21.512115
+         7    Seasonal naive           -      -        -         0.000000 5.054795 6.405691               1.179702 -0.063014                          0.000000
+
+MODEL-SELECTION AUDIT
+ESN | F4 | W=7 | N=100 | minimum 2022-2024 CV RMSE = 3.630921
+Ridge | F4 | W=- | - | Week 3 frozen benchmark
+Poisson | F4 | W=- | - | Week 3 frozen benchmark
+Negative Binomial | F4 | W=- | - | Week 3 frozen benchmark
+GRU | F4 | W=1 | H=1 | minimum 2022-2024 CV RMSE = 3.392277
+Vanilla RNN | F4 | W=2 | H=64 | minimum tuned 2022-2024 CV RMSE = 3.475766
+Seasonal naive | - | W=- | - | Week 3 frozen benchmark
+
+FROZEN CLASSICAL REFERENCE
+Model: ESN
+Feature set: F4
+Window: 7
+Capacity: N=100
+MAE: 3.870615
+RMSE: 4.869006
+Common NRMSE: 0.896699
+Bias: -0.266393
+
+2026 TEST SET WAS NOT USED.

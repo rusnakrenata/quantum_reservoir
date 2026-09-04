@@ -1,0 +1,36 @@
+STEP 4.3B - VANILLA RNN DIAGNOSTICS
+======================================================================
+
+Target standardization: YES
+Scaler fitted on training targets only.
+
+Selected architecture inherited from Step 4.3A
+Feature set: F4
+Window: 2
+Hidden size: 32
+Epochs: 41
+CV RMSE: 3.489481 +/- 0.390685
+
+Target scaler
+Training mean: 8.870201
+Training std: 3.997436
+
+Target level
+Training mean: 8.870201
+2025 mean: 12.731507
+Relative shift: +43.531%
+
+Seed robustness
+RMSE mean +/- std: 5.351458 +/- 0.243438
+RMSE min: 4.875464
+RMSE max: 5.638507
+Bias mean +/- std: -1.245178 +/- 0.894669
+
+Mean-seed prediction diagnostic
+RMSE: 5.240857
+Bias: -1.245178
+
+Seed 42 reproduction
+Step 4.3A RMSE: 5.638507
+Step 4.3B seed 42 RMSE: 5.638507
+Absolute difference: 0.00000018

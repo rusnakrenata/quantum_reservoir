@@ -1,0 +1,526 @@
+==========================================================================================
+WEEK 3 - COMPLETE PIPELINE
+==========================================================================================
+
+Started: 2026-09-02T17:35:32
+Project directory: C:\Users\rusna\OneDrive\Desktop\quantum_reservoir
+Python interpreter: C:\venvs\qrc_venv\Scripts\python.exe
+Combined output: C:\Users\rusna\OneDrive\Desktop\quantum_reservoir\results\03_all_output.txt
+
+Found 7 Week 3 scripts:
+  - 03_01_preprocessing.py
+  - 03_02_naive_baselines.py
+  - 03_03_ridge_baseline.py
+  - 03_04_poisson_baseline.py
+  - 03_05_negative_binomial_baseline.py
+  - 03_06_feature_set_benefit_analysis.py
+  - 03_07_final_validation_benchmark.py
+
+==========================================================================================
+RUNNING SCRIPT 1/7: 03_01_preprocessing.py
+==========================================================================================
+==============================================================================
+WEEK 3 - STEP 1: PREPROCESSING
+==============================================================================
+
+Split counts:
+train     : 1095 (expected 1095) PASS
+validation:  365 (expected 365) PASS
+test      :  232 (expected 232) PASS
+
+==============================================================================
+TRAINING PREPROCESSING PARAMETERS
+==============================================================================
+feature                        column    train_mean    train_std
+    C_t property_damage_claim_count_t      8.862100     4.003900
+    P_t         active_policy_count_t 104534.437443 11844.827542
+
+==============================================================================
+STANDARDIZATION CHECK
+==============================================================================
+variable  train_mean_after_scaling  train_std_after_scaling
+   C_t_z              1.427574e-16                      1.0
+   P_t_z              5.191180e-16                      1.0
+
+==============================================================================
+CYCLIC WEEKDAY ENCODING
+==============================================================================
+ day_of_week_t_plus_1     D_sin     D_cos  weekday_radius
+                    1  0.000000  1.000000             1.0
+                    2  0.781831  0.623490             1.0
+                    3  0.974928 -0.222521             1.0
+                    4  0.433884 -0.900969             1.0
+                    5 -0.433884 -0.900969             1.0
+                    6 -0.974928 -0.222521             1.0
+                    7 -0.781831  0.623490             1.0
+
+Maximum deviation from unit-circle radius = 1.110223024625e-16
+
+==============================================================================
+TRANSFORMED VARIABLES BY SPLIT
+==============================================================================
+     split  C_t_z_mean  C_t_z_std  P_t_z_mean  P_t_z_std
+      test    1.517909   1.435225    7.276604   1.292526
+     train    0.000000   1.000000    0.000000   1.000000
+validation    0.960251   1.360936    4.288400   0.720604
+
+==============================================================================
+PREPROCESSING CHECKS
+==============================================================================
+Missing processed values: 0
+Target standardized: NO
+Scaler fitted on training only: YES
+
+Saved:
+ results/03_01_preprocessing_parameters.csv
+ results/03_01_feature_sets.csv
+ results/03_01_preprocessed_samples.csv
+ results/03_01_standardization_checks.csv
+ results/03_01_transformed_split_statistics.csv
+
+Step 1 preprocessing finished.
+
+[SUCCESS] 03_01_preprocessing.py
+
+==========================================================================================
+RUNNING SCRIPT 2/7: 03_02_naive_baselines.py
+==========================================================================================
+==============================================================================
+WEEK 3 - STEP 2: NAIVE BASELINES
+==============================================================================
+
+Training samples:   1095
+Validation samples: 365
+
+==============================================================================
+TRAINING TARGET PARAMETERS
+==============================================================================
+Training mean: 8.864840
+Training std:  3.999543
+
+==============================================================================
+VALIDATION BASELINE RESULTS
+==============================================================================
+            model   n      mae     rmse  nrmse_train_std  bias_pred_minus_actual
+seasonal_naive_7d 365 5.054795 6.405691         1.601606               -0.063014
+    training_mean 365 5.252067 6.665972         1.666684               -3.866667
+      persistence 365 5.597260 7.117988         1.779700               -0.024658
+
+==============================================================================
+SEASONAL-NAIVE CHECK
+==============================================================================
+Missing seasonal predictions: 0
+
+==============================================================================
+EXAMPLE VALIDATION FORECASTS
+==============================================================================
+target_date  actual  mean_prediction  persistence_prediction  seasonal_naive_prediction
+ 2025-01-01     7.0          8.86484                     4.0                        4.0
+ 2025-01-02     6.0          8.86484                     7.0                        5.0
+ 2025-01-03     2.0          8.86484                     6.0                       17.0
+ 2025-01-04     6.0          8.86484                     2.0                       12.0
+ 2025-01-05    11.0          8.86484                     6.0                        6.0
+ 2025-01-06     4.0          8.86484                    11.0                       14.0
+ 2025-01-07    11.0          8.86484                     4.0                        4.0
+ 2025-01-08     8.0          8.86484                    11.0                        7.0
+ 2025-01-09     6.0          8.86484                     8.0                        6.0
+ 2025-01-10    14.0          8.86484                     6.0                        2.0
+
+Saved:
+ results/03_02_naive_baseline_metrics.csv
+ results/03_02_naive_baseline_predictions.csv
+
+Step 2 naive-baseline analysis finished.
+
+[SUCCESS] 03_02_naive_baselines.py
+
+==========================================================================================
+RUNNING SCRIPT 3/7: 03_03_ridge_baseline.py
+==========================================================================================
+==============================================================================
+WEEK 3 - STEP 3: RIDGE REGRESSION
+==============================================================================
+
+Training samples:   1095
+Validation samples: 365
+
+==============================================================================
+FEATURE SET F2
+==============================================================================
+Features: C_t_z, D_sin, D_cos
+
+Best alpha: 30.0
+Mean CV RMSE: 3.844353
+
+==============================================================================
+FEATURE SET F3
+==============================================================================
+Features: C_t_z, D_sin, D_cos, P_t_z
+
+Best alpha: 30.0
+Mean CV RMSE: 3.748194
+
+==============================================================================
+FEATURE SET F4
+==============================================================================
+Features: C_t_z, D_sin, D_cos, P_t_z, is_public_holiday_t_plus_1
+
+Best alpha: 6.5
+Mean CV RMSE: 3.646170
+
+==============================================================================
+RIDGE VALIDATION RESULTS
+==============================================================================
+model feature_set  best_alpha  cv_rmse  validation_mae  validation_rmse  validation_nrmse  validation_bias  improvement_vs_seasonal_pct
+Ridge          F4         6.5 3.646170        3.894183         4.874844          1.218850        -0.201055                    23.898240
+Ridge          F3        30.0 3.748194        3.986974         4.981443          1.245503        -0.371030                    22.234104
+Ridge          F2        30.0 3.844353        4.901377         6.304105          1.576206        -3.752445                     1.585871
+
+==============================================================================
+RIDGE COEFFICIENTS
+==============================================================================
+feature_set                   variable  coefficient
+         F2                  intercept     8.866056
+         F2                      C_t_z     0.112465
+         F2                      D_sin     1.741034
+         F2                      D_cos    -0.592315
+         F3                  intercept     8.866241
+         F3                      C_t_z    -0.084531
+         F3                      D_sin     1.772672
+         F3                      D_cos    -0.682655
+         F3                      P_t_z     0.832538
+         F4                  intercept     9.047108
+         F4                      C_t_z    -0.162719
+         F4                      D_sin     1.854611
+         F4                      D_cos    -0.732334
+         F4                      P_t_z     0.890558
+         F4 is_public_holiday_t_plus_1    -4.498580
+
+Saved:
+ results/03_03_ridge_cv_results.csv
+ results/03_03_ridge_validation_metrics.csv
+ results/03_03_ridge_coefficients.csv
+ results/03_03_ridge_validation_predictions.csv
+
+Step 3 Ridge analysis finished.
+
+[SUCCESS] 03_03_ridge_baseline.py
+
+==========================================================================================
+RUNNING SCRIPT 4/7: 03_04_poisson_baseline.py
+==========================================================================================
+==============================================================================
+WEEK 3 - STEP 4: POISSON REGRESSION
+==============================================================================
+
+Training samples:   1095
+Validation samples: 365
+
+==============================================================================
+FEATURE SET F2
+==============================================================================
+Features: C_t_z, D_sin, D_cos
+
+==============================================================================
+FEATURE SET F3
+==============================================================================
+Features: C_t_z, D_sin, D_cos, P_t_z
+
+==============================================================================
+FEATURE SET F4
+==============================================================================
+Features: C_t_z, D_sin, D_cos, P_t_z, is_public_holiday_t_plus_1
+
+==============================================================================
+POISSON VALIDATION RESULTS
+==============================================================================
+  model feature_set  validation_mae  validation_rmse  validation_nrmse  validation_bias  poisson_deviance  mean_poisson_deviance  improvement_vs_seasonal_pct  improvement_vs_ridge_F4_pct
+Poisson          F4        3.896949         4.879339          1.219974         0.503739        713.051666               1.953566                    23.828059                    -0.092212
+Poisson          F3        3.943150         4.939906          1.235118         0.291321        721.452525               1.976582                    22.882542                    -1.334649
+Poisson          F2        4.912949         6.324641          1.581341        -3.766216       1263.878297               3.462680                     1.265274                   -29.740386
+
+==============================================================================
+POISSON COEFFICIENTS
+==============================================================================
+feature_set                   variable  coefficient_beta  exp_beta
+         F2                      const          2.169678  8.755462
+         F2                      C_t_z          0.010810  1.010869
+         F2                      D_sin          0.208565  1.231909
+         F2                      D_cos         -0.072272  0.930278
+         F3                      const          2.165484  8.718819
+         F3                      C_t_z         -0.012691  0.987389
+         F3                      D_sin          0.213002  1.237387
+         F3                      D_cos         -0.082715  0.920613
+         F3                      P_t_z          0.092859  1.097307
+         F4                      const          2.188546  8.922234
+         F4                      C_t_z         -0.021528  0.978702
+         F4                      D_sin          0.213483  1.237982
+         F4                      D_cos         -0.085225  0.918305
+         F4                      P_t_z          0.098853  1.103904
+         F4 is_public_holiday_t_plus_1         -0.839077  0.432109
+
+==============================================================================
+PREDICTION RANGE
+==============================================================================
+feature_set  prediction_min  prediction_mean  prediction_max
+         F2        6.998717         8.965291       11.389212
+         F3        9.259383        13.022828       17.912325
+         F4        4.519837        13.235246       18.787265
+
+Saved:
+ results/03_04_poisson_validation_metrics.csv
+ results/03_04_poisson_coefficients.csv
+ results/03_04_poisson_validation_predictions.csv
+
+Step 4 Poisson analysis finished.
+
+[SUCCESS] 03_04_poisson_baseline.py
+
+==========================================================================================
+RUNNING SCRIPT 5/7: 03_05_negative_binomial_baseline.py
+==========================================================================================
+==============================================================================
+WEEK 3 - STEP 5: NEGATIVE BINOMIAL REGRESSION
+==============================================================================
+
+Training samples:   1095
+Validation samples: 365
+
+==============================================================================
+FEATURE SET F2
+==============================================================================
+Features: C_t_z, D_sin, D_cos
+
+==============================================================================
+FEATURE SET F3
+==============================================================================
+Features: C_t_z, D_sin, D_cos, P_t_z
+
+==============================================================================
+FEATURE SET F4
+==============================================================================
+Features: C_t_z, D_sin, D_cos, P_t_z, is_public_holiday_t_plus_1
+
+==============================================================================
+NEGATIVE BINOMIAL VALIDATION RESULTS
+==============================================================================
+            model feature_set    alpha  validation_mae  validation_rmse  validation_nrmse  validation_bias  mean_predicted_variance  log_likelihood_train   aic_train   bic_train  improvement_vs_seasonal_pct  improvement_vs_ridge_F4_pct  improvement_vs_poisson_F4_pct
+Negative Binomial          F4 0.044483        3.899527         4.882955          1.220878         0.526638                21.417690          -2893.861711 5801.723423 5836.712990                    23.771618                    -0.166377                      -0.074100
+Negative Binomial          F3 0.060877        3.947367         4.948771          1.237334         0.355504                23.838228          -2950.784260 5913.568520 5943.559578                    22.744153                    -1.516496                      -1.422976
+Negative Binomial          F2 0.070051        4.907910         6.322304          1.580757        -3.767085                14.747075          -2977.697329 5965.394657 5990.387205                     1.301770                   -29.692430                     -29.572953
+
+==============================================================================
+NEGATIVE BINOMIAL PARAMETERS
+==============================================================================
+feature_set                   variable  parameter  exp_beta
+         F2                      const   2.169194  8.751231
+         F2                      C_t_z   0.010146  1.010198
+         F2                      D_sin   0.217550  1.243028
+         F2                      D_cos  -0.074209  0.928478
+         F2                      alpha   0.070051       NaN
+         F3                      const   2.164929  8.713983
+         F3                      C_t_z  -0.013500  0.986590
+         F3                      D_sin   0.222017  1.248593
+         F3                      D_cos  -0.085387  0.918157
+         F3                      P_t_z   0.094056  1.098622
+         F3                      alpha   0.060877       NaN
+         F4                      const   2.188018  8.917521
+         F4                      C_t_z  -0.021143  0.979079
+         F4                      D_sin   0.219403  1.245334
+         F4                      D_cos  -0.087006  0.916672
+         F4                      P_t_z   0.099097  1.104173
+         F4 is_public_holiday_t_plus_1  -0.833227  0.434645
+         F4                      alpha   0.044483       NaN
+
+==============================================================================
+DISPERSION ESTIMATES
+==============================================================================
+feature_set    alpha  mean_predicted_variance
+         F4 0.044483                21.417690
+         F3 0.060877                23.838228
+         F2 0.070051                14.747075
+
+==============================================================================
+PREDICTION RANGE
+==============================================================================
+feature_set  prediction_min  prediction_mean  prediction_max
+         F2        6.944730         8.964422       11.458114
+         F3        9.211185        13.087011       18.174532
+         F4        4.530975        13.258145       18.926226
+
+Saved:
+ results/03_05_negative_binomial_validation_metrics.csv
+ results/03_05_negative_binomial_parameters.csv
+ results/03_05_negative_binomial_validation_predictions.csv
+
+Step 5 Negative Binomial analysis finished.
+
+[SUCCESS] 03_05_negative_binomial_baseline.py
+
+==========================================================================================
+RUNNING SCRIPT 6/7: 03_06_feature_set_benefit_analysis.py
+==========================================================================================
+==============================================================================
+WEEK 3 - STEP 6: FEATURE-SET BENEFIT ANALYSIS
+==============================================================================
+
+Using:
+ Ridge:             results\03_03_ridge_validation_metrics.csv
+ Poisson:           results\03_04_poisson_validation_metrics.csv
+ Negative Binomial: results\03_05_negative_binomial_validation_metrics.csv
+
+==============================================================================
+MODEL / FEATURE-SET VALIDATION RESULTS
+==============================================================================
+     model_family feature_set  validation_mae  validation_rmse  validation_nrmse  validation_bias
+Negative Binomial          F2        4.907910         6.322304          1.580757        -3.767085
+Negative Binomial          F3        3.947367         4.948771          1.237334         0.355504
+Negative Binomial          F4        3.899527         4.882955          1.220878         0.526638
+          Poisson          F2        4.912949         6.324641          1.581341        -3.766216
+          Poisson          F3        3.943150         4.939906          1.235118         0.291321
+          Poisson          F4        3.896949         4.879339          1.219974         0.503739
+            Ridge          F2        4.901377         6.304105          1.576206        -3.752445
+            Ridge          F3        3.986974         4.981443          1.245503        -0.371030
+            Ridge          F4        3.894183         4.874844          1.218850        -0.201055
+
+==============================================================================
+INCREMENTAL FEATURE BENEFIT
+==============================================================================
+     model_family transition added_feature  rmse_before  rmse_after  delta_rmse  rmse_improvement_pct  mae_before  mae_after  delta_mae  mae_improvement_pct  abs_bias_before  abs_bias_after  abs_bias_reduction
+            Ridge     F2->F3           P_t     6.304105    4.981443    1.322662             20.980964    4.901377   3.986974   0.914403            18.656038         3.752445        0.371030            3.381415
+            Ridge     F3->F4    H_t_plus_1     4.981443    4.874844    0.106599              2.139931    3.986974   3.894183   0.092792             2.327373         0.371030        0.201055            0.169974
+          Poisson     F2->F3           P_t     6.324641    4.939906    1.384735             21.894291    4.912949   3.943150   0.969799            19.739659         3.766216        0.291321            3.474895
+          Poisson     F3->F4    H_t_plus_1     4.939906    4.879339    0.060567              1.226073    3.943150   3.896949   0.046201             1.171671         0.291321        0.503739           -0.212418
+Negative Binomial     F2->F3           P_t     6.322304    4.948771    1.373533             21.725195    4.907910   3.947367   0.960544            19.571337         3.767085        0.355504            3.411581
+Negative Binomial     F3->F4    H_t_plus_1     4.948771    4.882955    0.065816              1.329951    3.947367   3.899527   0.047840             1.211938         0.355504        0.526638           -0.171134
+
+==============================================================================
+CROSS-MODEL FEATURE BENEFIT SUMMARY
+==============================================================================
+transition added_feature  mean_delta_rmse  min_delta_rmse  max_delta_rmse  mean_rmse_improvement_pct  min_rmse_improvement_pct  max_rmse_improvement_pct  improved_in_all_models
+    F2->F3           P_t         1.360310        1.322662        1.384735                  21.533483                 20.980964                 21.894291                    True
+    F3->F4    H_t_plus_1         0.077661        0.060567        0.106599                   1.565318                  1.226073                  2.139931                    True
+
+==============================================================================
+TOTAL BENEFIT: F2 -> F4
+==============================================================================
+     model_family  rmse_F2  rmse_F4  delta_rmse_F2_to_F4  improvement_pct_F2_to_F4
+            Ridge 6.304105 4.874844             1.429261                 22.671917
+          Poisson 6.324641 4.879339             1.445302                 22.851924
+Negative Binomial 6.322304 4.882955             1.439349                 22.766212
+
+==============================================================================
+SEMANTIC INPUT COMPLEXITY
+==============================================================================
+feature_set  semantic_input_count  classical_numeric_columns                  semantic_inputs
+         F2                     2                          3                  C_t, D_t_plus_1
+         F3                     3                          4             C_t, D_t_plus_1, P_t
+         F4                     4                          5 C_t, D_t_plus_1, P_t, H_t_plus_1
+
+Saved:
+ results/03_06_model_feature_set_metrics.csv
+ results/03_06_incremental_feature_benefit.csv
+ results/03_06_cross_model_feature_benefit_summary.csv
+ results/03_06_total_F2_to_F4_improvement.csv
+ results/03_06_semantic_input_complexity.csv
+
+Step 6 feature-set benefit analysis finished.
+
+[SUCCESS] 03_06_feature_set_benefit_analysis.py
+
+==========================================================================================
+RUNNING SCRIPT 7/7: 03_07_final_validation_benchmark.py
+==========================================================================================
+==============================================================================
+WEEK 3 - STEP 7: FINAL VALIDATION BENCHMARK
+==============================================================================
+
+Using:
+ Naive baselines:    results\03_02_naive_baseline_metrics.csv
+ Ridge:              results\03_03_ridge_validation_metrics.csv
+ Poisson:            results\03_04_poisson_validation_metrics.csv
+ Negative Binomial:  results\03_05_negative_binomial_validation_metrics.csv
+
+==============================================================================
+FINAL WEEK 3 VALIDATION RANKING
+==============================================================================
+ rmse_rank             model feature_set  validation_mae  validation_rmse  validation_nrmse  validation_bias  delta_rmse_vs_seasonal  rmse_improvement_vs_seasonal_pct  delta_mae_vs_seasonal  mae_improvement_vs_seasonal_pct  beats_seasonal_rmse
+         1             Ridge          F4        3.894183         4.874844          1.218850        -0.201055                1.530847                         23.898240               1.160612                        22.960615                 True
+         2           Poisson          F4        3.896949         4.879339          1.219974         0.503739                1.526352                         23.828058               1.157845                        22.905883                 True
+         3 Negative Binomial          F4        3.899527         4.882955          1.220878         0.526638                1.522736                         23.771618               1.155268                        22.854889                 True
+         4           Poisson          F3        3.943150         4.939906          1.235118         0.291321                1.465785                         22.882542               1.111645                        21.991884                 True
+         5 Negative Binomial          F3        3.947367         4.948771          1.237334         0.355504                1.456920                         22.744153               1.107428                        21.908468                 True
+         6             Ridge          F3        3.986974         4.981443          1.245503        -0.371030                1.424248                         22.234104               1.067820                        21.124897                 True
+         7             Ridge          F2        4.901377         6.304105          1.576206        -3.752445                0.101586                          1.585870               0.153417                         3.035086                 True
+         8 Negative Binomial          F2        4.907910         6.322304          1.580757        -3.767085                0.083387                          1.301769               0.146884                         2.905842                 True
+         9           Poisson          F2        4.912949         6.324641          1.581341        -3.766216                0.081050                          1.265274               0.141845                         2.806149                 True
+        10 seasonal_naive_7d           -        5.054795         6.405691          1.601606        -0.063014                0.000000                          0.000000               0.000000                         0.000000                False
+        11     training_mean           -        5.252067         6.665972          1.666684        -3.866667               -0.260281                         -4.063283              -0.197273                        -3.902687                False
+        12       persistence           -        5.597260         7.117988          1.779700        -0.024658               -0.712297                        -11.119754              -0.542466                       -10.731707                False
+
+==============================================================================
+LEARNED MODELS ONLY
+==============================================================================
+ rmse_rank             model feature_set  validation_mae  validation_rmse  validation_nrmse  validation_bias  rmse_improvement_vs_seasonal_pct
+         1             Ridge          F4        3.894183         4.874844          1.218850        -0.201055                         23.898240
+         2           Poisson          F4        3.896949         4.879339          1.219974         0.503739                         23.828058
+         3 Negative Binomial          F4        3.899527         4.882955          1.220878         0.526638                         23.771618
+         4           Poisson          F3        3.943150         4.939906          1.235118         0.291321                         22.882542
+         5 Negative Binomial          F3        3.947367         4.948771          1.237334         0.355504                         22.744153
+         6             Ridge          F3        3.986974         4.981443          1.245503        -0.371030                         22.234104
+         7             Ridge          F2        4.901377         6.304105          1.576206        -3.752445                          1.585870
+         8 Negative Binomial          F2        4.907910         6.322304          1.580757        -3.767085                          1.301769
+         9           Poisson          F2        4.912949         6.324641          1.581341        -3.766216                          1.265274
+
+==============================================================================
+BEST VALIDATION MODEL
+==============================================================================
+Model:                  Ridge
+Feature set:            F4
+Validation MAE:         3.894183
+Validation RMSE:        4.874844
+Validation NRMSE:       1.218850
+Validation bias:        -0.201055
+RMSE improvement vs SN: 23.898240%
+MAE improvement vs SN:  22.960615%
+
+==============================================================================
+BEST FEATURE SET WITHIN EACH MODEL FAMILY
+==============================================================================
+            model feature_set  validation_mae  validation_rmse  validation_nrmse  validation_bias  rmse_improvement_vs_seasonal_pct
+            Ridge          F4        3.894183         4.874844          1.218850        -0.201055                         23.898240
+          Poisson          F4        3.896949         4.879339          1.219974         0.503739                         23.828058
+Negative Binomial          F4        3.899527         4.882955          1.220878         0.526638                         23.771618
+
+==============================================================================
+DECISION GATE 1
+==============================================================================
+Seasonal-naive RMSE:       6.405691
+Best learned model:        Ridge F4
+Best learned-model RMSE:   4.874844
+Absolute RMSE reduction:   1.530847
+Relative RMSE improvement: 23.898240%
+Beats seasonal naive:      True
+
+DECISION GATE 1 STATUS: PASS
+
+Saved:
+ results/03_07_final_validation_benchmark.csv
+ results/03_07_best_by_model_family.csv
+ results/03_07_decision_gate_1.csv
+
+Step 7 final validation benchmark finished.
+
+[SUCCESS] 03_07_final_validation_benchmark.py
+
+==========================================================================================
+WEEK 3 PIPELINE SUMMARY
+==========================================================================================
+Scripts discovered:  7
+Scripts successful:  7
+Scripts failed:      0
+
+WEEK 3 PIPELINE STATUS: PASS
+
+Finished: 2026-09-02T17:36:17
+Full output saved to: C:\Users\rusna\OneDrive\Desktop\quantum_reservoir\results\03_all_output.txt

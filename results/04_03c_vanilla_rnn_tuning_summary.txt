@@ -1,0 +1,35 @@
+STEP 4.3C - FINAL VANILLA RNN TUNING
+======================================================================
+
+Target standardization: YES
+Within chronological CV, target scaling is fitted independently on each fold's training targets only.
+All RMSE values are reported in original claim-count units after inverse scaling.
+
+Selected using 2022-2024 chronological CV only
+
+Feature set: F4
+Window: 2
+Hidden size: 64
+Learning rate: 0.003
+L2: 0.001
+Layers: 1
+Parameters: 4609
+Median epochs: 17
+CV RMSE: 3.475766 +/- 0.311809
+
+Final full-training target scaler
+Mean: 8.870201
+Std: 3.997436
+
+Official 2025 validation
+MAE: 3.948176
+RMSE: 5.027691
+NRMSE: 0.925923
+Bias: -1.206917
+Actual mean: 12.731507
+Prediction mean: 11.524590
+
+Improvement vs corrected Step 4.3A RNN: +10.833%
+Improvement vs Ridge F4: -3.136%
+Improvement vs ESN: -3.189%
+Improvement vs seasonal naive: +21.512%

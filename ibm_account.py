@@ -1,143 +1,385 @@
 """
 ibm_account.py
 --------------
-IBM Quantum account setup and backend selection for QRC experiments.
+IBM Quantum account setup, backend selection and Aer simulator helpers
+for Quantum Reservoir Computing (QRC) experiments.
 
-Setup (first time only)
------------------------
-1. Get your IBM Quantum token from: https://quantum.ibm.com/account
-2. Run this file directly, passing your token:
+First-time setup
+----------------
+1. Create an IBM Cloud API key in the IBM Quantum Platform.
 
-       python ibm_account.py --save <YOUR_TOKEN>
+2. Install required packages:
 
-   This saves credentials to ~/.qiskit/qiskit-ibm.json permanently.
-   You only need to do this once per machine.
+       pip install qiskit qiskit-ibm-runtime qiskit-aer
 
-3. Verify the setup:
+3. Save your IBM Quantum credentials:
+
+       python ibm_account.py --save YOUR_API_KEY
+
+   Credentials are stored locally in:
+
+       ~/.qiskit/qiskit-ibm.json
+
+4. Verify the setup:
 
        python ibm_account.py --list
 
-Execution modes in 06_qrc_model.py
-------------------------------------
-    # Local simulation (no IBM account needed)
-    backend = get_aer_backend()
+5. Find the least-busy available QPU:
 
-    # IBM 127-qubit hardware
-    backend = get_ibm_backend("ibm_brisbane")
+       python ibm_account.py --least-busy
 
-    # IBM hardware with noise-model simulation (Aer mimics real device)
-    backend = get_aer_backend(device_backend=get_ibm_backend("ibm_brisbane"))
 """
 
 import os
 import argparse
 
+
 # ---------------------------------------------------------------------------
-# Known IBM Quantum backends
+# Configuration
 # ---------------------------------------------------------------------------
 
-IBM_BACKENDS_127Q = [
-    "ibm_brisbane",    # Eagle r3, 127 qubits (open plan available)
-    "ibm_kyoto",       # Eagle r3, 127 qubits
-    "ibm_osaka",       # Eagle r3, 127 qubits
-    "ibm_sherbrooke",  # Eagle r3, 127 qubits
-]
+DEFAULT_CHANNEL = "ibm_quantum_platform"
 
-IBM_BACKENDS_133Q = [
-    "ibm_torino",      # Heron r2, 133 qubits (fast, low noise)
-    "ibm_marrakesh",   # Heron r2, 156 qubits
-]
-
-DEFAULT_BACKEND = "ibm_brisbane"
-DEFAULT_CHANNEL = "ibm_quantum"   # use "ibm_cloud" for IBM Cloud accounts
+# Environment variable that can optionally contain the IBM Cloud API key.
+ENV_API_KEY = "IBM_QUANTUM_API_KEY"
 
 
 # ---------------------------------------------------------------------------
 # Account management
 # ---------------------------------------------------------------------------
 
-def setup_account(
-    token: str,
-    channel: str = DEFAULT_CHANNEL,
-    instance: str = "ibm-q/open/main",
-    save: bool = True,
-) -> None:
+def setup_account(api_key: str) -> None:
     """
-    Save IBM Quantum credentials locally (writes to ~/.qiskit/qiskit-ibm.json).
+    Save IBM Quantum Platform credentials locally.
 
     Parameters
     ----------
-    token    : IBM Quantum API token from https://quantum.ibm.com/account
-    channel  : "ibm_quantum" (default) or "ibm_cloud"
-    instance : hub/group/project string; "ibm-q/open/main" for open plan
-    save     : if True, persist credentials on disk (recommended)
+    api_key : str
+        IBM Cloud API key associated with the IBM Quantum Platform account.
+
+    Notes
+    -----
+    Credentials are stored by Qiskit Runtime, normally in:
+
+        ~/.qiskit/qiskit-ibm.json
     """
+
     try:
         from qiskit_ibm_runtime import QiskitRuntimeService
+
     except ImportError:
         raise ImportError(
-            "qiskit-ibm-runtime is not installed. "
-            "Run: pip install qiskit-ibm-runtime"
+            "qiskit-ibm-runtime is not installed.\n"
+            "Install it using:\n"
+            "    pip install qiskit-ibm-runtime"
         )
 
     QiskitRuntimeService.save_account(
-        channel=channel,
-        token=token,
-        instance=instance,
+        token=api_key,
+        channel=DEFAULT_CHANNEL,
+        plans_preference=["open"],
         overwrite=True,
         set_as_default=True,
     )
-    print(f"[ibm_account] Account saved (channel={channel}, instance={instance})")
+
+    print(
+        "[ibm_account] IBM Quantum Platform account saved successfully."
+    )
 
 
-def get_service(channel: str = DEFAULT_CHANNEL):
+def get_service():
     """
-    Load saved IBM Quantum credentials and return a QiskitRuntimeService.
+    Return an authenticated QiskitRuntimeService.
 
-    Raises RuntimeError if credentials are not found -- run
-    `python ibm_account.py --save <TOKEN>` first.
-    """
-    try:
-        from qiskit_ibm_runtime import QiskitRuntimeService
-    except ImportError:
-        raise ImportError(
-            "qiskit-ibm-runtime is not installed. "
-            "Run: pip install qiskit-ibm-runtime"
-        )
-
-    # Also accept token from environment variable IBM_QUANTUM_TOKEN
-    token = os.getenv("IBM_QUANTUM_TOKEN")
-    if token:
-        return QiskitRuntimeService(channel=channel, token=token)
-
-    return QiskitRuntimeService(channel=channel)
-
-
-# ---------------------------------------------------------------------------
-# Backend getters
-# ---------------------------------------------------------------------------
-
-def get_ibm_backend(name: str = DEFAULT_BACKEND, service=None):
-    """
-    Return an IBM Quantum hardware backend.
-
-    Parameters
-    ----------
-    name    : backend name, e.g. "ibm_brisbane"
-    service : existing QiskitRuntimeService instance (optional; will load
-              saved credentials if None)
+    Authentication priority
+    -----------------------
+    1. Environment variable IBM_QUANTUM_API_KEY
+    2. Previously saved Qiskit Runtime credentials
 
     Returns
     -------
-    IBMBackend -- pass directly to QiskitQRC(..., backend=backend)
+    QiskitRuntimeService
     """
+
+    try:
+        from qiskit_ibm_runtime import QiskitRuntimeService
+
+    except ImportError:
+        raise ImportError(
+            "qiskit-ibm-runtime is not installed.\n"
+            "Install it using:\n"
+            "    pip install qiskit-ibm-runtime"
+        )
+
+    # ---------------------------------------------------------------
+    # Option 1:
+    # API key provided through environment variable
+    # ---------------------------------------------------------------
+
+    api_key = os.getenv(ENV_API_KEY)
+
+    if api_key:
+        print(
+            f"[ibm_account] Using API key from environment variable "
+            f"{ENV_API_KEY}."
+        )
+
+        return QiskitRuntimeService(
+            token=api_key,
+            channel=DEFAULT_CHANNEL,
+            instance="auto",
+            plans_preference=["open"],
+        )
+
+    # ---------------------------------------------------------------
+    # Option 2:
+    # Load saved account
+    # ---------------------------------------------------------------
+
+    try:
+        service = QiskitRuntimeService(
+            instance = "auto",
+            channel = DEFAULT_CHANNEL,
+            plans_preference=["open"],
+        )
+
+    except Exception as exc:
+        raise RuntimeError(
+            "IBM Quantum credentials could not be loaded.\n\n"
+            "Run first:\n"
+            "    python ibm_account.py --save YOUR_API_KEY\n\n"
+            f"Original error:\n{exc}"
+        ) from exc
+
+    return service
+
+
+# ---------------------------------------------------------------------------
+# IBM hardware backends
+# ---------------------------------------------------------------------------
+
+def get_ibm_backend(name: str, service=None):
+    """
+    Return a specific IBM Quantum hardware backend.
+
+    Parameters
+    ----------
+    name : str
+        IBM backend name, for example:
+
+            ibm_brisbane
+            ibm_kingston
+
+        Availability depends on the IBM Quantum account and plan.
+
+    service : QiskitRuntimeService, optional
+        Existing service instance.
+
+    Returns
+    -------
+    IBMBackend
+    """
+
     if service is None:
         service = get_service()
-    backend = service.backend(name)
-    n_qubits = backend.num_qubits
-    print(f"[ibm_account] Backend: {name}  ({n_qubits} qubits)")
+
+    try:
+        backend = service.backend(name)
+
+    except Exception as exc:
+        raise RuntimeError(
+            f"Could not access IBM backend '{name}'.\n"
+            "Use:\n"
+            "    python ibm_account.py --list\n"
+            "to see currently available backends."
+        ) from exc
+
+    print(
+        f"[ibm_account] Backend: {backend.name} "
+        f"({backend.num_qubits} qubits)"
+    )
+
     return backend
 
+
+def list_available_backends(
+    service=None,
+    operational_only: bool = True,
+):
+    """
+    Print IBM Quantum hardware backends available to the account.
+
+    Parameters
+    ----------
+    service : QiskitRuntimeService, optional
+
+    operational_only : bool
+        If True, show only operational devices.
+
+    Returns
+    -------
+    list
+        List of available backend objects.
+    """
+
+    if service is None:
+        service = get_service()
+
+    try:
+
+        if operational_only:
+
+            backends = service.backends(
+                operational=True,
+                simulator=False,
+            )
+
+        else:
+
+            backends = service.backends(
+                simulator=False,
+            )
+
+    except Exception as exc:
+        raise RuntimeError(
+            "Could not retrieve IBM Quantum backends."
+        ) from exc
+
+    print()
+
+    print(
+        f"{'Backend':<30}"
+        f"{'Qubits':>10}"
+        f"{'Pending jobs':>15}"
+        f"{'Status':>20}"
+    )
+
+    print("-" * 75)
+
+    # ---------------------------------------------------------------
+    # Sort by number of qubits and then name
+    # ---------------------------------------------------------------
+
+    backends = sorted(
+        backends,
+        key=lambda backend: (
+            backend.num_qubits,
+            backend.name,
+        ),
+    )
+
+    for backend in backends:
+
+        try:
+
+            status = backend.status()
+
+            pending_jobs = getattr(
+                status,
+                "pending_jobs",
+                "?",
+            )
+
+            status_msg = getattr(
+                status,
+                "status_msg",
+                "?",
+            )
+
+        except Exception:
+
+            pending_jobs = "?"
+            status_msg = "?"
+
+        print(
+            f"{backend.name:<30}"
+            f"{backend.num_qubits:>10}"
+            f"{str(pending_jobs):>15}"
+            f"{str(status_msg):>20}"
+        )
+
+    print()
+
+    print(
+        f"[ibm_account] Found {len(backends)} hardware backend(s)."
+    )
+
+    print()
+
+    return backends
+
+
+def get_least_busy_backend(
+    service=None,
+    min_qubits: int = 5,
+):
+    """
+    Return the least-busy operational IBM QPU.
+
+    Parameters
+    ----------
+    service : QiskitRuntimeService, optional
+
+    min_qubits : int
+        Minimum number of qubits required.
+
+    Returns
+    -------
+    IBMBackend
+    """
+
+    if service is None:
+        service = get_service()
+
+    try:
+
+        backend = service.least_busy(
+            operational=True,
+            simulator=False,
+            min_num_qubits=min_qubits,
+        )
+
+    except Exception as exc:
+        raise RuntimeError(
+            "Could not find a suitable IBM Quantum backend "
+            f"with at least {min_qubits} qubits."
+        ) from exc
+
+    try:
+
+        status = backend.status()
+
+        pending_jobs = getattr(
+            status,
+            "pending_jobs",
+            "?",
+        )
+
+    except Exception:
+
+        pending_jobs = "?"
+
+    print(
+        f"[ibm_account] Least-busy backend: "
+        f"{backend.name}"
+    )
+
+    print(
+        f"[ibm_account] Qubits: "
+        f"{backend.num_qubits}"
+    )
+
+    print(
+        f"[ibm_account] Pending jobs: "
+        f"{pending_jobs}"
+    )
+
+    return backend
+
+
+# ---------------------------------------------------------------------------
+# Aer simulators
+# ---------------------------------------------------------------------------
 
 def get_aer_backend(
     method: str = "statevector",
@@ -145,119 +387,307 @@ def get_aer_backend(
     noise_model=None,
 ):
     """
-    Return an Aer simulation backend.
+    Return a Qiskit Aer simulator.
 
     Parameters
     ----------
-    method         : "statevector" (fast, pure states) or
-                     "density_matrix" (exact mixed states, slower)
-    device_backend : if provided, import noise model from this real IBM backend
-                     (simulates hardware noise locally)
-    noise_model    : explicit NoiseModel object; takes precedence over
-                     device_backend
+    method : str
+        Simulation method.
+
+        Common choices:
+
+            "statevector"
+                Ideal pure-state simulation.
+
+            "density_matrix"
+                Useful for exact mixed-state/noisy simulation of
+                relatively small circuits.
+
+    device_backend : IBMBackend, optional
+        If supplied, AerSimulator.from_backend() is used.
+
+        This creates a simulator approximating the selected IBM device,
+        including hardware information such as:
+
+            - noise model
+            - basis gates
+            - coupling map
+
+    noise_model : NoiseModel, optional
+        Explicit custom Aer noise model.
+
+        If both device_backend and noise_model are supplied,
+        the explicit noise_model takes precedence.
 
     Returns
     -------
-    AerSimulator -- pass directly to QiskitQRC(..., backend=backend)
+    AerSimulator
     """
+
     try:
         from qiskit_aer import AerSimulator
+
     except ImportError:
         raise ImportError(
-            "qiskit-aer is not installed. "
-            "Run: pip install qiskit-aer"
+            "qiskit-aer is not installed.\n"
+            "Install it using:\n"
+            "    pip install qiskit-aer"
         )
 
-    if device_backend is not None and noise_model is None:
-        from qiskit_aer.noise import NoiseModel
-        noise_model = NoiseModel.from_backend(device_backend)
-        print(f"[ibm_account] Aer noise model loaded from {device_backend.name}")
+    # ---------------------------------------------------------------
+    # Explicit custom noise model
+    # ---------------------------------------------------------------
 
     if noise_model is not None:
-        backend = AerSimulator(method=method, noise_model=noise_model)
-    else:
-        backend = AerSimulator(method=method)
 
-    label = f"AerSimulator({method})"
-    if noise_model:
-        label += "+noise"
-    print(f"[ibm_account] Backend: {label}")
+        backend = AerSimulator(
+            method=method,
+            noise_model=noise_model,
+        )
+
+        print(
+            f"[ibm_account] Backend: "
+            f"AerSimulator({method}) + custom noise model"
+        )
+
+        return backend
+
+    # ---------------------------------------------------------------
+    # Simulator configured from real IBM hardware
+    # ---------------------------------------------------------------
+
+    if device_backend is not None:
+
+        backend = AerSimulator.from_backend(
+            device_backend,
+            method=method,
+        )
+
+        print(
+            f"[ibm_account] Backend: "
+            f"AerSimulator({method}) configured from "
+            f"{device_backend.name}"
+        )
+
+        return backend
+
+    # ---------------------------------------------------------------
+    # Ideal simulator
+    # ---------------------------------------------------------------
+
+    backend = AerSimulator(
+        method=method,
+    )
+
+    print(
+        f"[ibm_account] Backend: "
+        f"AerSimulator({method})"
+    )
+
     return backend
 
 
 # ---------------------------------------------------------------------------
-# Backend info helpers
+# Basic backend information
 # ---------------------------------------------------------------------------
 
-def list_available_backends(service=None, operational_only: bool = True):
-    """Print all backends available to the account."""
-    if service is None:
-        service = get_service()
+def print_backend_info(backend):
+    """
+    Print basic information about an IBM Quantum backend.
 
-    backends = service.backends(operational=operational_only)
-    print(f"\n{'Backend':<30} {'Qubits':>8} {'Status':<15}")
-    print("-" * 55)
-    for b in sorted(backends, key=lambda x: x.num_qubits):
-        try:
-            status = b.status()
-            status_str = status.status_msg
-        except Exception:
-            status_str = "?"
-        print(f"{b.name:<30} {b.num_qubits:>8}   {status_str}")
+    More detailed hardware characterization will later be implemented
+    in backend_profiler.py.
+    """
+
+    print()
+    print("=" * 60)
+    print("IBM QUANTUM BACKEND")
+    print("=" * 60)
+
+    print(
+        f"Name:              {backend.name}"
+    )
+
+    print(
+        f"Number of qubits:  {backend.num_qubits}"
+    )
+
+    try:
+
+        status = backend.status()
+
+        print(
+            f"Operational:       "
+            f"{getattr(status, 'operational', '?')}"
+        )
+
+        print(
+            f"Pending jobs:      "
+            f"{getattr(status, 'pending_jobs', '?')}"
+        )
+
+        print(
+            f"Status:            "
+            f"{getattr(status, 'status_msg', '?')}"
+        )
+
+    except Exception:
+
+        pass
+
+    print("=" * 60)
     print()
 
 
-def get_best_backend(service=None, min_qubits: int = 5):
-    """Return the least-busy operational IBM backend with at least min_qubits."""
-    if service is None:
-        service = get_service()
-
-    backends = service.backends(
-        operational=True,
-        min_num_qubits=min_qubits,
-    )
-    best = min(backends, key=lambda b: b.status().pending_jobs)
-    print(f"[ibm_account] Least-busy backend: {best.name} "
-          f"({best.num_qubits} qubits, "
-          f"{best.status().pending_jobs} pending jobs)")
-    return best
-
-
 # ---------------------------------------------------------------------------
-# CLI helper
+# CLI
 # ---------------------------------------------------------------------------
 
 def main():
+
     parser = argparse.ArgumentParser(
-        description="IBM Quantum account setup for QRC experiments"
+        description=(
+            "IBM Quantum account and backend helper "
+            "for QRC experiments"
+        )
     )
-    group = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument("--save",   metavar="TOKEN",
-                       help="Save IBM Quantum token to disk")
-    group.add_argument("--list",   action="store_true",
-                       help="List available backends")
-    group.add_argument("--best",   action="store_true",
-                       help="Print the least-busy available backend")
-    parser.add_argument("--channel", default=DEFAULT_CHANNEL,
-                        help=f"Channel (default: {DEFAULT_CHANNEL})")
-    parser.add_argument("--instance", default="ibm-q/open/main",
-                        help="hub/group/project (default: ibm-q/open/main)")
+
+    group = parser.add_mutually_exclusive_group(
+        required=True
+    )
+
+    # ---------------------------------------------------------------
+    # Save credentials
+    # ---------------------------------------------------------------
+
+    group.add_argument(
+        "--save",
+        metavar="API_KEY",
+        help=(
+            "Save IBM Quantum Platform / IBM Cloud API key "
+            "to disk"
+        ),
+    )
+
+    # ---------------------------------------------------------------
+    # List hardware
+    # ---------------------------------------------------------------
+
+    group.add_argument(
+        "--list",
+        action="store_true",
+        help="List available IBM Quantum hardware backends",
+    )
+
+    # ---------------------------------------------------------------
+    # Least busy hardware
+    # ---------------------------------------------------------------
+
+    group.add_argument(
+        "--least-busy",
+        action="store_true",
+        help="Find the least-busy available IBM QPU",
+    )
+
+    # ---------------------------------------------------------------
+    # Specific backend
+    # ---------------------------------------------------------------
+
+    group.add_argument(
+        "--backend",
+        metavar="NAME",
+        help=(
+            "Show information about a specific backend, "
+            "for example --backend ibm_brisbane"
+        ),
+    )
+
+    parser.add_argument(
+        "--min-qubits",
+        type=int,
+        default=5,
+        help=(
+            "Minimum number of qubits for --least-busy "
+            "(default: 5)"
+        ),
+    )
+
     args = parser.parse_args()
 
-    if args.save:
-        setup_account(args.save, channel=args.channel, instance=args.instance)
-        print("[ibm_account] Done. You can now run 06_qrc_model.py --hardware")
-    elif args.list:
-        list_available_backends()
-    elif args.best:
-        get_best_backend()
+    # ---------------------------------------------------------------
+    # Save IBM account
+    # ---------------------------------------------------------------
 
+    if args.save:
+
+        setup_account(
+            args.save
+        )
+
+        print()
+        print(
+            "[ibm_account] Done."
+        )
+
+        print(
+            "[ibm_account] Test your account using:"
+        )
+
+        print()
+        print(
+            "    python ibm_account.py --list"
+        )
+
+    # ---------------------------------------------------------------
+    # List available hardware
+    # ---------------------------------------------------------------
+
+    elif args.list:
+
+        service = get_service()
+
+        list_available_backends(
+            service=service,
+        )
+
+    # ---------------------------------------------------------------
+    # Least-busy hardware
+    # ---------------------------------------------------------------
+
+    elif args.least_busy:
+
+        service = get_service()
+
+        backend = get_least_busy_backend(
+            service=service,
+            min_qubits=args.min_qubits,
+        )
+
+        print_backend_info(
+            backend
+        )
+
+    # ---------------------------------------------------------------
+    # Specific hardware
+    # ---------------------------------------------------------------
+
+    elif args.backend:
+
+        service = get_service()
+
+        backend = get_ibm_backend(
+            name=args.backend,
+            service=service,
+        )
+
+        print_backend_info(
+            backend
+        )
+
+
+# ---------------------------------------------------------------------------
+# Program entry point
+# ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
     main()
-
-
-
-
-# Save IBM token (once)
-#python ibm_account.py --save YOUR_TOKEN_HERE

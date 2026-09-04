@@ -1,0 +1,26 @@
+STEP 4.3A - VANILLA RNN
+======================================================================
+
+Target standardization: YES
+Target scaler fitted on training data only.
+Within chronological CV, scaler fitted independently inside every training fold.
+
+Best feature set: F4
+Best window: 2
+Best hidden size: 32
+CV RMSE: 3.489481 +/- 0.390685
+Median best epoch: 41
+
+Final training target scaler
+Mean: 8.870201
+Std: 3.997436
+
+Official validation
+MAE: 4.474515
+RMSE: 5.638507
+NRMSE: 1.038414
+Bias: -1.977461
+
+Improvement vs Ridge F4: -15.666%
+Improvement vs ESN: -15.725%
+Improvement vs seasonal naive: +11.977%

@@ -1,0 +1,1253 @@
+================================================================================
+WEEK 2 - RUN ALL SCRIPTS
+================================================================================
+
+Started: 2026-08-31 17:57:20
+Python:  C:\venvs\qrc_venv\Scripts\python.exe
+Folder:  C:\Users\rusna\OneDrive\Desktop\quantum_reservoir
+
+Scripts found: 12
+
+  - 02_01_target_sanity.py
+  - 02_02_target_visualization.py
+  - 02_03_autocorrelation.py
+  - 02_04_weekday_analysis.py
+  - 02_05_holiday_analysis.py
+  - 02_06_exposure_analysis.py
+  - 02_07_lagged_claim_relevance.py
+  - 02_08_exposure_analysis.py
+  - 02_09_nonlinear_relevance.py
+  - 02_10_feature_redundancy.py
+  - 02_11_regime_sensitivity.py
+  - 02_12_leakage_audit.py
+
+================================================================================
+
+================================================================================
+RUNNING 1/12: 02_01_target_sanity.py
+================================================================================
+[analysis] Loading forecast dataset: property_damage_next_day_v1
+
+======================================================================
+STRUCTURAL CHECKS
+======================================================================
+Total samples: 1692
+Target date range: 2022-01-02 -> 2026-08-20
+Duplicate target dates: 0
+Missing target values: 0
+Negative target values: 0
+Invalid one-day horizons: 0
+Gaps in target-date sequence: 0
+
+Split counts:
+split
+test           232
+train         1095
+validation     365
+Name: count, dtype: int64
+
+Split sizes: OK
+======================================================================
+
+======================================================================
+TRAINING TARGET STATISTICS
+======================================================================
+N:                 1095
+Mean:              8.8648
+Median:            9.0000
+Std deviation:     4.0014
+Variance:          16.0110
+Minimum:           0
+Maximum:           25
+
+Zero-count days:   3
+Zero fraction:     0.2740%
+
+Dispersion ratio (variance / mean): 1.8061
+
+Quantiles:
+0.01     1.0
+0.05     3.0
+0.25     6.0
+0.50     9.0
+0.75    11.0
+0.95    16.0
+0.99    19.0
+Name: target_property_damage_claim_count, dtype: float64
+======================================================================
+
+======================================================================
+TRAINING TARGET BY YEAR
+======================================================================
+      count   mean  median    std  variance  minimum  maximum  dispersion_ratio
+year                                                                           
+2022    364  8.082     8.0  3.600    12.963        1       19             1.604
+2023    365  8.830     8.0  3.993    15.944        0       24             1.806
+2024    366  9.678     9.0  4.234    17.923        0       25             1.852
+======================================================================
+
+--------------------------------------------------------------------------------
+02_01_target_sanity.py: SUCCESS
+Return code: 0
+Runtime: 3.99 seconds
+--------------------------------------------------------------------------------
+
+================================================================================
+RUNNING 2/12: 02_02_target_visualization.py
+================================================================================
+
+[analysis] Week 2 / Step 2
+[analysis] Target visualization and rolling-mean calculation
+
+======================================================================
+TRAINING DATA
+======================================================================
+Forecast dataset: property_damage_next_day_v1
+Training observations: 1095
+Training date range: 2022-01-02 -> 2024-12-31
+======================================================================
+
+======================================================================
+ROLLING-MEAN SUMMARY
+======================================================================
+
+7-day rolling mean:
+----------------------------------------------------------------------
+count    1089.000
+mean        8.877
+std         1.625
+min         3.857
+25%         7.857
+50%         8.714
+75%         9.857
+max        13.857
+Name: rolling_mean_7d, dtype: float64
+
+30-day rolling mean:
+----------------------------------------------------------------------
+count    1066.000
+mean        8.875
+std         1.097
+min         6.200
+25%         8.100
+50%         8.900
+75%         9.467
+max        12.500
+Name: rolling_mean_30d, dtype: float64
+======================================================================
+
+==========================================================================================
+EXAMPLE ROLLING-MEAN VALUES
+==========================================================================================
+target_date  target_property_damage_claim_count  rolling_mean_7d  rolling_mean_30d
+ 2022-01-31                                  11            7.286             7.533
+ 2022-02-01                                  11            8.143             7.800
+ 2022-02-02                                  13            8.714             8.033
+ 2022-02-03                                   6            8.143             8.133
+ 2022-02-04                                   5            7.571             8.200
+ 2022-02-05                                   8            8.286             8.333
+ 2022-02-06                                   5            8.429             8.300
+ 2022-02-07                                   9            8.143             8.467
+ 2022-02-08                                  13            8.429             8.667
+ 2022-02-09                                   3            7.000             8.367
+==========================================================================================
+
+[analysis] Rolling-mean data saved to:
+           results\target_training_with_rolling_means.csv
+
+[analysis] Plot saved to:
+           results\target_training_timeseries.png
+
+--------------------------------------------------------------------------------
+02_02_target_visualization.py: SUCCESS
+Return code: 0
+Runtime: 6.63 seconds
+--------------------------------------------------------------------------------
+
+================================================================================
+RUNNING 3/12: 02_03_autocorrelation.py
+================================================================================
+
+[analysis] Week 2 / Step 3
+[analysis] Autocorrelation analysis
+
+===========================================================================
+TRAINING DATA
+===========================================================================
+Dataset: property_damage_next_day_v1
+Training observations: 1095
+Date range: 2022-01-02 -> 2024-12-31
+Mean target: 8.8648
+===========================================================================
+
+===========================================================================
+AUTOCORRELATION BY LAG
+===========================================================================
+ lag  n_pairs  autocorrelation
+   1     1094           0.0964
+   2     1093           0.0097
+   3     1092           0.0006
+   4     1091          -0.0218
+   5     1090          -0.0283
+   6     1089           0.0800
+   7     1088           0.3066
+   8     1087           0.0964
+   9     1086          -0.0439
+  10     1085          -0.0556
+  11     1084          -0.0372
+  12     1083          -0.0497
+  13     1082           0.1028
+  14     1081           0.3043
+  15     1080           0.1087
+  16     1079          -0.0550
+  17     1078          -0.0236
+  18     1077          -0.0382
+  19     1076          -0.0746
+  20     1075           0.0976
+  21     1074           0.2616
+  22     1073           0.1260
+  23     1072          -0.0561
+  24     1071          -0.0267
+  25     1070          -0.0141
+  26     1069          -0.0588
+  27     1068           0.0650
+  28     1067           0.2929
+  29     1066           0.0617
+  30     1065          -0.0365
+===========================================================================
+
+============================================================
+IMPORTANT TEMPORAL LAGS
+============================================================
+ lag  autocorrelation
+   1           0.0964
+   7           0.3066
+  14           0.3043
+  21           0.2616
+  28           0.2929
+============================================================
+
+============================================================
+TOP 10 LAGS BY ABSOLUTE AUTOCORRELATION
+============================================================
+ lag  autocorrelation
+   7           0.3066
+  14           0.3043
+  28           0.2929
+  21           0.2616
+  22           0.1260
+  15           0.1087
+  13           0.1028
+  20           0.0976
+   1           0.0964
+   8           0.0964
+============================================================
+
+==========================================================================================
+DETAILED AUTOCORRELATION CALCULATIONS
+==========================================================================================
+
+------------------------------------------------------------------------------------------
+LAG k = 1
+------------------------------------------------------------------------------------------
+Number of aligned pairs:       1094
+Mean current values X:          8.870201
+Mean lagged values Y:           8.869287
+
+Numerator:
+  sum[(X-Xbar)(Y-Ybar)]
+  = 1686.438757
+
+Current squared deviations:
+  sum[(X-Xbar)^2]
+  = 17481.568556
+
+Lagged squared deviations:
+  sum[(Y-Ybar)^2]
+  = 17492.308044
+
+Denominator:
+  sqrt(sum[(X-Xbar)^2] * sum[(Y-Ybar)^2])
+  = 17486.937475
+
+Final autocorrelation:
+  rho(k) = numerator / denominator
+  rho(1) = 0.096440
+
+Pandas verification:
+  corr(X,Y) = 0.096440
+  difference = -0.000000000000
+
+------------------------------------------------------------------------------------------
+LAG k = 7
+------------------------------------------------------------------------------------------
+Number of aligned pairs:       1088
+Mean current values X:          8.895221
+Mean lagged values Y:           8.864890
+
+Numerator:
+  sum[(X-Xbar)(Y-Ybar)]
+  = 5318.597426
+
+Current squared deviations:
+  sum[(X-Xbar)^2]
+  = 17348.055147
+
+Lagged squared deviations:
+  sum[(Y-Ybar)^2]
+  = 17343.138787
+
+Denominator:
+  sqrt(sum[(X-Xbar)^2] * sum[(Y-Ybar)^2])
+  = 17345.596793
+
+Final autocorrelation:
+  rho(k) = numerator / denominator
+  rho(7) = 0.306625
+
+Pandas verification:
+  corr(X,Y) = 0.306625
+  difference = 0.000000000000
+
+------------------------------------------------------------------------------------------
+LAG k = 14
+------------------------------------------------------------------------------------------
+Number of aligned pairs:       1081
+Mean current values X:          8.888992
+Mean lagged values Y:           8.851064
+
+Numerator:
+  sum[(X-Xbar)(Y-Ybar)]
+  = 5251.127660
+
+Current squared deviations:
+  sum[(X-Xbar)^2]
+  = 17318.679001
+
+Lagged squared deviations:
+  sum[(Y-Ybar)^2]
+  = 17195.021277
+
+Denominator:
+  sqrt(sum[(X-Xbar)^2] * sum[(Y-Ybar)^2])
+  = 17256.739376
+
+Final autocorrelation:
+  rho(k) = numerator / denominator
+  rho(14) = 0.304294
+
+Pandas verification:
+  corr(X,Y) = 0.304294
+  difference = -0.000000000000
+
+------------------------------------------------------------------------------------------
+LAG k = 21
+------------------------------------------------------------------------------------------
+Number of aligned pairs:       1074
+Mean current values X:          8.891061
+Mean lagged values Y:           8.837989
+
+Numerator:
+  sum[(X-Xbar)(Y-Ybar)]
+  = 4480.044693
+
+Current squared deviations:
+  sum[(X-Xbar)^2]
+  = 17144.254190
+
+Lagged squared deviations:
+  sum[(Y-Ybar)^2]
+  = 17109.810056
+
+Denominator:
+  sqrt(sum[(X-Xbar)^2] * sum[(Y-Ybar)^2])
+  = 17127.023464
+
+Final autocorrelation:
+  rho(k) = numerator / denominator
+  rho(21) = 0.261578
+
+Pandas verification:
+  corr(X,Y) = 0.261578
+  difference = 0.000000000000
+
+------------------------------------------------------------------------------------------
+LAG k = 28
+------------------------------------------------------------------------------------------
+Number of aligned pairs:       1067
+Mean current values X:          8.899719
+Mean lagged values Y:           8.812559
+
+Numerator:
+  sum[(X-Xbar)(Y-Ybar)]
+  = 4959.943768
+
+Current squared deviations:
+  sum[(X-Xbar)^2]
+  = 17052.269916
+
+Lagged squared deviations:
+  sum[(Y-Ybar)^2]
+  = 16812.511715
+
+Denominator:
+  sqrt(sum[(X-Xbar)^2] * sum[(Y-Ybar)^2])
+  = 16931.966446
+
+Final autocorrelation:
+  rho(k) = numerator / denominator
+  rho(28) = 0.292934
+
+Pandas verification:
+  corr(X,Y) = 0.292934
+  difference = 0.000000000000
+
+==========================================================================================
+
+[analysis] Autocorrelation calculations saved to:
+           results\week2\target_training_autocorrelation.csv
+
+[analysis] Autocorrelation plot saved to:
+           results\week2\target_training_autocorrelation.png
+
+--------------------------------------------------------------------------------
+02_03_autocorrelation.py: SUCCESS
+Return code: 0
+Runtime: 6.42 seconds
+--------------------------------------------------------------------------------
+
+================================================================================
+RUNNING 4/12: 02_04_weekday_analysis.py
+================================================================================
+
+[analysis] Week 2 / Step 4
+[analysis] Weekday structure analysis
+
+===========================================================================
+TRAINING DATA
+===========================================================================
+Forecast dataset: property_damage_next_day_v1
+Training observations: 1095
+Date range: 2022-01-02 -> 2024-12-31
+Overall target mean: 8.8648
+===========================================================================
+
+====================================================================================================
+PROPERTY-DAMAGE CLAIMS BY TARGET-DAY WEEKDAY
+====================================================================================================
+ day_of_week_t_plus_1 weekday_name  count   mean  median   std  variance  minimum  maximum  dispersion_ratio
+                    1       Monday    157 10.427    10.0 3.860    14.900        0       24             1.429
+                    2      Tuesday    157  9.522     9.0 3.827    14.649        1       25             1.538
+                    3    Wednesday    156 10.000    10.0 3.455    11.935        3       20             1.194
+                    4     Thursday    156  9.865    10.0 3.547    12.582        1       19             1.275
+                    5       Friday    156 10.506    10.0 4.122    16.987        1       24             1.617
+                    6     Saturday    156  6.481     6.0 2.961     8.767        1       19             1.353
+                    7       Sunday    157  5.261     5.0 2.481     6.156        0       12             1.170
+====================================================================================================
+
+====================================================================================================
+PROPERTY-DAMAGE CLAIMS BY WEEKDAY � PUBLIC HOLIDAYS REMOVED
+====================================================================================================
+ day_of_week_t_plus_1 weekday_name  count   mean  median   std  variance  minimum  maximum  dispersion_ratio
+                    1       Monday    148 10.858    10.0 3.507    12.299        4       24             1.133
+                    2      Tuesday    152  9.724     9.0 3.708    13.751        3       25             1.414
+                    3    Wednesday    151 10.199    10.0 3.319    11.014        3       20             1.080
+                    4     Thursday    150 10.133    10.0 3.333    11.110        2       19             1.096
+                    5       Friday    147 10.823    10.0 3.970    15.763        2       24             1.456
+                    6     Saturday    154  6.526     6.0 2.944     8.669        1       19             1.328
+                    7       Sunday    149  5.309     5.0 2.506     6.282        0       12             1.183
+====================================================================================================
+
+===========================================================================
+WEEKDAY VS WEEKEND
+===========================================================================
+  group  count   mean  variance
+weekday    782 10.064    14.272
+weekend    313  5.869     7.807
+
+Weekday mean:           10.0639
+Weekend mean:           5.8690
+Difference:             4.1949
+Weekend reduction:      41.68%
+Cohen's d:              1.1900
+===========================================================================
+
+==========================================================================================
+ONE-WAY WEEKDAY ANOVA
+==========================================================================================
+N:                         1095
+Number of weekday groups:  7
+Grand mean:                8.864840
+
+SS_between:
+  sum n_d (mean_d - grand_mean)^2
+  = 4154.014761
+
+SS_within:
+  sum sum(y_di - mean_d)^2
+  = 13361.981586
+
+SS_total:                  17515.996347
+SS_between + SS_within:    17515.996347
+Decomposition error:       -0.000000000004
+
+df_between:                6
+df_within:                 1088
+
+MS_between:                692.335794
+MS_within:                 12.281233
+
+F statistic:               56.373476
+ANOVA p-value:             9.3961154952e-61
+
+Eta squared:               0.237155
+
+Eta squared represents the fraction of total target variance associated with weekday group differences.
+
+Kruskal-Wallis H:          287.227234
+Kruskal-Wallis p-value:    4.45459008439e-59
+==========================================================================================
+
+[analysis] Saved:
+           results\weekday_claim_statistics.csv
+           results\weekday_claim_statistics_nonholiday.csv
+           results\weekend_vs_weekday_statistics.csv
+           results\weekday_anova_statistics.csv
+
+[analysis] Plot saved: results\weekday_mean_claim_count.png
+[analysis] Plot saved: results\weekday_claim_boxplot.png
+
+--------------------------------------------------------------------------------
+02_04_weekday_analysis.py: SUCCESS
+Return code: 0
+Runtime: 9.60 seconds
+--------------------------------------------------------------------------------
+
+================================================================================
+RUNNING 5/12: 02_05_holiday_analysis.py
+================================================================================
+
+[analysis] Week 2 / Step 5
+[analysis] Public-holiday effect
+
+===========================================================================
+TRAINING DATA
+===========================================================================
+N: 1095
+Date range: 2022-01-02 -> 2024-12-31
+Public-holiday days: 44
+Non-holiday days: 1051
+===========================================================================
+
+=====================================================================================
+HOLIDAY VS NON-HOLIDAY
+=====================================================================================
+holiday_group  count  mean  median   std  variance  minimum  maximum  dispersion_ratio
+      holiday     44 3.977     4.0 2.236     4.999        0       11             1.257
+   nonholiday   1051 9.069     9.0 3.929    15.434        0       25             1.702
+
+Non-holiday mean:      9.0695
+Holiday mean:          3.9773
+Difference:            5.0922
+Holiday reduction:     56.15%
+Cohen's d:             1.3138
+=====================================================================================
+
+====================================================================================================
+HOLIDAY EFFECT WITHIN EACH WEEKDAY
+====================================================================================================
+ day_of_week weekday_name  nonholiday_count  holiday_count  nonholiday_mean  holiday_mean  mean_difference  holiday_reduction_pct
+           1       Monday               148              9           10.858         3.333            7.525                 69.301
+           2      Tuesday               152              5            9.724         3.400            6.324                 65.034
+           3    Wednesday               151              5           10.199         4.000            6.199                 60.779
+           4     Thursday               150              6           10.133         3.167            6.967                 68.750
+           5       Friday               147              9           10.823         5.333            5.490                 50.723
+           6     Saturday               154              2            6.526         3.000            3.526                 54.030
+           7       Sunday               149              8            5.309         4.375            0.934                 17.588
+====================================================================================================
+
+==========================================================================================
+INCREMENTAL VALUE OF HOLIDAY AFTER WEEKDAY
+==========================================================================================
+               model          sse  r_squared  adjusted_r_squared
+        weekday_only 13361.981586   0.237155            0.232949
+weekday_plus_holiday 12153.374734   0.306156            0.301687
+
+Delta R^2 from adding holiday: 0.069000
+Delta adjusted R^2:             0.068739
+==========================================================================================
+
+==========================================================================================
+STRATIFIED HOLIDAY PERMUTATION TEST
+==========================================================================================
+H0: holiday status adds no information after weekday is known.
+Holiday labels are shuffled within weekday only.
+
+Observed Delta R^2:           0.069000
+Mean permuted Delta R^2:      0.000723
+Std permuted Delta R^2:       0.001024
+95% permutation percentile:   0.002785
+99% permutation percentile:   0.004775
+Permutations >= observed:     0
+Number of permutations:       10000
+Permutation p-value:          0.00009999
+==========================================================================================
+
+[analysis] Saved:
+           results\holiday_claim_statistics.csv
+           results\holiday_effect_summary.csv
+           results\holiday_by_weekday_statistics.csv
+           results\holiday_incremental_model_comparison.csv
+           results\holiday_stratified_permutation_test.csv
+[analysis] Plot saved: results\holiday_mean_claim_count.png
+[analysis] Plot saved: results\holiday_by_weekday_mean_claim_count.png
+
+--------------------------------------------------------------------------------
+02_05_holiday_analysis.py: SUCCESS
+Return code: 0
+Runtime: 9.99 seconds
+--------------------------------------------------------------------------------
+
+================================================================================
+RUNNING 6/12: 02_06_exposure_analysis.py
+================================================================================
+
+[analysis] Week 2 / Step 6
+[analysis] Active-policy exposure analysis
+[analysis] Exposure column: active_policy_count_t
+
+================================================================================
+EXPOSURE DATA CHECK
+================================================================================
+Training observations: 1095
+Date range: 2022-01-02 -> 2024-12-31
+Missing exposure:       0
+Missing target:         0
+Non-positive exposure:  0
+
+Exposure minimum: 89,534.00
+Exposure maximum: 138,183.00
+Exposure mean:    104,534.44
+Exposure std:     11,850.24
+================================================================================
+
+========================================================================================================================
+YEARLY EXPOSURE AND CLAIM STATISTICS
+========================================================================================================================
+ year  count  mean_claim_count  variance_claim_count  mean_active_policy_count  min_active_policy_count  max_active_policy_count  mean_claim_rate_per_100k  claim_dispersion_ratio  policy_count_change_pct  claim_count_change_pct  claim_rate_change_pct
+ 2022    364            8.0824               12.9629                94217.0192                    89534                    96139                    8.5823                  1.6038                      NaN                     NaN                    NaN
+ 2023    365            8.8301               15.9436               100592.8822                    96144                   106843                    8.7708                  1.8056                   6.7672                  9.2512                 2.1955
+ 2024    366            9.6776               17.9232               118726.2623                   106893                   138183                    8.1402                  1.8520                  18.0265                  9.5973                -7.1896
+========================================================================================================================
+
+==========================================================================================
+EXPOSURE-TARGET CORRELATION
+==========================================================================================
+
+RAW PEARSON CALCULATION
+
+N:                     1095
+Mean exposure:         104534.437443
+Mean target:           8.864840
+Numerator:             10822419.741553
+Sum squared exposure:  153628433759.464874
+Sum squared target:    17515.996347
+Denominator:           51874416.474126
+Pearson r:             0.208627
+
+SPEARMAN
+Spearman rho:          0.179008
+Spearman p-value:      2.44640166733e-09
+
+PEARSON AFTER REMOVING WEEKDAY + HOLIDAY + LINEAR TIME
+Residual Pearson r:    0.105720
+==========================================================================================
+
+=========================================================================================================
+INCREMENTAL VALUE OF ACTIVE-POLICY EXPOSURE
+=========================================================================================================
+                           model          sse  r_squared  adjusted_r_squared  exposure_beta_per_1sd
+                   exposure_only 16753.606429   0.043525            0.042650               0.834795
+                   calendar_only 12153.374734   0.306156            0.301687                    NaN
+          calendar_plus_exposure 11335.509390   0.352848            0.348081               0.864953
+              calendar_plus_time 11463.139213   0.345562            0.340741                    NaN
+calendar_plus_time_plus_exposure 11335.018680   0.352876            0.347508               0.917644
+
+Training exposure mean: 104,534.4374
+Training exposure std:  11,850.2398
+
+Delta R^2 from adding exposure after weekday + holiday:
+    0.046692
+
+Delta R^2 from adding exposure after weekday + holiday + time trend:
+    0.007314
+
+The exposure beta is expressed per +1 training standard deviation of exposure.
+=========================================================================================================
+
+[analysis] Saved:
+           results\exposure_training_data.csv
+           results\exposure_yearly_statistics.csv
+           results\exposure_correlation_statistics.csv
+           results\exposure_model_comparison.csv
+[analysis] Plot saved: results\exposure_vs_target_scatter.png
+[analysis] Plot saved: results\exposure_time_series.png
+[analysis] Plot saved: results\exposure_claim_rate_by_year.png
+
+[analysis] Week 2 / Step 6 completed.
+
+--------------------------------------------------------------------------------
+02_06_exposure_analysis.py: SUCCESS
+Return code: 0
+Runtime: 10.38 seconds
+--------------------------------------------------------------------------------
+
+================================================================================
+RUNNING 7/12: 02_07_lagged_claim_relevance.py
+================================================================================
+
+[analysis] Week 2 / Step 7
+[analysis] Lagged predictive relevance
+[analysis] current claim column: property_damage_claim_count_t
+[analysis] exposure column: active_policy_count_t
+
+================================================================================
+TRAINING DATA
+================================================================================
+N: 1095
+Date range: 2022-01-02 -> 2024-12-31
+Target column: target_property_damage_claim_count
+Current claim column: property_damage_claim_count_t
+Exposure column: active_policy_count_t
+================================================================================
+[analysis] Analyzing lag  1 / 28
+[analysis] Analyzing lag  2 / 28
+[analysis] Analyzing lag  3 / 28
+[analysis] Analyzing lag  4 / 28
+[analysis] Analyzing lag  5 / 28
+[analysis] Analyzing lag  6 / 28
+[analysis] Analyzing lag  7 / 28
+[analysis] Analyzing lag  8 / 28
+[analysis] Analyzing lag  9 / 28
+[analysis] Analyzing lag 10 / 28
+[analysis] Analyzing lag 11 / 28
+[analysis] Analyzing lag 12 / 28
+[analysis] Analyzing lag 13 / 28
+[analysis] Analyzing lag 14 / 28
+[analysis] Analyzing lag 15 / 28
+[analysis] Analyzing lag 16 / 28
+[analysis] Analyzing lag 17 / 28
+[analysis] Analyzing lag 18 / 28
+[analysis] Analyzing lag 19 / 28
+[analysis] Analyzing lag 20 / 28
+[analysis] Analyzing lag 21 / 28
+[analysis] Analyzing lag 22 / 28
+[analysis] Analyzing lag 23 / 28
+[analysis] Analyzing lag 24 / 28
+[analysis] Analyzing lag 25 / 28
+[analysis] Analyzing lag 26 / 28
+[analysis] Analyzing lag 27 / 28
+[analysis] Analyzing lag 28 / 28
+
+=========================================================================================================
+LAGGED CLAIM RELEVANCE
+=========================================================================================================
+ lag  n_pairs  pearson_r  spearman_r  delta_r2_lag_vs_baseline  delta_r2_current_vs_baseline  delta_r2_lag_after_current  delta_r2_lag_after_current_and_time
+   1     1095   0.098807    0.098004                  0.000178                      0.000178                         NaN                                  NaN
+   2     1094   0.011011   -0.002677                  0.006825                      0.000167                    0.006765                             0.006759
+   3     1093   0.003232   -0.026349                  0.000281                      0.000160                    0.000251                             0.000249
+   4     1092  -0.019057   -0.036690                  0.000083                      0.000129                    0.000077                             0.000076
+   5     1091  -0.026004   -0.036263                  0.001704                      0.000083                    0.001701                             0.001699
+   6     1090   0.081134    0.081302                  0.000304                      0.000086                    0.000295                             0.000292
+   7     1089   0.308081    0.325414                  0.000779                      0.000065                    0.000779                             0.000770
+   8     1088   0.097052    0.099236                  0.000151                      0.000059                    0.000146                             0.000140
+   9     1087  -0.045173   -0.057492                  0.000004                      0.000063                    0.000003                             0.000002
+  10     1086  -0.056925   -0.075299                  0.001742                      0.000057                    0.001743                             0.001764
+  11     1085  -0.038068   -0.043396                  0.000904                      0.000048                    0.000885                             0.000898
+  12     1084  -0.049632   -0.060528                  0.000049                      0.000042                    0.000051                             0.000049
+  13     1083   0.102090    0.097571                  0.000724                      0.000042                    0.000723                             0.000715
+  14     1082   0.304147    0.304660                  0.000645                      0.000042                    0.000633                             0.000626
+  15     1081   0.111942    0.117708                  0.001556                      0.000041                    0.001544                             0.001534
+  16     1080  -0.054931   -0.061285                  0.000009                      0.000050                    0.000011                             0.000012
+  17     1079  -0.021753   -0.042516                  0.000083                      0.000048                    0.000081                             0.000084
+  18     1078  -0.037731   -0.041905                  0.000004                      0.000046                    0.000005                             0.000004
+  19     1077  -0.075819   -0.074107                  0.000261                      0.000042                    0.000257                             0.000264
+  20     1076   0.093057    0.098724                  0.000634                      0.000045                    0.000646                             0.000636
+  21     1075   0.261945    0.280142                  0.000603                      0.000025                    0.000609                             0.000616
+  22     1074   0.127951    0.150900                  0.002190                      0.000017                    0.002204                             0.002193
+  23     1073  -0.057867   -0.060242                  0.000205                      0.000017                    0.000213                             0.000218
+  24     1072  -0.024849   -0.053761                  0.000008                      0.000018                    0.000009                             0.000008
+  25     1071  -0.014106   -0.044420                  0.000186                      0.000026                    0.000188                             0.000184
+  26     1070  -0.059160   -0.063739                  0.000095                      0.000026                    0.000094                             0.000092
+  27     1069   0.064833    0.076342                  0.000020                      0.000026                    0.000019                             0.000020
+  28     1068   0.294818    0.311231                  0.000921                      0.000027                    0.000925                             0.000921
+=========================================================================================================
+
+==============================================================================================================
+IMPORTANT TEMPORAL LAGS
+==============================================================================================================
+ lag  n_pairs  pearson_r  spearman_r  delta_r2_lag_vs_baseline  delta_r2_lag_after_current  delta_r2_lag_after_current_and_time
+   1     1095   0.098807    0.098004                  0.000178                         NaN                                  NaN
+   2     1094   0.011011   -0.002677                  0.006825                    0.006765                             0.006759
+   3     1093   0.003232   -0.026349                  0.000281                    0.000251                             0.000249
+   7     1089   0.308081    0.325414                  0.000779                    0.000779                             0.000770
+  14     1082   0.304147    0.304660                  0.000645                    0.000633                             0.000626
+  21     1075   0.261945    0.280142                  0.000603                    0.000609                             0.000616
+  28     1068   0.294818    0.311231                  0.000921                    0.000925                             0.000921
+==============================================================================================================
+
+====================================================================================================
+TOP 10 LAGS AFTER CURRENT CLAIM + CALENDAR + HOLIDAY + EXPOSURE
+====================================================================================================
+ lag  pearson_r  delta_r2_lag_after_current  delta_r2_lag_after_current_and_time
+   2   0.011011                    0.006765                             0.006759
+  22   0.127951                    0.002204                             0.002193
+  10  -0.056925                    0.001743                             0.001764
+   5  -0.026004                    0.001701                             0.001699
+  15   0.111942                    0.001544                             0.001534
+  28   0.294818                    0.000925                             0.000921
+  11  -0.038068                    0.000885                             0.000898
+   7   0.308081                    0.000779                             0.000770
+  13   0.102090                    0.000723                             0.000715
+  20   0.093057                    0.000646                             0.000636
+====================================================================================================
+
+[analysis] Saved:
+           results\lagged_claim_relevance.csv
+           results\lagged_claim_key_lags.csv
+[analysis] Plot saved: results\lagged_claim_correlation.png
+[analysis] Plot saved: results\lagged_claim_incremental_r2.png
+[analysis] Plot saved: results\lagged_claim_incremental_r2_after_current.png
+
+[analysis] Week 2 / Step 7 completed.
+
+--------------------------------------------------------------------------------
+02_07_lagged_claim_relevance.py: SUCCESS
+Return code: 0
+Runtime: 10.20 seconds
+--------------------------------------------------------------------------------
+
+================================================================================
+RUNNING 8/12: 02_08_exposure_analysis.py
+================================================================================
+===========================================================================
+WEEK 2 - STEP 8: EXPOSURE ANALYSIS
+===========================================================================
+
+Number of samples: 1692
+Date range: 2022-01-02 to 2026-08-20
+
+Split counts:
+split
+test           232
+train         1095
+validation     365
+Name: count, dtype: int64
+
+===========================================================================
+ACTIVE POLICY COUNT
+===========================================================================
+count      1692.000000
+mean     127310.094563
+std       34580.651757
+min       89534.000000
+25%       97084.750000
+50%      112137.000000
+75%      155071.250000
+max      221773.000000
+Name: active_policy_count_t, dtype: float64
+
+===========================================================================
+DAILY CLAIM RATE PER 100,000 ACTIVE POLICIES
+===========================================================================
+count    1692.000000
+mean        8.333995
+std         3.599556
+min         0.000000
+25%         5.742716
+50%         8.127077
+75%        10.489342
+max        23.116043
+Name: claim_rate_per_100k, dtype: float64
+
+===========================================================================
+YEARLY EXPOSURE-ADJUSTED CLAIM RATES
+===========================================================================
+ year  n_days  total_claims  mean_active_policies  claims_per_100k_policy_days
+ 2022     364          2942          94217.019231                     8.578511
+ 2023     365          3223         100592.882192                     8.778093
+ 2024     366          3542         118726.262295                     8.151184
+ 2025     365          4647         155329.794521                     8.196436
+ 2026     232          3455         190724.551724                     7.808246
+
+===========================================================================
+RAW ASSOCIATION
+===========================================================================
+Pearson r   = 0.484938
+Spearman rho = 0.440008
+
+===========================================================================
+MODEL COMPARISON
+===========================================================================
+                model  r_squared  adjusted_r_squared         aic         bic  n_parameters
+        Exposure only   0.235165            0.234712 9915.162969 9926.030302             2
+             Calendar   0.238049            0.234882 9920.770478 9964.239810             8
+       Calendar + P_t   0.471143            0.468629 9304.911583 9353.814582             9
+      Calendar + time   0.447830            0.445205 9377.902018 9426.805017             9
+Calendar + time + P_t   0.471196            0.468366 9306.744424 9361.081089            10
+
+===========================================================================
+INCREMENTAL VALUE OF P_t
+===========================================================================
+Delta R^2: Calendar -> Calendar + P_t = 0.233094
+Delta R^2: Calendar + time -> Calendar + time + P_t = 0.023366
+
+===========================================================================
+PARTIAL / RESIDUAL ASSOCIATION
+===========================================================================
+After removing weekday + holiday + linear time:
+Residual Pearson r   = 0.205708
+Residual Spearman rho = 0.222536
+
+===========================================================================
+P_t COEFFICIENT IN FULL MODEL
+===========================================================================
+Coefficient = 2.392778
+p-value     = 1.50653e-17
+
+Saved:
+ results/02_08_yearly_exposure_rates.csv
+ results/02_08_exposure_model_comparison.csv
+ results/02_08_exposure_summary.csv
+ results/02_08_exposure_vs_claims.png
+ results/02_08_exposure_over_time.png
+ results/02_08_exposure_residuals.png
+
+Step 8 analysis finished.
+
+--------------------------------------------------------------------------------
+02_08_exposure_analysis.py: SUCCESS
+Return code: 0
+Runtime: 8.46 seconds
+--------------------------------------------------------------------------------
+
+================================================================================
+RUNNING 9/12: 02_09_nonlinear_relevance.py
+================================================================================
+==============================================================================
+WEEK 2 - STEP 9: NONLINEAR FEATURE RELEVANCE
+==============================================================================
+
+Training samples: 1095
+Training period: 2022-01-02 to 2024-12-31
+
+==============================================================================
+NONLINEAR RELEVANCE RESULTS
+==============================================================================
+feature   pearson  spearman  mutual_information  permutation_mean  permutation_95pct  mi_above_baseline  permutation_pvalue
+  D_t+1 -0.376813 -0.401574            0.116529          0.008546           0.031854           0.107983            0.001996
+    C_t  0.098807  0.098004            0.048234          0.008788           0.037741           0.039446            0.021956
+  H_t+1 -0.250039 -0.255617            0.040102          0.002136           0.009632           0.037966            0.001996
+    P_t  0.208627  0.179008            0.022876          0.008290           0.037979           0.014587            0.153693
+
+==============================================================================
+PERMUTATION TEST
+==============================================================================
+D_t+1 : MI = 0.116529, 95% random threshold = 0.031854, above threshold = YES, p = 0.001996
+C_t   : MI = 0.048234, 95% random threshold = 0.037741, above threshold = YES, p = 0.021956
+H_t+1 : MI = 0.040102, 95% random threshold = 0.009632, above threshold = YES, p = 0.001996
+P_t   : MI = 0.022876, 95% random threshold = 0.037979, above threshold = NO, p = 0.153693
+
+Saved:
+ results/02_09_nonlinear_relevance.csv
+ results/02_09_mutual_information.png
+ results/02_09_correlation_vs_mi.png
+
+Step 9 analysis finished.
+
+--------------------------------------------------------------------------------
+02_09_nonlinear_relevance.py: SUCCESS
+Return code: 0
+Runtime: 33.36 seconds
+--------------------------------------------------------------------------------
+
+================================================================================
+RUNNING 10/12: 02_10_feature_redundancy.py
+================================================================================
+==============================================================================
+WEEK 2 - STEP 10: FEATURE REDUNDANCY
+==============================================================================
+
+Training samples: 1095
+Training period: 2022-01-02 to 2024-12-31
+
+==============================================================================
+PEARSON FEATURE-FEATURE CORRELATION
+==============================================================================
+            C_t       P_t     D_t+1     H_t+1
+C_t    1.000000  0.214526  0.071507 -0.052185
+P_t    0.214526  1.000000 -0.000726  0.026673
+D_t+1  0.071507 -0.000726  1.000000 -0.011426
+H_t+1 -0.052185  0.026673 -0.011426  1.000000
+
+==============================================================================
+SPEARMAN FEATURE-FEATURE CORRELATION
+==============================================================================
+            C_t       P_t     D_t+1     H_t+1
+C_t    1.000000  0.183767  0.071093 -0.060846
+P_t    0.183767  1.000000  0.000011  0.022560
+D_t+1  0.071093  0.000011  1.000000 -0.011445
+H_t+1 -0.060846  0.022560 -0.011445  1.000000
+
+==============================================================================
+PAIRWISE REDUNDANCY RANKING
+==============================================================================
+feature_1 feature_2   pearson  abs_pearson  spearman  abs_spearman
+      C_t       P_t  0.214526     0.214526  0.183767      0.183767
+      C_t     D_t+1  0.071507     0.071507  0.071093      0.071093
+      C_t     H_t+1 -0.052185     0.052185 -0.060846      0.060846
+      P_t     H_t+1  0.026673     0.026673  0.022560      0.022560
+    D_t+1     H_t+1 -0.011426     0.011426 -0.011445      0.011445
+      P_t     D_t+1 -0.000726     0.000726  0.000011      0.000011
+
+==============================================================================
+DAY-OF-WEEK / HOLIDAY CONTINGENCY TABLE
+==============================================================================
+is_public_holiday_t_plus_1    0  1
+day_of_week_t_plus_1              
+1                           148  9
+2                           152  5
+3                           151  5
+4                           150  6
+5                           147  9
+6                           154  2
+7                           149  8
+
+Cramer's V (D_t+1 vs H_t+1) = 0.077042
+
+==============================================================================
+VARIANCE INFLATION FACTORS
+==============================================================================
+variable      vif redundancy
+     D_6 2.006144        LOW
+     D_2 1.999381        LOW
+     D_4 1.949743        LOW
+     D_5 1.936173        LOW
+     D_3 1.907954        LOW
+     D_7 1.728406        LOW
+     C_t 1.400620        LOW
+     P_t 1.065788        LOW
+   H_t+1 1.008257        LOW
+
+==============================================================================
+REDUNDANCY SUMMARY
+==============================================================================
+                   metric    value
+ max_abs_pairwise_pearson 0.214526
+max_abs_pairwise_spearman 0.183767
+         cramers_v_D_vs_H 0.077042
+                  vif_C_t 1.400620
+                  vif_P_t 1.065788
+                vif_H_t+1 1.008257
+    max_weekday_dummy_vif 2.006144
+
+Saved:
+ results/02_10_feature_pearson_correlation.csv
+ results/02_10_feature_spearman_correlation.csv
+ results/02_10_pairwise_redundancy.csv
+ results/02_10_dow_holiday_contingency.csv
+ results/02_10_vif.csv
+ results/02_10_redundancy_summary.csv
+ results/02_10_feature_redundancy.png
+
+Step 10 analysis finished.
+
+--------------------------------------------------------------------------------
+02_10_feature_redundancy.py: SUCCESS
+Return code: 0
+Runtime: 6.11 seconds
+--------------------------------------------------------------------------------
+
+================================================================================
+RUNNING 11/12: 02_11_regime_sensitivity.py
+================================================================================
+==============================================================================
+WEEK 2 - STEP 11: REGIME / STRUCTURAL-STABILITY SENSITIVITY
+==============================================================================
+
+Training samples: 1095
+Training period: 2022-01-02 to 2024-12-31
+
+Samples by year:
+year
+2022    364
+2023    365
+2024    366
+
+==============================================================================
+PEARSON CORRELATION BY REGIME
+==============================================================================
+regime     2022    2023    2024  EARLY_HALF  FULL_TRAIN  LATE_HALF
+feature                                                           
+C_t      0.0942  0.0630  0.0698      0.1011      0.0988     0.0503
+D_t+1   -0.4180 -0.3215 -0.4092     -0.3993     -0.3768    -0.3664
+H_t+1   -0.2390 -0.2681 -0.2548     -0.2314     -0.2500    -0.2778
+P_t      0.0078  0.1281  0.2133      0.0497      0.2086     0.1661
+
+==============================================================================
+SPEARMAN CORRELATION BY REGIME
+==============================================================================
+regime     2022    2023    2024  EARLY_HALF  FULL_TRAIN  LATE_HALF
+feature                                                           
+C_t      0.0939  0.0729  0.0646      0.1002      0.0980     0.0495
+D_t+1   -0.4411 -0.3607 -0.4214     -0.4262     -0.4016    -0.3907
+H_t+1   -0.2479 -0.2851 -0.2429     -0.2457     -0.2556    -0.2715
+P_t     -0.0245  0.1348  0.2094      0.0221      0.1790     0.1416
+
+==============================================================================
+MUTUAL INFORMATION BY REGIME
+==============================================================================
+regime       2022      2023      2024  EARLY_HALF  FULL_TRAIN  LATE_HALF
+feature                                                                 
+C_t      0.000000  0.000000  0.007346    0.000000    0.048234   0.014897
+D_t+1    0.211633  0.140149  0.079283    0.183055    0.116529   0.146051
+H_t+1    0.033663  0.058812  0.034527    0.033794    0.040102   0.057108
+P_t      0.000000  0.015112  0.057652    0.003079    0.022876   0.017333
+
+==============================================================================
+YEAR-TO-YEAR STABILITY SUMMARY
+==============================================================================
+feature  pearson_min  pearson_max  pearson_range  spearman_min  spearman_max  spearman_range   mi_min   mi_max  mi_range
+    C_t     0.062987     0.094187       0.031200      0.064624      0.093901        0.029276 0.000000 0.007346  0.007346
+  D_t+1    -0.417958    -0.321520       0.096438     -0.441090     -0.360733        0.080357 0.079283 0.211633  0.132351
+    P_t     0.007758     0.213324       0.205567     -0.024540      0.209393        0.233932 0.000000 0.057652  0.057652
+  H_t+1    -0.268075    -0.239008       0.029067     -0.285075     -0.242855        0.042220 0.033663 0.058812  0.025149
+
+==============================================================================
+PEARSON SIGN CONSISTENCY
+==============================================================================
+feature  positive_years  negative_years pearson_sign_consistency
+    C_t               3               0             POSITIVE_ALL
+  D_t+1               0               3             NEGATIVE_ALL
+    P_t               3               0             POSITIVE_ALL
+  H_t+1               0               3             NEGATIVE_ALL
+
+==============================================================================
+YEARLY TARGET / EXPOSURE DESCRIPTIVE STATISTICS
+==============================================================================
+ year  n_days  mean_claims  std_claims  mean_active_policies  std_active_policies
+ 2022     364       8.0824      3.6004            94217.0192            2170.7741
+ 2023     365       8.8301      3.9929           100592.8822            3247.3616
+ 2024     366       9.6776      4.2336           118726.2623            9057.8078
+
+Saved:
+ results/02_11_regime_feature_relevance.csv
+ results/02_11_regime_stability_summary.csv
+ results/02_11_regime_sign_consistency.csv
+ results/02_11_yearly_descriptive.csv
+
+Step 11 analysis finished.
+
+--------------------------------------------------------------------------------
+02_11_regime_sensitivity.py: SUCCESS
+Return code: 0
+Runtime: 6.35 seconds
+--------------------------------------------------------------------------------
+
+================================================================================
+RUNNING 12/12: 02_12_leakage_audit.py
+================================================================================
+==============================================================================
+WEEK 2 - STEP 12: LEAKAGE AND FEATURE-AVAILABILITY AUDIT
+==============================================================================
+
+Total samples: 1692
+Overall input-date range: 2022-01-01 to 2026-08-19
+Overall target-date range: 2022-01-02 to 2026-08-20
+
+==============================================================================
+CHRONOLOGICAL SPLIT AUDIT
+==============================================================================
+     split    n input_start  input_end target_start target_end
+      test  232  2025-12-31 2026-08-19   2026-01-01 2026-08-20
+     train 1095  2022-01-01 2024-12-30   2022-01-02 2024-12-31
+validation  365  2024-12-31 2025-12-30   2025-01-01 2025-12-31
+
+==============================================================================
+AUTOMATED LEAKAGE AUDIT
+==============================================================================
+                           check status                                                              details
+        One-day forecast horizon   PASS                       0 rows where target_date != input_date + 1 day
+               Unique input_date   PASS                                             0 duplicated input dates
+              Unique target_date   PASS                                            0 duplicated target dates
+      No missing required values   PASS                                  0 missing values in required fields
+         Daily sample continuity   PASS                                              0 non-daily transitions
+C_t / C_(t+1) temporal alignment   PASS                        0 mismatches among 1691 consecutive row pairs
+       D_t+1 matches target_date   PASS                  0 weekday mismatches assuming Monday=1,...,Sunday=7
+                 H_t+1 is binary   PASS                                              Observed values: [0, 1]
+       Claim counts non-negative   PASS                                  C_t negatives=0, target negatives=0
+                    P_t positive   PASS                               0 rows with active_policy_count_t <= 0
+           Expected split labels   PASS                            Observed: ['test', 'train', 'validation']
+    Chronological split ordering   PASS Requires max(train) < min(validation) <= max(validation) < min(test)
+    No target-date split overlap   PASS                           0 target dates assigned to multiple splits
+   No backward split transitions   PASS                                         0 backward split transitions
+
+==============================================================================
+FEATURE AVAILABILITY AT FORECAST ORIGIN t
+==============================================================================
+feature  source_time  known_at_forecast_time                                                                        reason
+    C_t            t                    True Current-day observed claim count; forecast is issued after day t is finalized
+  D_t+1 t+1 calendar                    True                      Target-day weekday is deterministic and known in advance
+    P_t            t                    True                          Active-policy exposure measured at forecast origin t
+  H_t+1 t+1 calendar                    True                        Public-holiday calendar is known before the target day
+  C_t+1          t+1                   False         This is the prediction target and must never enter the feature matrix
+
+==============================================================================
+OVERALL LEAKAGE-AUDIT RESULT
+==============================================================================
+PASS: all automated temporal and split checks passed.
+
+Saved:
+ results/02_12_leakage_audit.csv
+ results/02_12_split_audit.csv
+ results/02_12_feature_availability.csv
+ results/02_12_temporal_alignment_problems.csv
+
+Step 12 leakage audit finished.
+
+--------------------------------------------------------------------------------
+02_12_leakage_audit.py: SUCCESS
+Return code: 0
+Runtime: 3.31 seconds
+--------------------------------------------------------------------------------
+
+
+================================================================================
+WEEK 2 - FINAL EXECUTION SUMMARY
+================================================================================
+
+Finished: 2026-08-31 17:59:15
+Total runtime: 114.82 seconds
+
+Scripts discovered: 12
+Successful:         12
+Failed:             0
+
+SUCCESSFUL SCRIPTS:
+  PASS  02_01_target_sanity.py
+  PASS  02_02_target_visualization.py
+  PASS  02_03_autocorrelation.py
+  PASS  02_04_weekday_analysis.py
+  PASS  02_05_holiday_analysis.py
+  PASS  02_06_exposure_analysis.py
+  PASS  02_07_lagged_claim_relevance.py
+  PASS  02_08_exposure_analysis.py
+  PASS  02_09_nonlinear_relevance.py
+  PASS  02_10_feature_redundancy.py
+  PASS  02_11_regime_sensitivity.py
+  PASS  02_12_leakage_audit.py
+
+================================================================================
+OVERALL RESULT: PASS
+All Week 2 scripts completed successfully.
+================================================================================

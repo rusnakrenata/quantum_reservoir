@@ -3,10 +3,10 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 # Use environment variables if set, otherwise use defaults
-DB_USER     = os.getenv("DB_USER",     "trafficOpti")
+DB_USER     = os.getenv("DB_USER",     "qrc_user")
 DB_PASSWORD = os.getenv("DB_PASSWORD", "P4ssw0rd")
 DB_HOST     = os.getenv("DB_HOST",     "147.232.204.254")
-DB_NAME     = os.getenv("DB_NAME",     "trafficOverlap")
+DB_NAME     = os.getenv("DB_NAME",     "quantumReservoir")
 
 # pymysql is pure-Python (no C build needed); fallback to mysqldb if preferred
 DB_DRIVER = os.getenv("DB_DRIVER", "mysql+pymysql")
