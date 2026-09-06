@@ -1,0 +1,181 @@
+================================================================================
+WEEK 6 - STEP 6.2
+TEMPORAL MEMORY SEARCH
+CONT vs RWP W={1,2,5,7,14,21,28}
+================================================================================
+
+Loaded samples       = 1692
+Target column        = target_property_damage_claim_count
+
+Unitarity error      = 4.991e-15
+
+Precomputing exact daily superoperators...
+Precomputed maps  250/1692...
+Precomputed maps  500/1692...
+Precomputed maps  750/1692...
+Precomputed maps 1000/1692...
+Precomputed maps 1250/1692...
+Precomputed maps 1500/1692...
+Precomputed maps 1692/1692...
+
+Generating rewinding feature tables...
+  W= 1: rows=1692, split={'train': 1095, 'validation': 365, 'test': 232}, mean purity=0.999447
+  W= 2: rows=1691, split={'train': 1094, 'validation': 365, 'test': 232}, mean purity=0.996403
+  W= 5: rows=1688, split={'train': 1091, 'validation': 365, 'test': 232}, mean purity=0.985883
+  W= 7: rows=1686, split={'train': 1089, 'validation': 365, 'test': 232}, mean purity=0.979112
+  W=14: rows=1679, split={'train': 1082, 'validation': 365, 'test': 232}, mean purity=0.960155
+  W=21: rows=1672, split={'train': 1075, 'validation': 365, 'test': 232}, mean purity=0.938726
+  W=28: rows=1665, split={'train': 1068, 'validation': 365, 'test': 232}, mean purity=0.921222
+
+Superoperator vs direct density-matrix audits:
+Audit W= 1, target=2022-01-29: feature error=2.220e-16, purity error=0.000e+00
+Audit W= 2, target=2022-04-12: feature error=5.551e-16, purity error=2.220e-16
+Audit W= 5, target=2023-05-17: feature error=6.661e-16, purity error=8.882e-16
+Audit W= 7, target=2022-04-12: feature error=6.106e-16, purity error=6.661e-16
+Audit W= 7, target=2023-05-17: feature error=4.441e-16, purity error=7.772e-16
+Audit W=14, target=2023-05-17: feature error=7.216e-16, purity error=3.331e-16
+Audit W=21, target=2024-03-12: feature error=1.443e-15, purity error=6.661e-16
+Audit W=28, target=2023-05-17: feature error=6.106e-16, purity error=6.661e-16
+Audit W=28, target=2024-12-17: feature error=1.110e-15, purity error=4.441e-16
+
+Maximum feature error = 1.443e-15
+Maximum purity error  = 8.882e-16
+
+RWP W=7 vs validated Week-5 implementation:
+  maximum feature error = 1.665e-15
+
+================================================================================
+TEMPORAL SEARCH
+Each W uses maximum legitimate training history
+================================================================================
+
+CONT:
+  Train rows     = 1095
+  Validation     = 365
+  Test           = 232 (NOT evaluated)
+  lambda*        = 100
+  CV RMSE        = 3.633137 (+/- 0.315009)
+  rank           = 12
+  kappa(X)       = 1.020344e+01
+  rho(C)         = 2.345641
+  Val RMSE       = 5.325743
+  Val Bias       = -2.010041
+
+RWP_W1:
+  Train rows     = 1095
+  Validation     = 365
+  Test           = 232 (NOT evaluated)
+  lambda*        = 100
+  CV RMSE        = 3.626512 (+/- 0.322139)
+  rank           = 9
+  kappa(X)       = inf
+  rho(C)         = 4.073643
+  Val RMSE       = 5.297046
+  Val Bias       = -1.923576
+
+RWP_W2:
+  Train rows     = 1094
+  Validation     = 365
+  Test           = 232 (NOT evaluated)
+  lambda*        = 100
+  CV RMSE        = 3.634047 (+/- 0.327915)
+  rank           = 11
+  kappa(X)       = inf
+  rho(C)         = 4.557414
+  Val RMSE       = 5.309981
+  Val Bias       = -1.960629
+
+RWP_W5:
+  Train rows     = 1091
+  Validation     = 365
+  Test           = 232 (NOT evaluated)
+  lambda*        = 100
+  CV RMSE        = 3.626630 (+/- 0.357725)
+  rank           = 12
+  kappa(X)       = 1.768560e+01
+  rho(C)         = 3.505676
+  Val RMSE       = 5.327890
+  Val Bias       = -1.998600
+
+RWP_W7:
+  Train rows     = 1089
+  Validation     = 365
+  Test           = 232 (NOT evaluated)
+  lambda*        = 100
+  CV RMSE        = 3.633922 (+/- 0.357675)
+  rank           = 12
+  kappa(X)       = 1.068402e+01
+  rho(C)         = 3.156328
+  Val RMSE       = 5.308175
+  Val Bias       = -1.946622
+
+RWP_W14:
+  Train rows     = 1082
+  Validation     = 365
+  Test           = 232 (NOT evaluated)
+  lambda*        = 100
+  CV RMSE        = 3.648535 (+/- 0.333928)
+  rank           = 12
+  kappa(X)       = 1.399934e+01
+  rho(C)         = 2.430087
+  Val RMSE       = 5.330509
+  Val Bias       = -1.997701
+
+RWP_W21:
+  Train rows     = 1075
+  Validation     = 365
+  Test           = 232 (NOT evaluated)
+  lambda*        = 100
+  CV RMSE        = 3.650020 (+/- 0.287281)
+  rank           = 12
+  kappa(X)       = 1.170929e+01
+  rho(C)         = 2.828366
+  Val RMSE       = 5.332919
+  Val Bias       = -2.031619
+
+RWP_W28:
+  Train rows     = 1068
+  Validation     = 365
+  Test           = 232 (NOT evaluated)
+  lambda*        = 100
+  CV RMSE        = 3.661829 (+/- 0.289366)
+  rank           = 12
+  kappa(X)       = 1.114401e+01
+  rho(C)         = 2.477050
+  Val RMSE       = 5.344487
+  Val Bias       = -2.049866
+
+================================================================================
+TEMPORAL PROTOCOL RANKING
+PRIMARY RANKING = TRAINING-ONLY CV
+================================================================================
+
+ 1. RWP_W1   Ntrain=1095 CV=3.626512 (+/- 0.322139) lambda*=100      Val=5.297046
+ 2. RWP_W5   Ntrain=1091 CV=3.626630 (+/- 0.357725) lambda*=100      Val=5.327890
+ 3. CONT     Ntrain=1095 CV=3.633137 (+/- 0.315009) lambda*=100      Val=5.325743
+ 4. RWP_W7   Ntrain=1089 CV=3.633922 (+/- 0.357675) lambda*=100      Val=5.308175
+ 5. RWP_W2   Ntrain=1094 CV=3.634047 (+/- 0.327915) lambda*=100      Val=5.309981
+ 6. RWP_W14  Ntrain=1082 CV=3.648535 (+/- 0.333928) lambda*=100      Val=5.330509
+ 7. RWP_W21  Ntrain=1075 CV=3.650020 (+/- 0.287281) lambda*=100      Val=5.332919
+ 8. RWP_W28  Ntrain=1068 CV=3.661829 (+/- 0.289366) lambda*=100      Val=5.344487
+
+Best temporal protocol by training CV:
+  RWP_W1
+
+IMPORTANT:
+  Each W used all legitimate training samples available for that W.
+  Validation contains all 365 days for every protocol.
+  Historical inputs before the validation boundary are allowed.
+  2025 validation is diagnostic only.
+  2026 test set remains untouched.
+
+Saved all RWP features to:
+  results\06_02_all_rwp_features.csv
+Saved CV results to:
+  results\06_02_temporal_cv_results.csv
+Saved temporal results to:
+  results\06_02_temporal_validation_results.csv
+Saved feature geometry to:
+  results\06_02_temporal_geometry.csv
+Saved purity diagnostics to:
+  results\06_02_temporal_purity.csv

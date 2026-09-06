@@ -1,0 +1,124 @@
+========================================================================
+WEEK 5 - STEP 5.2A
+MINIMAL IDEAL-QRC CORRECTNESS TEST
+========================================================================
+
+Logical architecture:
+  q0 = injection qubit
+  q1 = memory qubit
+  q2 = memory qubit
+
+Fixed test parameters:
+  theta_input = 0.6
+  J01         = 0.7
+  J12         = -0.4
+  h_x         = 0.5
+  h_y         = 0.3
+  Delta_t     = 0.8
+
+Input-preparation circuit:
+     ┌─────────┐
+q_0: ┤ Ry(0.6) ├
+     └─────────┘
+q_1: ───────────
+                
+q_2: ───────────
+                
+
+Expected injection amplitudes:
+  cos(theta/2) = 0.955336489126
+  sin(theta/2) = 0.295520206661
+
+Initial global state:
+  dimension             = (8, 8)
+  trace                 = (1+0j)
+  Hermiticity error     = 0.000000000000e+00
+  minimum eigenvalue    = 0.000000000000e+00
+  purity                = 1.000000000000
+
+Initial memory state:
+  dimension             = (4, 4)
+  trace                 = (1+0j)
+  Hermiticity error     = 0.000000000000e+00
+  minimum eigenvalue    = 0.000000000000e+00
+  purity                = 1.000000000000
+
+Initial memory density matrix:
+[[1.+0.j 0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j 0.+0.j]]
+
+========================================================================
+HAMILTONIAN VARIANT: baseline ZZ + X
+========================================================================
+
+Hamiltonian:
+SparsePauliOp(['IZZ', 'ZZI', 'IIX', 'IXI', 'XII'],
+              coeffs=[ 0.7+0.j, -0.4+0.j,  0.5+0.j,  0.5+0.j,  0.5+0.j])
+
+Hamiltonian / exact-unitary checks:
+  ||H - H^dagger||_F       = 0.000000000000e+00
+  ||U^dagger U - I||_F     = 5.328309934176e-16
+
+Exact global state after reservoir evolution:
+  dimension             = (8, 8)
+  trace                 = (1-2.692858613501662e-17j)
+  Hermiticity error     = 8.635160599448e-17
+  minimum eigenvalue    = -2.826551604886e-17
+  purity                = 1.000000000000
+
+Exact reduced MEMORY state Tr_input(rho):
+  dimension             = (4, 4)
+  trace                 = (1-2.6928586135016617e-17j)
+  Hermiticity error     = 4.815269742727e-17
+  minimum eigenvalue    = -3.177036351822e-18
+  purity                = 0.973134189265
+
+Interpretation of memory purity:
+  purity = 1   -> pure memory state
+  purity < 1   -> memory is mixed after tracing out input
+
+Trotter convergence:
+r    ||U_exact-U_trot||_F    global fidelity    memory fidelity
+1    9.104251997646e-01       0.932592661040     0.967340407415
+2    4.336827349993e-01       0.983458280070     0.991074155662
+4    2.142845144478e-01       0.995884547410     0.997672602412
+8    1.068269410387e-01       0.998971807655     0.999406193372
+
+========================================================================
+HAMILTONIAN VARIANT: extended ZZ + X + Y_memory
+========================================================================
+
+Hamiltonian:
+SparsePauliOp(['IZZ', 'ZZI', 'IIX', 'IXI', 'XII', 'IYI', 'YII'],
+              coeffs=[ 0.7+0.j, -0.4+0.j,  0.5+0.j,  0.5+0.j,  0.5+0.j,  0.3+0.j,  0.3+0.j])
+
+Hamiltonian / exact-unitary checks:
+  ||H - H^dagger||_F       = 0.000000000000e+00
+  ||U^dagger U - I||_F     = 6.749462488873e-16
+
+Exact global state after reservoir evolution:
+  dimension             = (8, 8)
+  trace                 = (1+1.3873398589807513e-17j)
+  Hermiticity error     = 1.361046105194e-16
+  minimum eigenvalue    = -7.218000857636e-17
+  purity                = 1.000000000000
+
+Exact reduced MEMORY state Tr_input(rho):
+  dimension             = (4, 4)
+  trace                 = (1+1.3873398589807516e-17j)
+  Hermiticity error     = 1.243136912854e-16
+  minimum eigenvalue    = -7.848713292974e-18
+  purity                = 0.965068131005
+
+Interpretation of memory purity:
+  purity = 1   -> pure memory state
+  purity < 1   -> memory is mixed after tracing out input
+
+Trotter convergence:
+r    ||U_exact-U_trot||_F    global fidelity    memory fidelity
+1    1.044607589489e+00       0.921298376056     0.956284106550
+2    5.021981383178e-01       0.980549992553     0.987882129240
+4    2.486115763171e-01       0.995154894927     0.996847199680
+8    1.239957980732e-01       0.998789489448     0.999197865133

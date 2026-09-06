@@ -1,0 +1,457 @@
+================================================================================
+WEEK 6 - STEP 6.6B
+TROTTER-DEPTH ROBUSTNESS ACROSS F2 / F3 / F4
+TASK PERFORMANCE vs PHYSICS ACCURACY vs RESOURCE COST
+================================================================================
+
+Frozen dynamics:
+  alpha = 0.005
+  J multiplier = 1.0
+  hx = 0.5
+  dt = 0.8
+  memory qubits = 2
+  six-qubit topology retained for F2/F3/F4
+
+Exact-unitary unitarity error = 3.679e-15
+
+Trotter approximation / logical cost:
+  r1   FroErr=3.637440e-01 Favg=0.8740349494 RZZ=  5 ~CX= 10
+  r2   FroErr=1.761315e-01 Favg=0.9696918709 RZZ= 10 ~CX= 20
+  r4   FroErr=8.735992e-02 Favg=0.9924999922 RZZ= 20 ~CX= 40
+  r8   FroErr=4.359216e-02 Favg=0.9981298474 RZZ= 40 ~CX= 80
+  r16  FroErr=2.178512e-02 Favg=0.9995327654 RZZ= 80 ~CX=160
+  EXACT FroErr=0 Favg=1
+
+################################################################################
+FEATURE SET = F2
+################################################################################
+
+================================================================================
+F2 | EVOLUTION = r1
+================================================================================
+Unitarity error = 8.091e-15
+Direct audit feature error = 4.445e-16
+Direct audit memory error  = 2.806e-16
+F2_r1_CONT                 CV=3.831446 (+/- 0.457543) lambda=100      rank=10/12 Val=6.168397
+F2_r1_RWP_W1               CV=3.817208 (+/- 0.474252) lambda=100      rank= 8/12 Val=6.181169
+F2_r1_RWP_W2               CV=3.817174 (+/- 0.472478) lambda=100      rank= 6/12 Val=6.180988
+F2_r1_RWP_W5               CV=3.824168 (+/- 0.464369) lambda=100      rank= 6/12 Val=6.181097
+F2_r1_RWP_W7               CV=3.836638 (+/- 0.452134) lambda=100      rank= 6/12 Val=6.176406
+F2_r1_RWP_W14              CV=3.832232 (+/- 0.467060) lambda=100      rank= 6/12 Val=6.190183
+F2_r1_RWP_W21              CV=3.846143 (+/- 0.463787) lambda=100      rank= 6/12 Val=6.194031
+F2_r1_RWP_W28              CV=3.853683 (+/- 0.470419) lambda=300      rank= 6/12 Val=6.214896
+
+================================================================================
+F2 | EVOLUTION = r2
+================================================================================
+Unitarity error = 4.991e-15
+Direct audit feature error = 3.364e-16
+Direct audit memory error  = 1.668e-16
+F2_r2_CONT                 CV=3.813446 (+/- 0.454965) lambda=100      rank=11/12 Val=6.124884
+F2_r2_RWP_W1               CV=3.820471 (+/- 0.477846) lambda=100      rank= 5/12 Val=6.261310
+F2_r2_RWP_W2               CV=3.820685 (+/- 0.475569) lambda=100      rank= 5/12 Val=6.258285
+F2_r2_RWP_W5               CV=3.824379 (+/- 0.468452) lambda=100      rank= 5/12 Val=6.246839
+F2_r2_RWP_W7               CV=3.823840 (+/- 0.467226) lambda=100      rank= 5/12 Val=6.244928
+F2_r2_RWP_W14              CV=3.831198 (+/- 0.470561) lambda=100      rank= 5/12 Val=6.246742
+F2_r2_RWP_W21              CV=3.845813 (+/- 0.465533) lambda=100      rank= 5/12 Val=6.247473
+F2_r2_RWP_W28              CV=3.853381 (+/- 0.464238) lambda=100      rank= 5/12 Val=6.246481
+
+================================================================================
+F2 | EVOLUTION = r4
+================================================================================
+Unitarity error = 2.169e-14
+Direct audit feature error = 2.249e-16
+Direct audit memory error  = 1.686e-16
+F2_r4_CONT                 CV=3.805124 (+/- 0.453821) lambda=100      rank=12/12 Val=6.062873
+F2_r4_RWP_W1               CV=3.818026 (+/- 0.479736) lambda=100      rank= 9/12 Val=6.257725
+F2_r4_RWP_W2               CV=3.819982 (+/- 0.472067) lambda=100      rank=11/12 Val=6.248579
+F2_r4_RWP_W5               CV=3.821256 (+/- 0.468751) lambda=100      rank=12/12 Val=6.237809
+F2_r4_RWP_W7               CV=3.823874 (+/- 0.470928) lambda=300      rank=12/12 Val=6.253514
+F2_r4_RWP_W14              CV=3.833354 (+/- 0.473873) lambda=300      rank=12/12 Val=6.258761
+F2_r4_RWP_W21              CV=3.850730 (+/- 0.455953) lambda=100      rank=12/12 Val=6.234795
+F2_r4_RWP_W28              CV=3.858733 (+/- 0.465563) lambda=300      rank=12/12 Val=6.259971
+
+================================================================================
+F2 | EVOLUTION = r8
+================================================================================
+Unitarity error = 2.939e-14
+Direct audit feature error = 3.338e-16
+Direct audit memory error  = 1.241e-16
+F2_r8_CONT                 CV=3.803708 (+/- 0.447553) lambda=100      rank=12/12 Val=6.019490
+F2_r8_RWP_W1               CV=3.817747 (+/- 0.480040) lambda=100      rank=10/12 Val=6.257389
+F2_r8_RWP_W2               CV=3.819913 (+/- 0.472075) lambda=100      rank=11/12 Val=6.248186
+F2_r8_RWP_W5               CV=3.821161 (+/- 0.468992) lambda=100      rank=12/12 Val=6.238123
+F2_r8_RWP_W7               CV=3.823724 (+/- 0.471016) lambda=300      rank=12/12 Val=6.253261
+F2_r8_RWP_W14              CV=3.833104 (+/- 0.463372) lambda=100      rank=12/12 Val=6.233189
+F2_r8_RWP_W21              CV=3.850403 (+/- 0.456198) lambda=100      rank=12/12 Val=6.234461
+F2_r8_RWP_W28              CV=3.858219 (+/- 0.465725) lambda=300      rank=12/12 Val=6.259174
+
+================================================================================
+F2 | EVOLUTION = r16
+================================================================================
+Unitarity error = 3.237e-14
+Direct audit feature error = 4.448e-16
+Direct audit memory error  = 1.395e-16
+F2_r16_CONT                CV=3.802595 (+/- 0.443968) lambda=100      rank=12/12 Val=6.009143
+F2_r16_RWP_W1              CV=3.817734 (+/- 0.480096) lambda=100      rank=10/12 Val=6.257389
+F2_r16_RWP_W2              CV=3.819864 (+/- 0.472093) lambda=100      rank=11/12 Val=6.247994
+F2_r16_RWP_W5              CV=3.821112 (+/- 0.469092) lambda=100      rank=12/12 Val=6.238213
+F2_r16_RWP_W7              CV=3.823632 (+/- 0.471079) lambda=300      rank=12/12 Val=6.253132
+F2_r16_RWP_W14             CV=3.832797 (+/- 0.463708) lambda=100      rank=12/12 Val=6.233236
+F2_r16_RWP_W21             CV=3.850209 (+/- 0.456347) lambda=100      rank=12/12 Val=6.234300
+F2_r16_RWP_W28             CV=3.857918 (+/- 0.465818) lambda=300      rank=12/12 Val=6.258720
+
+================================================================================
+F2 | EVOLUTION = EXACT
+================================================================================
+Unitarity error = 3.679e-15
+Direct audit feature error = 4.445e-16
+Direct audit memory error  = 1.755e-16
+F2_EXACT_CONT              CV=3.801108 (+/- 0.440970) lambda=100      rank=12/12 Val=6.006826
+F2_EXACT_RWP_W1            CV=3.817701 (+/- 0.480162) lambda=100      rank=10/12 Val=6.257355
+F2_EXACT_RWP_W2            CV=3.819805 (+/- 0.472118) lambda=100      rank=11/12 Val=6.247800
+F2_EXACT_RWP_W5            CV=3.821059 (+/- 0.469182) lambda=100      rank=12/12 Val=6.238261
+F2_EXACT_RWP_W7            CV=3.823529 (+/- 0.471154) lambda=300      rank=12/12 Val=6.253001
+F2_EXACT_RWP_W14           CV=3.832463 (+/- 0.464077) lambda=100      rank=12/12 Val=6.233291
+F2_EXACT_RWP_W21           CV=3.849995 (+/- 0.456510) lambda=100      rank=12/12 Val=6.234136
+F2_EXACT_RWP_W28           CV=3.857601 (+/- 0.465920) lambda=300      rank=12/12 Val=6.258257
+
+################################################################################
+FEATURE SET = F3
+################################################################################
+
+================================================================================
+F3 | EVOLUTION = r1
+================================================================================
+Unitarity error = 8.091e-15
+Direct audit feature error = 3.044e-16
+Direct audit memory error  = 1.755e-16
+F3_r1_CONT                 CV=3.780370 (+/- 0.266417) lambda=100      rank=11/12 Val=5.229634
+F3_r1_RWP_W1               CV=3.759905 (+/- 0.274623) lambda=100      rank= 9/12 Val=5.228959
+F3_r1_RWP_W2               CV=3.764009 (+/- 0.275456) lambda=100      rank= 7/12 Val=5.234518
+F3_r1_RWP_W5               CV=3.762704 (+/- 0.293561) lambda=100      rank= 7/12 Val=5.245428
+F3_r1_RWP_W7               CV=3.780910 (+/- 0.294495) lambda=100      rank= 7/12 Val=5.256831
+F3_r1_RWP_W14              CV=3.768153 (+/- 0.296758) lambda=100      rank= 7/12 Val=5.248062
+F3_r1_RWP_W21              CV=3.784778 (+/- 0.289755) lambda=100      rank= 7/12 Val=5.246608
+F3_r1_RWP_W28              CV=3.782653 (+/- 0.293742) lambda=100      rank= 7/12 Val=5.243939
+
+================================================================================
+F3 | EVOLUTION = r2
+================================================================================
+Unitarity error = 4.991e-15
+Direct audit feature error = 4.492e-16
+Direct audit memory error  = 2.789e-16
+F3_r2_CONT                 CV=3.756393 (+/- 0.305142) lambda=1        rank=12/12 Val=5.218014
+F3_r2_RWP_W1               CV=3.760400 (+/- 0.289103) lambda=100      rank= 8/12 Val=5.243750
+F3_r2_RWP_W2               CV=3.760896 (+/- 0.290428) lambda=100      rank= 8/12 Val=5.246019
+F3_r2_RWP_W5               CV=3.761345 (+/- 0.307280) lambda=100      rank= 8/12 Val=5.253758
+F3_r2_RWP_W7               CV=3.764058 (+/- 0.312497) lambda=100      rank= 8/12 Val=5.258849
+F3_r2_RWP_W14              CV=3.763219 (+/- 0.312762) lambda=100      rank= 8/12 Val=5.253292
+F3_r2_RWP_W21              CV=3.779177 (+/- 0.301114) lambda=100      rank= 8/12 Val=5.247261
+F3_r2_RWP_W28              CV=3.783492 (+/- 0.299317) lambda=100      rank= 8/12 Val=5.246889
+
+================================================================================
+F3 | EVOLUTION = r4
+================================================================================
+Unitarity error = 2.169e-14
+Direct audit feature error = 2.309e-16
+Direct audit memory error  = 1.631e-16
+F3_r4_CONT                 CV=3.753934 (+/- 0.327773) lambda=1        rank=12/12 Val=5.235796
+F3_r4_RWP_W1               CV=3.777291 (+/- 0.268949) lambda=100      rank=11/12 Val=5.241240
+F3_r4_RWP_W2               CV=3.762740 (+/- 0.294884) lambda=100      rank=12/12 Val=5.261798
+F3_r4_RWP_W5               CV=3.769914 (+/- 0.305803) lambda=100      rank=12/12 Val=5.237657
+F3_r4_RWP_W7               CV=3.771276 (+/- 0.305348) lambda=300      rank=12/12 Val=5.230376
+F3_r4_RWP_W14              CV=3.784211 (+/- 0.285147) lambda=300      rank=12/12 Val=5.236385
+F3_r4_RWP_W21              CV=3.797873 (+/- 0.303141) lambda=300      rank=12/12 Val=5.231894
+F3_r4_RWP_W28              CV=3.804705 (+/- 0.296407) lambda=300      rank=12/12 Val=5.232640
+
+================================================================================
+F3 | EVOLUTION = r8
+================================================================================
+Unitarity error = 2.939e-14
+Direct audit feature error = 3.333e-16
+Direct audit memory error  = 1.667e-16
+F3_r8_CONT                 CV=3.757380 (+/- 0.330980) lambda=1        rank=12/12 Val=5.245680
+F3_r8_RWP_W1               CV=3.758594 (+/- 0.294463) lambda=100      rank=11/12 Val=5.273756
+F3_r8_RWP_W2               CV=3.760857 (+/- 0.293702) lambda=10       rank=12/12 Val=5.252429
+F3_r8_RWP_W5               CV=3.766493 (+/- 0.372278) lambda=100      rank=12/12 Val=5.277655
+F3_r8_RWP_W7               CV=3.755340 (+/- 0.318250) lambda=300      rank=12/12 Val=5.274047
+F3_r8_RWP_W14              CV=3.747768 (+/- 0.314279) lambda=300      rank=12/12 Val=5.237894
+F3_r8_RWP_W21              CV=3.764730 (+/- 0.326493) lambda=300      rank=12/12 Val=5.263610
+F3_r8_RWP_W28              CV=3.784632 (+/- 0.301500) lambda=300      rank=12/12 Val=5.242156
+
+================================================================================
+F3 | EVOLUTION = r16
+================================================================================
+Unitarity error = 3.237e-14
+Direct audit feature error = 2.408e-16
+Direct audit memory error  = 2.326e-16
+F3_r16_CONT                CV=3.760694 (+/- 0.333016) lambda=1        rank=12/12 Val=5.259457
+F3_r16_RWP_W1              CV=3.740891 (+/- 0.322672) lambda=100      rank=11/12 Val=5.309833
+F3_r16_RWP_W2              CV=3.756937 (+/- 0.308363) lambda=10       rank=12/12 Val=5.269758
+F3_r16_RWP_W5              CV=3.766089 (+/- 0.298966) lambda=10       rank=12/12 Val=5.209989
+F3_r16_RWP_W7              CV=3.750004 (+/- 0.322545) lambda=300      rank=12/12 Val=5.300375
+F3_r16_RWP_W14             CV=3.742226 (+/- 0.331372) lambda=300      rank=12/12 Val=5.270494
+F3_r16_RWP_W21             CV=3.763315 (+/- 0.338890) lambda=300      rank=12/12 Val=5.295832
+F3_r16_RWP_W28             CV=3.779791 (+/- 0.304138) lambda=300      rank=12/12 Val=5.255809
+
+================================================================================
+F3 | EVOLUTION = EXACT
+================================================================================
+Unitarity error = 3.679e-15
+Direct audit feature error = 3.349e-16
+Direct audit memory error  = 2.819e-16
+F3_EXACT_CONT              CV=3.763820 (+/- 0.335348) lambda=1        rank=12/12 Val=5.277089
+F3_EXACT_RWP_W1            CV=3.736489 (+/- 0.345184) lambda=100      rank=11/12 Val=5.369951
+F3_EXACT_RWP_W2            CV=3.756856 (+/- 0.320654) lambda=10       rank=12/12 Val=5.292833
+F3_EXACT_RWP_W5            CV=3.762116 (+/- 0.307947) lambda=10       rank=12/12 Val=5.217186
+F3_EXACT_RWP_W7            CV=3.744925 (+/- 0.327872) lambda=300      rank=12/12 Val=5.322597
+F3_EXACT_RWP_W14           CV=3.744755 (+/- 0.347407) lambda=300      rank=12/12 Val=5.322339
+F3_EXACT_RWP_W21           CV=3.764395 (+/- 0.319015) lambda=100      rank=12/12 Val=5.228398
+F3_EXACT_RWP_W28           CV=3.774709 (+/- 0.307770) lambda=300      rank=12/12 Val=5.271315
+
+################################################################################
+FEATURE SET = F4
+################################################################################
+
+================================================================================
+F4 | EVOLUTION = r1
+================================================================================
+Unitarity error = 8.091e-15
+Direct audit feature error = 3.044e-16
+Direct audit memory error  = 1.755e-16
+F4_r1_CONT                 CV=3.638925 (+/- 0.255884) lambda=100      rank=12/12 Val=5.111705
+F4_r1_RWP_W1               CV=3.611573 (+/- 0.279334) lambda=100      rank=10/12 Val=5.134901
+F4_r1_RWP_W2               CV=3.629979 (+/- 0.274052) lambda=100      rank= 8/12 Val=5.164993
+F4_r1_RWP_W5               CV=3.632220 (+/- 0.309783) lambda=100      rank=12/12 Val=5.174964
+F4_r1_RWP_W7               CV=3.641711 (+/- 0.304709) lambda=100      rank=12/12 Val=5.178100
+F4_r1_RWP_W14              CV=3.673331 (+/- 0.261954) lambda=100      rank=12/12 Val=5.168510
+F4_r1_RWP_W21              CV=3.664275 (+/- 0.255829) lambda=100      rank=12/12 Val=5.169944
+F4_r1_RWP_W28              CV=3.674983 (+/- 0.258065) lambda=100      rank=12/12 Val=5.168416
+
+================================================================================
+F4 | EVOLUTION = r2
+================================================================================
+Unitarity error = 4.991e-15
+Direct audit feature error = 4.492e-16
+Direct audit memory error  = 2.789e-16
+F4_r2_CONT                 CV=3.588632 (+/- 0.324454) lambda=0.01     rank=12/12 Val=5.156031
+F4_r2_RWP_W1               CV=3.577811 (+/- 0.311015) lambda=0.01     rank= 9/12 Val=5.128391
+F4_r2_RWP_W2               CV=3.584427 (+/- 0.309966) lambda=0.01     rank=11/12 Val=5.129457
+F4_r2_RWP_W5               CV=3.604740 (+/- 0.354538) lambda=0.01     rank=12/12 Val=5.168780
+F4_r2_RWP_W7               CV=3.617304 (+/- 0.329778) lambda=0.01     rank=12/12 Val=5.159828
+F4_r2_RWP_W14              CV=3.622905 (+/- 0.323322) lambda=0.01     rank=12/12 Val=5.169476
+F4_r2_RWP_W21              CV=3.638049 (+/- 0.285285) lambda=0.01     rank=12/12 Val=5.155071
+F4_r2_RWP_W28              CV=3.696277 (+/- 0.286001) lambda=0.01     rank=12/12 Val=5.156583
+
+================================================================================
+F4 | EVOLUTION = r4
+================================================================================
+Unitarity error = 2.169e-14
+Direct audit feature error = 2.309e-16
+Direct audit memory error  = 1.631e-16
+F4_r4_CONT                 CV=3.592433 (+/- 0.281213) lambda=0.001    rank=12/12 Val=5.097793
+F4_r4_RWP_W1               CV=3.581123 (+/- 0.329123) lambda=0.01     rank=11/12 Val=5.158367
+F4_r4_RWP_W2               CV=3.593504 (+/- 0.323932) lambda=0.01     rank=12/12 Val=5.164333
+F4_r4_RWP_W5               CV=3.610405 (+/- 0.315977) lambda=0.001    rank=12/12 Val=5.121375
+F4_r4_RWP_W7               CV=3.608934 (+/- 0.308181) lambda=0.001    rank=12/12 Val=5.112582
+F4_r4_RWP_W14              CV=3.621752 (+/- 0.293204) lambda=0.001    rank=12/12 Val=5.126268
+F4_r4_RWP_W21              CV=3.639806 (+/- 0.246248) lambda=0.001    rank=12/12 Val=5.102950
+F4_r4_RWP_W28              CV=3.695581 (+/- 0.301292) lambda=0.01     rank=12/12 Val=5.212014
+
+================================================================================
+F4 | EVOLUTION = r8
+================================================================================
+Unitarity error = 2.939e-14
+Direct audit feature error = 3.333e-16
+Direct audit memory error  = 1.667e-16
+F4_r8_CONT                 CV=3.589174 (+/- 0.284613) lambda=0.001    rank=12/12 Val=5.097748
+F4_r8_RWP_W1               CV=3.584037 (+/- 0.336325) lambda=0.01     rank=11/12 Val=5.175110
+F4_r8_RWP_W2               CV=3.602643 (+/- 0.325922) lambda=0.01     rank=12/12 Val=5.183728
+F4_r8_RWP_W5               CV=3.611441 (+/- 0.319286) lambda=0.001    rank=12/12 Val=5.125329
+F4_r8_RWP_W7               CV=3.604276 (+/- 0.317344) lambda=0.001    rank=12/12 Val=5.115001
+F4_r8_RWP_W14              CV=3.616895 (+/- 0.304564) lambda=0.001    rank=12/12 Val=5.132603
+F4_r8_RWP_W21              CV=3.636745 (+/- 0.250906) lambda=0.001    rank=12/12 Val=5.103445
+F4_r8_RWP_W28              CV=3.694415 (+/- 0.255701) lambda=0.001    rank=12/12 Val=5.116970
+
+================================================================================
+F4 | EVOLUTION = r16
+================================================================================
+Unitarity error = 3.237e-14
+Direct audit feature error = 2.408e-16
+Direct audit memory error  = 2.326e-16
+F4_r16_CONT                CV=3.587370 (+/- 0.286698) lambda=0.001    rank=12/12 Val=5.099196
+F4_r16_RWP_W1              CV=3.585594 (+/- 0.339535) lambda=0.01     rank=11/12 Val=5.183527
+F4_r16_RWP_W2              CV=3.607308 (+/- 0.326646) lambda=0.01     rank=12/12 Val=5.193423
+F4_r16_RWP_W5              CV=3.612880 (+/- 0.319608) lambda=0.001    rank=12/12 Val=5.127291
+F4_r16_RWP_W7              CV=3.602482 (+/- 0.321001) lambda=0.001    rank=12/12 Val=5.116537
+F4_r16_RWP_W14             CV=3.614902 (+/- 0.309725) lambda=0.001    rank=12/12 Val=5.136134
+F4_r16_RWP_W21             CV=3.635494 (+/- 0.253051) lambda=0.001    rank=12/12 Val=5.103873
+F4_r16_RWP_W28             CV=3.694208 (+/- 0.259690) lambda=0.001    rank=12/12 Val=5.121149
+
+================================================================================
+F4 | EVOLUTION = EXACT
+================================================================================
+Unitarity error = 3.679e-15
+Direct audit feature error = 3.349e-16
+Direct audit memory error  = 2.819e-16
+F4_EXACT_CONT              CV=3.585755 (+/- 0.288863) lambda=0.001    rank=12/12 Val=5.100843
+F4_EXACT_RWP_W1            CV=3.585372 (+/- 0.278794) lambda=0.001    rank=11/12 Val=5.099130
+F4_EXACT_RWP_W2            CV=3.611789 (+/- 0.327400) lambda=0.01     rank=12/12 Val=5.203023
+F4_EXACT_RWP_W5            CV=3.615191 (+/- 0.318619) lambda=0.001    rank=12/12 Val=5.128974
+F4_EXACT_RWP_W7            CV=3.600897 (+/- 0.324160) lambda=0.001    rank=12/12 Val=5.118229
+F4_EXACT_RWP_W14           CV=3.613178 (+/- 0.314487) lambda=0.001    rank=12/12 Val=5.139800
+F4_EXACT_RWP_W21           CV=3.634427 (+/- 0.255088) lambda=0.001    rank=12/12 Val=5.104455
+F4_EXACT_RWP_W28           CV=3.694101 (+/- 0.263601) lambda=0.001    rank=12/12 Val=5.125622
+
+6.6A F4 reproduction audit:
+  max CV RMSE error  = 8.882e-16
+  max Val RMSE error = 8.882e-16
+
+================================================================================
+BEST TEMPORAL PROTOCOL WITHIN EACH FEATURE SET x DEPTH
+================================================================================
+
+--- F2 ---
+r1    : RWP_W2   CV=3.817174 (+/- 0.472478) Val=6.180988 ~CX=10
+r2    : CONT     CV=3.813446 (+/- 0.454965) Val=6.124884 ~CX=20
+r4    : CONT     CV=3.805124 (+/- 0.453821) Val=6.062873 ~CX=40
+r8    : CONT     CV=3.803708 (+/- 0.447553) Val=6.019490 ~CX=80
+r16   : CONT     CV=3.802595 (+/- 0.443968) Val=6.009143 ~CX=160
+EXACT : CONT     CV=3.801108 (+/- 0.440970) Val=6.006826 physics reference
+
+--- F3 ---
+r1    : RWP_W1   CV=3.759905 (+/- 0.274623) Val=5.228959 ~CX=10
+r2    : CONT     CV=3.756393 (+/- 0.305142) Val=5.218014 ~CX=20
+r4    : CONT     CV=3.753934 (+/- 0.327773) Val=5.235796 ~CX=40
+r8    : RWP_W14  CV=3.747768 (+/- 0.314279) Val=5.237894 ~CX=80
+r16   : RWP_W1   CV=3.740891 (+/- 0.322672) Val=5.309833 ~CX=160
+EXACT : RWP_W1   CV=3.736489 (+/- 0.345184) Val=5.369951 physics reference
+
+--- F4 ---
+r1    : RWP_W1   CV=3.611573 (+/- 0.279334) Val=5.134901 ~CX=10
+r2    : RWP_W1   CV=3.577811 (+/- 0.311015) Val=5.128391 ~CX=20
+r4    : RWP_W1   CV=3.581123 (+/- 0.329123) Val=5.158367 ~CX=40
+r8    : RWP_W1   CV=3.584037 (+/- 0.336325) Val=5.175110 ~CX=80
+r16   : RWP_W1   CV=3.585594 (+/- 0.339535) Val=5.183527 ~CX=160
+EXACT : RWP_W1   CV=3.585372 (+/- 0.278794) Val=5.099130 physics reference
+
+================================================================================
+RESOURCE / TASK PARETO FRONT
+================================================================================
+
+--- F2 ---
+r1    RWP_W2   CV=3.817174 ~CX=10
+r2    CONT     CV=3.813446 ~CX=20
+r4    CONT     CV=3.805124 ~CX=40
+r8    CONT     CV=3.803708 ~CX=80
+r16   CONT     CV=3.802595 ~CX=160
+
+--- F3 ---
+r1    RWP_W1   CV=3.759905 ~CX=10
+r2    CONT     CV=3.756393 ~CX=20
+r4    CONT     CV=3.753934 ~CX=40
+r8    RWP_W14  CV=3.747768 ~CX=80
+r16   RWP_W1   CV=3.740891 ~CX=160
+
+--- F4 ---
+r1    RWP_W1   CV=3.611573 ~CX=10
+r2    RWP_W1   CV=3.577811 ~CX=20
+
+================================================================================
+PRIMARY RESULT BY FEATURE SET
+PRIMARY RANKING = TRAINING-ONLY CV
+================================================================================
+
+F2:
+  Best configuration = F2_EXACT_CONT
+  CV RMSE = 3.801108 (+/- 0.440970)
+  Validation RMSE = 6.006826
+  Exact evolution = physics reference only
+
+F3:
+  Best configuration = F3_EXACT_RWP_W1
+  CV RMSE = 3.736489 (+/- 0.345184)
+  Validation RMSE = 5.369951
+  Exact evolution = physics reference only
+
+F4:
+  Best configuration = F4_r2_RWP_W1
+  CV RMSE = 3.577811 (+/- 0.311015)
+  Validation RMSE = 5.128391
+  Approx. CX = 20
+
+================================================================================
+R=2 ROBUSTNESS CHECK
+================================================================================
+
+F2:
+  Best finite depth = r16 (CONT)
+  Best finite CV = 3.802595
+  r2 best protocol = CONT
+  r2 CV = 3.813446
+  r2 - best delta = +0.010851
+
+F3:
+  Best finite depth = r16 (RWP_W1)
+  Best finite CV = 3.740891
+  r2 best protocol = CONT
+  r2 CV = 3.756393
+  r2 - best delta = +0.015501
+
+F4:
+  Best finite depth = r2 (RWP_W1)
+  Best finite CV = 3.577811
+  r2 best protocol = RWP_W1
+  r2 CV = 3.577811
+  r2 - best delta = +0.000000
+
+================================================================================
+TOP 30 OVERALL CONFIGURATIONS
+================================================================================
+
+ 1. F4_r2_RWP_W1                CV=3.577811 (+/- 0.311015) Val=5.128391
+ 2. F4_r4_RWP_W1                CV=3.581123 (+/- 0.329123) Val=5.158367
+ 3. F4_r8_RWP_W1                CV=3.584037 (+/- 0.336325) Val=5.175110
+ 4. F4_r2_RWP_W2                CV=3.584427 (+/- 0.309966) Val=5.129457
+ 5. F4_EXACT_RWP_W1             CV=3.585372 (+/- 0.278794) Val=5.099130
+ 6. F4_r16_RWP_W1               CV=3.585594 (+/- 0.339535) Val=5.183527
+ 7. F4_EXACT_CONT               CV=3.585755 (+/- 0.288863) Val=5.100843
+ 8. F4_r16_CONT                 CV=3.587370 (+/- 0.286698) Val=5.099196
+ 9. F4_r2_CONT                  CV=3.588632 (+/- 0.324454) Val=5.156031
+10. F4_r8_CONT                  CV=3.589174 (+/- 0.284613) Val=5.097748
+11. F4_r4_CONT                  CV=3.592433 (+/- 0.281213) Val=5.097793
+12. F4_r4_RWP_W2                CV=3.593504 (+/- 0.323932) Val=5.164333
+13. F4_EXACT_RWP_W7             CV=3.600897 (+/- 0.324160) Val=5.118229
+14. F4_r16_RWP_W7               CV=3.602482 (+/- 0.321001) Val=5.116537
+15. F4_r8_RWP_W2                CV=3.602643 (+/- 0.325922) Val=5.183728
+16. F4_r8_RWP_W7                CV=3.604276 (+/- 0.317344) Val=5.115001
+17. F4_r2_RWP_W5                CV=3.604740 (+/- 0.354538) Val=5.168780
+18. F4_r16_RWP_W2               CV=3.607308 (+/- 0.326646) Val=5.193423
+19. F4_r4_RWP_W7                CV=3.608934 (+/- 0.308181) Val=5.112582
+20. F4_r4_RWP_W5                CV=3.610405 (+/- 0.315977) Val=5.121375
+21. F4_r8_RWP_W5                CV=3.611441 (+/- 0.319286) Val=5.125329
+22. F4_r1_RWP_W1                CV=3.611573 (+/- 0.279334) Val=5.134901
+23. F4_EXACT_RWP_W2             CV=3.611789 (+/- 0.327400) Val=5.203023
+24. F4_r16_RWP_W5               CV=3.612880 (+/- 0.319608) Val=5.127291
+25. F4_EXACT_RWP_W14            CV=3.613178 (+/- 0.314487) Val=5.139800
+26. F4_r16_RWP_W14              CV=3.614902 (+/- 0.309725) Val=5.136134
+27. F4_EXACT_RWP_W5             CV=3.615191 (+/- 0.318619) Val=5.128974
+28. F4_r8_RWP_W14               CV=3.616895 (+/- 0.304564) Val=5.132603
+29. F4_r2_RWP_W7                CV=3.617304 (+/- 0.329778) Val=5.159828
+30. F4_r4_RWP_W14               CV=3.621752 (+/- 0.293204) Val=5.126268
+
+================================================================================
+INTERPRETATION RULES FOR 6.6B
+================================================================================
+
+1. F4 was optimized previously; F2/F3 are robustness checks.
+2. The six-qubit topology is identical for F2/F3/F4.
+3. Missing variables are switched off by zero input rotations.
+4. Exact evolution is only a physics reference.
+5. Primary model selection remains training-only chronological CV.
+6. Validation 2025 remains diagnostic.
+7. Test 2026 remains untouched.
+8. Prefer shallow depth when a deeper configuration is dominated in both RMSE and gate cost.
+9. Fold-level results are saved for direct robustness analysis.
+10. The ideal small alpha may later need reconsideration under hardware shot/device noise.

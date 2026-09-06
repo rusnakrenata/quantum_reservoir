@@ -1,0 +1,1092 @@
+================================================================================
+WEEK 6 - STEP 6.5B
+JOINT ALPHA x COUPLING SEARCH
+F4 + SOFTSIGN + M=2 + ALL WINDOWS
+================================================================================
+
+
+================================================================================
+DYNAMICS = a0p0_J1p0
+================================================================================
+alpha  = 0.0
+J mult = 1.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.454521, +0.401630]
+RX per-step angle   = +0.400000
+Unitarity error = 4.991e-15
+Direct audit feature error = 2.263e-16
+Direct audit memory error  = 1.779e-16
+a0p0_J1p0_CONT            CV=3.698923 (+/- 0.503072) lambda=100     rank= 9/12 Val=6.276529
+a0p0_J1p0_RWP_W1          CV=3.704845 (+/- 0.517551) lambda=100     rank= 5/12 Val=6.318650
+a0p0_J1p0_RWP_W2          CV=3.710032 (+/- 0.519812) lambda=100     rank= 6/12 Val=6.316605
+a0p0_J1p0_RWP_W5          CV=3.704393 (+/- 0.538564) lambda=100     rank= 9/12 Val=6.307358
+a0p0_J1p0_RWP_W7          CV=3.709301 (+/- 0.537267) lambda=100     rank= 9/12 Val=6.303231
+a0p0_J1p0_RWP_W14         CV=3.724837 (+/- 0.523457) lambda=100     rank= 9/12 Val=6.310123
+a0p0_J1p0_RWP_W21         CV=3.737416 (+/- 0.491822) lambda=100     rank= 9/12 Val=6.304087
+a0p0_J1p0_RWP_W28         CV=3.746667 (+/- 0.483547) lambda=100     rank= 9/12 Val=6.303742
+
+================================================================================
+DYNAMICS = a0p0_J1p5
+================================================================================
+alpha  = 0.0
+J mult = 1.5
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.681782, +0.602445]
+RX per-step angle   = +0.400000
+Unitarity error = 3.977e-15
+Direct audit feature error = 4.483e-16
+Direct audit memory error  = 2.233e-16
+a0p0_J1p5_CONT            CV=3.702235 (+/- 0.501699) lambda=100     rank= 9/12 Val=6.198094
+a0p0_J1p5_RWP_W1          CV=3.707517 (+/- 0.506194) lambda=10      rank= 5/12 Val=6.306725
+a0p0_J1p5_RWP_W2          CV=3.714340 (+/- 0.519062) lambda=100     rank= 6/12 Val=6.319359
+a0p0_J1p5_RWP_W5          CV=3.708559 (+/- 0.534249) lambda=100     rank= 9/12 Val=6.306923
+a0p0_J1p5_RWP_W7          CV=3.716403 (+/- 0.532020) lambda=100     rank= 9/12 Val=6.306845
+a0p0_J1p5_RWP_W14         CV=3.720482 (+/- 0.511833) lambda=100     rank= 9/12 Val=6.303518
+a0p0_J1p5_RWP_W21         CV=3.724991 (+/- 0.473648) lambda=100     rank= 9/12 Val=6.332060
+a0p0_J1p5_RWP_W28         CV=3.738691 (+/- 0.475748) lambda=100     rank= 9/12 Val=6.318798
+
+================================================================================
+DYNAMICS = a0p0_J2p0
+================================================================================
+alpha  = 0.0
+J mult = 2.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.909043, +0.803259]
+RX per-step angle   = +0.400000
+Unitarity error = 4.331e-15
+Direct audit feature error = 4.663e-16
+Direct audit memory error  = 2.294e-16
+a0p0_J2p0_CONT            CV=3.673241 (+/- 0.433369) lambda=10      rank= 9/12 Val=6.046659
+a0p0_J2p0_RWP_W1          CV=3.707452 (+/- 0.506562) lambda=10      rank= 4/12 Val=6.307569
+a0p0_J2p0_RWP_W2          CV=3.713943 (+/- 0.505228) lambda=10      rank= 6/12 Val=6.306861
+a0p0_J2p0_RWP_W5          CV=3.712095 (+/- 0.523572) lambda=100     rank= 9/12 Val=6.318359
+a0p0_J2p0_RWP_W7          CV=3.717253 (+/- 0.530847) lambda=100     rank= 9/12 Val=6.315276
+a0p0_J2p0_RWP_W14         CV=3.723509 (+/- 0.500945) lambda=100     rank= 9/12 Val=6.295568
+a0p0_J2p0_RWP_W21         CV=3.759128 (+/- 0.485321) lambda=100     rank= 9/12 Val=6.303258
+a0p0_J2p0_RWP_W28         CV=3.750483 (+/- 0.475796) lambda=100     rank= 9/12 Val=6.310170
+
+================================================================================
+DYNAMICS = a0p005_J1p0
+================================================================================
+alpha  = 0.005
+J mult = 1.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.454521, +0.401630]
+RX per-step angle   = +0.400000
+Unitarity error = 4.991e-15
+Direct audit feature error = 4.492e-16
+Direct audit memory error  = 2.789e-16
+a0p005_J1p0_CONT          CV=3.588632 (+/- 0.324454) lambda=0.01    rank=12/12 Val=5.156031
+a0p005_J1p0_RWP_W1        CV=3.577811 (+/- 0.311015) lambda=0.01    rank= 9/12 Val=5.128391
+a0p005_J1p0_RWP_W2        CV=3.584427 (+/- 0.309966) lambda=0.01    rank=11/12 Val=5.129457
+a0p005_J1p0_RWP_W5        CV=3.604740 (+/- 0.354538) lambda=0.01    rank=12/12 Val=5.168780
+a0p005_J1p0_RWP_W7        CV=3.617304 (+/- 0.329778) lambda=0.01    rank=12/12 Val=5.159828
+a0p005_J1p0_RWP_W14       CV=3.622905 (+/- 0.323322) lambda=0.01    rank=12/12 Val=5.169476
+a0p005_J1p0_RWP_W21       CV=3.638049 (+/- 0.285285) lambda=0.01    rank=12/12 Val=5.155071
+a0p005_J1p0_RWP_W28       CV=3.696277 (+/- 0.286001) lambda=0.01    rank=12/12 Val=5.156583
+
+================================================================================
+DYNAMICS = a0p005_J1p5
+================================================================================
+alpha  = 0.005
+J mult = 1.5
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.681782, +0.602445]
+RX per-step angle   = +0.400000
+Unitarity error = 3.977e-15
+Direct audit feature error = 2.663e-16
+Direct audit memory error  = 1.811e-16
+a0p005_J1p5_CONT          CV=3.592030 (+/- 0.315627) lambda=0.001   rank=12/12 Val=5.208994
+a0p005_J1p5_RWP_W1        CV=3.581573 (+/- 0.306075) lambda=0.001   rank= 9/12 Val=5.196761
+a0p005_J1p5_RWP_W2        CV=3.637147 (+/- 0.359791) lambda=0.01    rank=11/12 Val=5.374678
+a0p005_J1p5_RWP_W5        CV=3.621095 (+/- 0.335172) lambda=0.001   rank=12/12 Val=5.216431
+a0p005_J1p5_RWP_W7        CV=3.665888 (+/- 0.301973) lambda=0.001   rank=12/12 Val=5.209151
+a0p005_J1p5_RWP_W14       CV=3.630708 (+/- 0.285865) lambda=0.001   rank=12/12 Val=5.221588
+a0p005_J1p5_RWP_W21       CV=3.623363 (+/- 0.268179) lambda=0.001   rank=12/12 Val=5.262800
+a0p005_J1p5_RWP_W28       CV=3.650584 (+/- 0.286136) lambda=0.001   rank=12/12 Val=5.256002
+
+================================================================================
+DYNAMICS = a0p005_J2p0
+================================================================================
+alpha  = 0.005
+J mult = 2.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.909043, +0.803259]
+RX per-step angle   = +0.400000
+Unitarity error = 4.331e-15
+Direct audit feature error = 4.912e-16
+Direct audit memory error  = 2.391e-16
+a0p005_J2p0_CONT          CV=3.630211 (+/- 0.401962) lambda=10      rank=12/12 Val=5.889996
+a0p005_J2p0_RWP_W1        CV=3.611735 (+/- 0.360244) lambda=0.0001  rank= 8/12 Val=5.310372
+a0p005_J2p0_RWP_W2        CV=3.670291 (+/- 0.472835) lambda=10      rank=11/12 Val=6.127232
+a0p005_J2p0_RWP_W5        CV=3.674269 (+/- 0.492212) lambda=100     rank=12/12 Val=6.144699
+a0p005_J2p0_RWP_W7        CV=3.678614 (+/- 0.500136) lambda=100     rank=12/12 Val=6.142299
+a0p005_J2p0_RWP_W14       CV=3.683448 (+/- 0.468325) lambda=100     rank=12/12 Val=6.119935
+a0p005_J2p0_RWP_W21       CV=3.722293 (+/- 0.448691) lambda=100     rank=12/12 Val=6.130525
+a0p005_J2p0_RWP_W28       CV=3.714489 (+/- 0.429744) lambda=10      rank=12/12 Val=6.116954
+
+================================================================================
+DYNAMICS = a0p01_J1p0
+================================================================================
+alpha  = 0.01
+J mult = 1.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.454521, +0.401630]
+RX per-step angle   = +0.400000
+Unitarity error = 4.991e-15
+Direct audit feature error = 2.500e-16
+Direct audit memory error  = 2.232e-16
+a0p01_J1p0_CONT           CV=3.591502 (+/- 0.288545) lambda=0.01    rank=12/12 Val=5.107220
+a0p01_J1p0_RWP_W1         CV=3.581522 (+/- 0.338133) lambda=0.1     rank= 9/12 Val=5.170687
+a0p01_J1p0_RWP_W2         CV=3.588640 (+/- 0.337237) lambda=0.1     rank=11/12 Val=5.175013
+a0p01_J1p0_RWP_W5         CV=3.606732 (+/- 0.322293) lambda=0.01    rank=12/12 Val=5.123034
+a0p01_J1p0_RWP_W7         CV=3.618896 (+/- 0.297238) lambda=0.01    rank=12/12 Val=5.116558
+a0p01_J1p0_RWP_W14        CV=3.625429 (+/- 0.287101) lambda=0.01    rank=12/12 Val=5.123959
+a0p01_J1p0_RWP_W21        CV=3.635690 (+/- 0.253266) lambda=0.01    rank=12/12 Val=5.108715
+a0p01_J1p0_RWP_W28        CV=3.683014 (+/- 0.411557) lambda=100     rank=12/12 Val=5.811442
+
+================================================================================
+DYNAMICS = a0p01_J1p5
+================================================================================
+alpha  = 0.01
+J mult = 1.5
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.681782, +0.602445]
+RX per-step angle   = +0.400000
+Unitarity error = 3.977e-15
+Direct audit feature error = 4.534e-16
+Direct audit memory error  = 3.350e-16
+a0p01_J1p5_CONT           CV=3.590678 (+/- 0.288112) lambda=0.001   rank=12/12 Val=5.175860
+a0p01_J1p5_RWP_W1         CV=3.582308 (+/- 0.331516) lambda=0.01    rank= 9/12 Val=5.218194
+a0p01_J1p5_RWP_W2         CV=3.631739 (+/- 0.404515) lambda=0.1     rank=11/12 Val=5.502182
+a0p01_J1p5_RWP_W5         CV=3.623398 (+/- 0.311881) lambda=0.001   rank=12/12 Val=5.187078
+a0p01_J1p5_RWP_W7         CV=3.662810 (+/- 0.484521) lambda=100     rank=12/12 Val=5.980145
+a0p01_J1p5_RWP_W14        CV=3.635824 (+/- 0.314817) lambda=0.01    rank=12/12 Val=5.257284
+a0p01_J1p5_RWP_W21        CV=3.627915 (+/- 0.242302) lambda=0.001   rank=12/12 Val=5.231918
+a0p01_J1p5_RWP_W28        CV=3.653574 (+/- 0.260535) lambda=0.001   rank=12/12 Val=5.224888
+
+================================================================================
+DYNAMICS = a0p01_J2p0
+================================================================================
+alpha  = 0.01
+J mult = 2.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.909043, +0.803259]
+RX per-step angle   = +0.400000
+Unitarity error = 4.331e-15
+Direct audit feature error = 7.819e-16
+Direct audit memory error  = 5.552e-16
+a0p01_J2p0_CONT           CV=3.628134 (+/- 0.398991) lambda=10      rank=12/12 Val=5.855229
+a0p01_J2p0_RWP_W1         CV=3.596989 (+/- 0.310245) lambda=0.0001  rank= 8/12 Val=5.160573
+a0p01_J2p0_RWP_W2         CV=3.663720 (+/- 0.452593) lambda=0.01    rank=11/12 Val=5.899213
+a0p01_J2p0_RWP_W5         CV=3.667157 (+/- 0.483745) lambda=100     rank=12/12 Val=6.074154
+a0p01_J2p0_RWP_W7         CV=3.671582 (+/- 0.491802) lambda=100     rank=12/12 Val=6.072523
+a0p01_J2p0_RWP_W14        CV=3.676179 (+/- 0.459323) lambda=100     rank=12/12 Val=6.047894
+a0p01_J2p0_RWP_W21        CV=3.716354 (+/- 0.441026) lambda=100     rank=12/12 Val=6.062656
+a0p01_J2p0_RWP_W28        CV=3.709037 (+/- 0.431869) lambda=100     rank=12/12 Val=6.070096
+
+================================================================================
+DYNAMICS = a0p02_J1p0
+================================================================================
+alpha  = 0.02
+J mult = 1.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.454521, +0.401630]
+RX per-step angle   = +0.400000
+Unitarity error = 4.991e-15
+Direct audit feature error = 3.519e-16
+Direct audit memory error  = 2.225e-16
+a0p02_J1p0_CONT           CV=3.588306 (+/- 0.310423) lambda=0.1     rank=12/12 Val=5.123401
+a0p02_J1p0_RWP_W1         CV=3.579320 (+/- 0.301872) lambda=0.1     rank= 9/12 Val=5.108362
+a0p02_J1p0_RWP_W2         CV=3.586982 (+/- 0.301754) lambda=0.1     rank=11/12 Val=5.108792
+a0p02_J1p0_RWP_W5         CV=3.602769 (+/- 0.431922) lambda=100     rank=12/12 Val=5.526177
+a0p02_J1p0_RWP_W7         CV=3.607481 (+/- 0.428517) lambda=100     rank=12/12 Val=5.522443
+a0p02_J1p0_RWP_W14        CV=3.617604 (+/- 0.312544) lambda=0.1     rank=12/12 Val=5.139330
+a0p02_J1p0_RWP_W21        CV=3.625270 (+/- 0.272576) lambda=0.1     rank=12/12 Val=5.125364
+a0p02_J1p0_RWP_W28        CV=3.652284 (+/- 0.366784) lambda=100     rank=12/12 Val=5.531678
+
+================================================================================
+DYNAMICS = a0p02_J1p5
+================================================================================
+alpha  = 0.02
+J mult = 1.5
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.681782, +0.602445]
+RX per-step angle   = +0.400000
+Unitarity error = 3.977e-15
+Direct audit feature error = 5.556e-16
+Direct audit memory error  = 2.244e-16
+a0p02_J1p5_CONT           CV=3.588192 (+/- 0.308990) lambda=0.01    rank=12/12 Val=5.175210
+a0p02_J1p5_RWP_W1         CV=3.580488 (+/- 0.301802) lambda=0.01    rank= 9/12 Val=5.170182
+a0p02_J1p5_RWP_W2         CV=3.595977 (+/- 0.356551) lambda=0.1     rank=11/12 Val=5.255639
+a0p02_J1p5_RWP_W5         CV=3.613613 (+/- 0.336266) lambda=0.01    rank=12/12 Val=5.186209
+a0p02_J1p5_RWP_W7         CV=3.631691 (+/- 0.367938) lambda=0.1     rank=12/12 Val=5.295148
+a0p02_J1p5_RWP_W14        CV=3.629626 (+/- 0.278489) lambda=0.01    rank=12/12 Val=5.191205
+a0p02_J1p5_RWP_W21        CV=3.616833 (+/- 0.259689) lambda=0.01    rank=12/12 Val=5.230277
+a0p02_J1p5_RWP_W28        CV=3.644423 (+/- 0.276192) lambda=0.01    rank=12/12 Val=5.222759
+
+================================================================================
+DYNAMICS = a0p02_J2p0
+================================================================================
+alpha  = 0.02
+J mult = 2.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.909043, +0.803259]
+RX per-step angle   = +0.400000
+Unitarity error = 4.331e-15
+Direct audit feature error = 4.467e-16
+Direct audit memory error  = 4.636e-16
+a0p02_J2p0_CONT           CV=3.621931 (+/- 0.389369) lambda=10      rank=12/12 Val=5.744131
+a0p02_J2p0_RWP_W1         CV=3.603026 (+/- 0.340187) lambda=0.001   rank= 8/12 Val=5.231487
+a0p02_J2p0_RWP_W2         CV=3.642298 (+/- 0.416783) lambda=0.01    rank=11/12 Val=5.600952
+a0p02_J2p0_RWP_W5         CV=3.650646 (+/- 0.463068) lambda=100     rank=12/12 Val=5.893533
+a0p02_J2p0_RWP_W7         CV=3.655218 (+/- 0.471343) lambda=100     rank=12/12 Val=5.893579
+a0p02_J2p0_RWP_W14        CV=3.658852 (+/- 0.413002) lambda=10      rank=12/12 Val=5.786028
+a0p02_J2p0_RWP_W21        CV=3.701912 (+/- 0.421214) lambda=100     rank=12/12 Val=5.885815
+a0p02_J2p0_RWP_W28        CV=3.694700 (+/- 0.412102) lambda=100     rank=12/12 Val=5.896323
+
+================================================================================
+DYNAMICS = a0p05_J1p0
+================================================================================
+alpha  = 0.05
+J mult = 1.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.454521, +0.401630]
+RX per-step angle   = +0.400000
+Unitarity error = 4.991e-15
+Direct audit feature error = 3.375e-16
+Direct audit memory error  = 1.735e-16
+a0p05_J1p0_CONT           CV=3.585936 (+/- 0.350600) lambda=100     rank=12/12 Val=5.347327
+a0p05_J1p0_RWP_W1         CV=3.579959 (+/- 0.354915) lambda=100     rank= 9/12 Val=5.348601
+a0p05_J1p0_RWP_W2         CV=3.587305 (+/- 0.358577) lambda=100     rank=11/12 Val=5.343747
+a0p05_J1p0_RWP_W5         CV=3.583378 (+/- 0.383966) lambda=100     rank=12/12 Val=5.351156
+a0p05_J1p0_RWP_W7         CV=3.587706 (+/- 0.380185) lambda=100     rank=12/12 Val=5.343155
+a0p05_J1p0_RWP_W14        CV=3.604330 (+/- 0.360634) lambda=100     rank=12/12 Val=5.354668
+a0p05_J1p0_RWP_W21        CV=3.617627 (+/- 0.323339) lambda=100     rank=12/12 Val=5.342637
+a0p05_J1p0_RWP_W28        CV=3.632835 (+/- 0.311203) lambda=100     rank=12/12 Val=5.351536
+
+================================================================================
+DYNAMICS = a0p05_J1p5
+================================================================================
+alpha  = 0.05
+J mult = 1.5
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.681782, +0.602445]
+RX per-step angle   = +0.400000
+Unitarity error = 3.977e-15
+Direct audit feature error = 3.400e-16
+Direct audit memory error  = 2.249e-16
+a0p05_J1p5_CONT           CV=3.588047 (+/- 0.316348) lambda=0.1     rank=12/12 Val=5.157679
+a0p05_J1p5_RWP_W1         CV=3.581075 (+/- 0.314596) lambda=0.1     rank= 9/12 Val=5.155318
+a0p05_J1p5_RWP_W2         CV=3.590063 (+/- 0.315729) lambda=0.1     rank=11/12 Val=5.156549
+a0p05_J1p5_RWP_W5         CV=3.592863 (+/- 0.404671) lambda=100     rank=12/12 Val=5.423914
+a0p05_J1p5_RWP_W7         CV=3.600158 (+/- 0.402052) lambda=100     rank=12/12 Val=5.427299
+a0p05_J1p5_RWP_W14        CV=3.605313 (+/- 0.371409) lambda=100     rank=12/12 Val=5.421319
+a0p05_J1p5_RWP_W21        CV=3.612060 (+/- 0.329007) lambda=100     rank=12/12 Val=5.448296
+a0p05_J1p5_RWP_W28        CV=3.630455 (+/- 0.333410) lambda=100     rank=12/12 Val=5.442396
+
+================================================================================
+DYNAMICS = a0p05_J2p0
+================================================================================
+alpha  = 0.05
+J mult = 2.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.909043, +0.803259]
+RX per-step angle   = +0.400000
+Unitarity error = 4.331e-15
+Direct audit feature error = 5.599e-16
+Direct audit memory error  = 3.331e-16
+a0p05_J2p0_CONT           CV=3.602718 (+/- 0.357127) lambda=10      rank=12/12 Val=5.482622
+a0p05_J2p0_RWP_W1         CV=3.595901 (+/- 0.385960) lambda=10      rank= 8/12 Val=5.448763
+a0p05_J2p0_RWP_W2         CV=3.602898 (+/- 0.382871) lambda=10      rank=11/12 Val=5.447963
+a0p05_J2p0_RWP_W5         CV=3.608406 (+/- 0.388822) lambda=10      rank=12/12 Val=5.458788
+a0p05_J2p0_RWP_W7         CV=3.614874 (+/- 0.421335) lambda=100     rank=12/12 Val=5.538777
+a0p05_J2p0_RWP_W14        CV=3.615793 (+/- 0.355855) lambda=10      rank=12/12 Val=5.423997
+a0p05_J2p0_RWP_W21        CV=3.663625 (+/- 0.367713) lambda=100     rank=12/12 Val=5.526730
+a0p05_J2p0_RWP_W28        CV=3.655093 (+/- 0.343146) lambda=10      rank=12/12 Val=5.463084
+
+================================================================================
+DYNAMICS = a0p1_J1p0
+================================================================================
+alpha  = 0.1
+J mult = 1.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.454521, +0.401630]
+RX per-step angle   = +0.400000
+Unitarity error = 4.991e-15
+Direct audit feature error = 3.331e-16
+Direct audit memory error  = 1.693e-16
+a0p1_J1p0_CONT            CV=3.592725 (+/- 0.323416) lambda=100     rank=12/12 Val=5.296108
+a0p1_J1p0_RWP_W1          CV=3.587603 (+/- 0.328746) lambda=100     rank= 9/12 Val=5.300010
+a0p1_J1p0_RWP_W2          CV=3.594753 (+/- 0.332823) lambda=100     rank=11/12 Val=5.294326
+a0p1_J1p0_RWP_W5          CV=3.589800 (+/- 0.359393) lambda=100     rank=12/12 Val=5.306872
+a0p1_J1p0_RWP_W7          CV=3.594441 (+/- 0.354559) lambda=100     rank=12/12 Val=5.295652
+a0p1_J1p0_RWP_W14         CV=3.611411 (+/- 0.333958) lambda=100     rank=12/12 Val=5.308508
+a0p1_J1p0_RWP_W21         CV=3.621707 (+/- 0.299580) lambda=100     rank=12/12 Val=5.295006
+a0p1_J1p0_RWP_W28         CV=3.638489 (+/- 0.284896) lambda=100     rank=12/12 Val=5.305540
+
+================================================================================
+DYNAMICS = a0p1_J1p5
+================================================================================
+alpha  = 0.1
+J mult = 1.5
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.681782, +0.602445]
+RX per-step angle   = +0.400000
+Unitarity error = 3.977e-15
+Direct audit feature error = 3.368e-16
+Direct audit memory error  = 2.263e-16
+a0p1_J1p5_CONT            CV=3.586705 (+/- 0.350031) lambda=100     rank=12/12 Val=5.345504
+a0p1_J1p5_RWP_W1          CV=3.584817 (+/- 0.345013) lambda=100     rank= 9/12 Val=5.352794
+a0p1_J1p5_RWP_W2          CV=3.593292 (+/- 0.348425) lambda=100     rank=11/12 Val=5.346689
+a0p1_J1p5_RWP_W5          CV=3.590520 (+/- 0.372596) lambda=100     rank=12/12 Val=5.355717
+a0p1_J1p5_RWP_W7          CV=3.597364 (+/- 0.371108) lambda=100     rank=12/12 Val=5.358510
+a0p1_J1p5_RWP_W14         CV=3.604062 (+/- 0.336987) lambda=100     rank=12/12 Val=5.351442
+a0p1_J1p5_RWP_W21         CV=3.608075 (+/- 0.297133) lambda=100     rank=12/12 Val=5.374909
+a0p1_J1p5_RWP_W28         CV=3.627254 (+/- 0.297035) lambda=100     rank=12/12 Val=5.369563
+
+================================================================================
+DYNAMICS = a0p1_J2p0
+================================================================================
+alpha  = 0.1
+J mult = 2.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.909043, +0.803259]
+RX per-step angle   = +0.400000
+Unitarity error = 4.331e-15
+Direct audit feature error = 6.682e-16
+Direct audit memory error  = 3.331e-16
+a0p1_J2p0_CONT            CV=3.597130 (+/- 0.343713) lambda=100     rank=12/12 Val=5.422213
+a0p1_J2p0_RWP_W1          CV=3.586713 (+/- 0.340096) lambda=10      rank= 8/12 Val=5.332179
+a0p1_J2p0_RWP_W2          CV=3.594720 (+/- 0.367715) lambda=100     rank=11/12 Val=5.393271
+a0p1_J2p0_RWP_W5          CV=3.591469 (+/- 0.378980) lambda=100     rank=12/12 Val=5.404291
+a0p1_J2p0_RWP_W7          CV=3.596608 (+/- 0.387510) lambda=100     rank=12/12 Val=5.406795
+a0p1_J2p0_RWP_W14         CV=3.600819 (+/- 0.350539) lambda=100     rank=12/12 Val=5.376780
+a0p1_J2p0_RWP_W21         CV=3.644405 (+/- 0.330203) lambda=100     rank=12/12 Val=5.389695
+a0p1_J2p0_RWP_W28         CV=3.638555 (+/- 0.320935) lambda=100     rank=12/12 Val=5.404694
+
+================================================================================
+DYNAMICS = a0p15_J1p0
+================================================================================
+alpha  = 0.15
+J mult = 1.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.454521, +0.401630]
+RX per-step angle   = +0.400000
+Unitarity error = 4.991e-15
+Direct audit feature error = 4.453e-16
+Direct audit memory error  = 2.289e-16
+a0p15_J1p0_CONT           CV=3.596117 (+/- 0.312306) lambda=100     rank=12/12 Val=5.262606
+a0p15_J1p0_RWP_W1         CV=3.591295 (+/- 0.318521) lambda=100     rank= 9/12 Val=5.267040
+a0p15_J1p0_RWP_W2         CV=3.598339 (+/- 0.322594) lambda=100     rank=11/12 Val=5.261948
+a0p15_J1p0_RWP_W5         CV=3.593180 (+/- 0.349011) lambda=100     rank=12/12 Val=5.277350
+a0p15_J1p0_RWP_W7         CV=3.598169 (+/- 0.343834) lambda=100     rank=12/12 Val=5.265171
+a0p15_J1p0_RWP_W14        CV=3.615041 (+/- 0.322685) lambda=100     rank=12/12 Val=5.277778
+a0p15_J1p0_RWP_W21        CV=3.624236 (+/- 0.289636) lambda=100     rank=12/12 Val=5.264459
+a0p15_J1p0_RWP_W28        CV=3.641200 (+/- 0.274715) lambda=100     rank=12/12 Val=5.275914
+
+================================================================================
+DYNAMICS = a0p15_J1p5
+================================================================================
+alpha  = 0.15
+J mult = 1.5
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.681782, +0.602445]
+RX per-step angle   = +0.400000
+Unitarity error = 3.977e-15
+Direct audit feature error = 3.472e-16
+Direct audit memory error  = 3.415e-16
+a0p15_J1p5_CONT           CV=3.590194 (+/- 0.335770) lambda=100     rank=12/12 Val=5.330779
+a0p15_J1p5_RWP_W1         CV=3.590120 (+/- 0.331375) lambda=100     rank= 9/12 Val=5.341142
+a0p15_J1p5_RWP_W2         CV=3.598472 (+/- 0.335249) lambda=100     rank=11/12 Val=5.334023
+a0p15_J1p5_RWP_W5         CV=3.594876 (+/- 0.360129) lambda=100     rank=12/12 Val=5.345983
+a0p15_J1p5_RWP_W7         CV=3.601807 (+/- 0.358485) lambda=100     rank=12/12 Val=5.348200
+a0p15_J1p5_RWP_W14        CV=3.608678 (+/- 0.323543) lambda=100     rank=12/12 Val=5.340735
+a0p15_J1p5_RWP_W21        CV=3.611898 (+/- 0.285257) lambda=100     rank=12/12 Val=5.362444
+a0p15_J1p5_RWP_W28        CV=3.630991 (+/- 0.283138) lambda=100     rank=12/12 Val=5.358091
+
+================================================================================
+DYNAMICS = a0p15_J2p0
+================================================================================
+alpha  = 0.15
+J mult = 2.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.909043, +0.803259]
+RX per-step angle   = +0.400000
+Unitarity error = 4.331e-15
+Direct audit feature error = 4.614e-16
+Direct audit memory error  = 2.569e-16
+a0p15_J2p0_CONT           CV=3.600186 (+/- 0.330212) lambda=100     rank=12/12 Val=5.405437
+a0p15_J2p0_RWP_W1         CV=3.590240 (+/- 0.346754) lambda=100     rank= 8/12 Val=5.378411
+a0p15_J2p0_RWP_W2         CV=3.597268 (+/- 0.351182) lambda=100     rank=11/12 Val=5.376184
+a0p15_J2p0_RWP_W5         CV=3.592921 (+/- 0.364426) lambda=100     rank=12/12 Val=5.388663
+a0p15_J2p0_RWP_W7         CV=3.597975 (+/- 0.372504) lambda=100     rank=12/12 Val=5.390357
+a0p15_J2p0_RWP_W14        CV=3.602301 (+/- 0.335981) lambda=100     rank=12/12 Val=5.360728
+a0p15_J2p0_RWP_W21        CV=3.644909 (+/- 0.315686) lambda=100     rank=12/12 Val=5.371574
+a0p15_J2p0_RWP_W28        CV=3.639374 (+/- 0.305420) lambda=100     rank=12/12 Val=5.386407
+
+================================================================================
+DYNAMICS = a0p2_J1p0
+================================================================================
+alpha  = 0.2
+J mult = 1.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.454521, +0.401630]
+RX per-step angle   = +0.400000
+Unitarity error = 4.991e-15
+Direct audit feature error = 2.223e-16
+Direct audit memory error  = 1.388e-16
+a0p2_J1p0_CONT            CV=3.598115 (+/- 0.305597) lambda=100     rank=12/12 Val=5.235386
+a0p2_J1p0_RWP_W1          CV=3.593423 (+/- 0.312445) lambda=100     rank= 9/12 Val=5.240658
+a0p2_J1p0_RWP_W2          CV=3.600414 (+/- 0.316264) lambda=100     rank=11/12 Val=5.236346
+a0p2_J1p0_RWP_W5          CV=3.595103 (+/- 0.342377) lambda=100     rank=12/12 Val=5.252368
+a0p2_J1p0_RWP_W7          CV=3.600273 (+/- 0.337310) lambda=100     rank=12/12 Val=5.240179
+a0p2_J1p0_RWP_W14         CV=3.616939 (+/- 0.315779) lambda=100     rank=12/12 Val=5.251836
+a0p2_J1p0_RWP_W21         CV=3.625603 (+/- 0.283535) lambda=100     rank=12/12 Val=5.239104
+a0p2_J1p0_RWP_W28         CV=3.642491 (+/- 0.268774) lambda=100     rank=12/12 Val=5.250763
+
+================================================================================
+DYNAMICS = a0p2_J1p5
+================================================================================
+alpha  = 0.2
+J mult = 1.5
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.681782, +0.602445]
+RX per-step angle   = +0.400000
+Unitarity error = 3.977e-15
+Direct audit feature error = 5.554e-16
+Direct audit memory error  = 5.561e-16
+a0p2_J1p5_CONT            CV=3.592745 (+/- 0.328112) lambda=100     rank=12/12 Val=5.322772
+a0p2_J1p5_RWP_W1          CV=3.593583 (+/- 0.324265) lambda=100     rank= 9/12 Val=5.334433
+a0p2_J1p5_RWP_W2          CV=3.601848 (+/- 0.328479) lambda=100     rank=11/12 Val=5.326950
+a0p2_J1p5_RWP_W5          CV=3.597874 (+/- 0.353627) lambda=100     rank=12/12 Val=5.341760
+a0p2_J1p5_RWP_W7          CV=3.604942 (+/- 0.351807) lambda=100     rank=12/12 Val=5.343558
+a0p2_J1p5_RWP_W14         CV=3.611624 (+/- 0.316366) lambda=100     rank=12/12 Val=5.335876
+a0p2_J1p5_RWP_W21         CV=3.614711 (+/- 0.278800) lambda=100     rank=12/12 Val=5.356633
+a0p2_J1p5_RWP_W28         CV=3.633484 (+/- 0.276018) lambda=100     rank=12/12 Val=5.353310
+
+================================================================================
+DYNAMICS = a0p2_J2p0
+================================================================================
+alpha  = 0.2
+J mult = 2.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.909043, +0.803259]
+RX per-step angle   = +0.400000
+Unitarity error = 4.331e-15
+Direct audit feature error = 4.470e-16
+Direct audit memory error  = 6.762e-16
+a0p2_J2p0_CONT            CV=3.604761 (+/- 0.323104) lambda=100     rank=12/12 Val=5.409766
+a0p2_J2p0_RWP_W1          CV=3.594365 (+/- 0.338345) lambda=100     rank= 8/12 Val=5.383982
+a0p2_J2p0_RWP_W2          CV=3.601328 (+/- 0.343323) lambda=100     rank=11/12 Val=5.381485
+a0p2_J2p0_RWP_W5          CV=3.596411 (+/- 0.357506) lambda=100     rank=12/12 Val=5.394973
+a0p2_J2p0_RWP_W7          CV=3.601468 (+/- 0.365172) lambda=100     rank=12/12 Val=5.396148
+a0p2_J2p0_RWP_W14         CV=3.605813 (+/- 0.329033) lambda=100     rank=12/12 Val=5.366640
+a0p2_J2p0_RWP_W21         CV=3.647917 (+/- 0.309304) lambda=100     rank=12/12 Val=5.376552
+a0p2_J2p0_RWP_W28         CV=3.642548 (+/- 0.298328) lambda=100     rank=12/12 Val=5.391271
+
+================================================================================
+DYNAMICS = a0p25_J1p0
+================================================================================
+alpha  = 0.25
+J mult = 1.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.454521, +0.401630]
+RX per-step angle   = +0.400000
+Unitarity error = 4.991e-15
+Direct audit feature error = 2.242e-16
+Direct audit memory error  = 1.172e-16
+a0p25_J1p0_CONT           CV=3.599798 (+/- 0.301168) lambda=100     rank=12/12 Val=5.215778
+a0p25_J1p0_RWP_W1         CV=3.595174 (+/- 0.308518) lambda=100     rank= 9/12 Val=5.222056
+a0p25_J1p0_RWP_W2         CV=3.602139 (+/- 0.312040) lambda=100     rank=11/12 Val=5.218446
+a0p25_J1p0_RWP_W5         CV=3.596635 (+/- 0.337808) lambda=100     rank=12/12 Val=5.233948
+a0p25_J1p0_RWP_W7         CV=3.601914 (+/- 0.333022) lambda=100     rank=12/12 Val=5.222145
+a0p25_J1p0_RWP_W14        CV=3.618319 (+/- 0.311292) lambda=100     rank=12/12 Val=5.232693
+a0p25_J1p0_RWP_W21        CV=3.626632 (+/- 0.279540) lambda=100     rank=12/12 Val=5.220531
+a0p25_J1p0_RWP_W28        CV=3.643384 (+/- 0.265019) lambda=100     rank=12/12 Val=5.231994
+
+================================================================================
+DYNAMICS = a0p25_J1p5
+================================================================================
+alpha  = 0.25
+J mult = 1.5
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.681782, +0.602445]
+RX per-step angle   = +0.400000
+Unitarity error = 3.977e-15
+Direct audit feature error = 3.357e-16
+Direct audit memory error  = 2.238e-16
+a0p25_J1p5_CONT           CV=3.594444 (+/- 0.323065) lambda=100     rank=12/12 Val=5.315003
+a0p25_J1p5_RWP_W1         CV=3.595912 (+/- 0.319607) lambda=100     rank= 9/12 Val=5.327401
+a0p25_J1p5_RWP_W2         CV=3.604099 (+/- 0.323999) lambda=100     rank=11/12 Val=5.319918
+a0p25_J1p5_RWP_W5         CV=3.599952 (+/- 0.349251) lambda=100     rank=12/12 Val=5.337084
+a0p25_J1p5_RWP_W7         CV=3.607081 (+/- 0.347362) lambda=100     rank=12/12 Val=5.338471
+a0p25_J1p5_RWP_W14        CV=3.613528 (+/- 0.311560) lambda=100     rank=12/12 Val=5.330681
+a0p25_J1p5_RWP_W21        CV=3.616692 (+/- 0.274428) lambda=100     rank=12/12 Val=5.351051
+a0p25_J1p5_RWP_W28        CV=3.635136 (+/- 0.271509) lambda=100     rank=12/12 Val=5.348623
+
+================================================================================
+DYNAMICS = a0p25_J2p0
+================================================================================
+alpha  = 0.25
+J mult = 2.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.909043, +0.803259]
+RX per-step angle   = +0.400000
+Unitarity error = 4.331e-15
+Direct audit feature error = 4.516e-16
+Direct audit memory error  = 4.442e-16
+a0p25_J2p0_CONT           CV=3.608761 (+/- 0.319293) lambda=100     rank=12/12 Val=5.420692
+a0p25_J2p0_RWP_W1         CV=3.597735 (+/- 0.333976) lambda=100     rank= 8/12 Val=5.396285
+a0p25_J2p0_RWP_W2         CV=3.604673 (+/- 0.339462) lambda=100     rank=11/12 Val=5.393688
+a0p25_J2p0_RWP_W5         CV=3.599521 (+/- 0.354158) lambda=100     rank=12/12 Val=5.408085
+a0p25_J2p0_RWP_W7         CV=3.604639 (+/- 0.361524) lambda=100     rank=12/12 Val=5.408910
+a0p25_J2p0_RWP_W14        CV=3.608966 (+/- 0.325598) lambda=100     rank=12/12 Val=5.379414
+a0p25_J2p0_RWP_W21        CV=3.650807 (+/- 0.306464) lambda=100     rank=12/12 Val=5.388819
+a0p25_J2p0_RWP_W28        CV=3.645526 (+/- 0.295028) lambda=100     rank=12/12 Val=5.403422
+
+================================================================================
+DYNAMICS = a0p5_J1p0
+================================================================================
+alpha  = 0.5
+J mult = 1.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.454521, +0.401630]
+RX per-step angle   = +0.400000
+Unitarity error = 4.991e-15
+Direct audit feature error = 4.454e-16
+Direct audit memory error  = 1.688e-16
+a0p5_J1p0_CONT            CV=3.608796 (+/- 0.294554) lambda=100     rank=12/12 Val=5.193430
+a0p5_J1p0_RWP_W1          CV=3.604090 (+/- 0.303455) lambda=100     rank= 9/12 Val=5.200690
+a0p5_J1p0_RWP_W2          CV=3.611216 (+/- 0.306249) lambda=100     rank=11/12 Val=5.200019
+a0p5_J1p0_RWP_W5          CV=3.604710 (+/- 0.330748) lambda=100     rank=12/12 Val=5.211878
+a0p5_J1p0_RWP_W7          CV=3.610534 (+/- 0.327283) lambda=100     rank=12/12 Val=5.203245
+a0p5_J1p0_RWP_W14         CV=3.625965 (+/- 0.305555) lambda=100     rank=12/12 Val=5.209090
+a0p5_J1p0_RWP_W21         CV=3.632738 (+/- 0.273796) lambda=100     rank=12/12 Val=5.199390
+a0p5_J1p0_RWP_W28         CV=3.648538 (+/- 0.261121) lambda=100     rank=12/12 Val=5.208920
+
+================================================================================
+DYNAMICS = a0p5_J1p5
+================================================================================
+alpha  = 0.5
+J mult = 1.5
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.681782, +0.602445]
+RX per-step angle   = +0.400000
+Unitarity error = 3.977e-15
+Direct audit feature error = 3.359e-16
+Direct audit memory error  = 2.900e-16
+a0p5_J1p5_CONT            CV=3.599025 (+/- 0.311502) lambda=100     rank=12/12 Val=5.288498
+a0p5_J1p5_RWP_W1          CV=3.602405 (+/- 0.309430) lambda=100     rank= 9/12 Val=5.304788
+a0p5_J1p5_RWP_W2          CV=3.610308 (+/- 0.313517) lambda=100     rank=11/12 Val=5.298920
+a0p5_J1p5_RWP_W5          CV=3.605809 (+/- 0.338123) lambda=100     rank=12/12 Val=5.319316
+a0p5_J1p5_RWP_W7          CV=3.612571 (+/- 0.336685) lambda=100     rank=12/12 Val=5.317834
+a0p5_J1p5_RWP_W14         CV=3.618146 (+/- 0.300507) lambda=100     rank=12/12 Val=5.310256
+a0p5_J1p5_RWP_W21         CV=3.622146 (+/- 0.265020) lambda=100     rank=12/12 Val=5.332311
+a0p5_J1p5_RWP_W28         CV=3.639498 (+/- 0.262903) lambda=100     rank=12/12 Val=5.331680
+
+================================================================================
+DYNAMICS = a0p5_J2p0
+================================================================================
+alpha  = 0.5
+J mult = 2.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.909043, +0.803259]
+RX per-step angle   = +0.400000
+Unitarity error = 4.331e-15
+Direct audit feature error = 5.551e-16
+Direct audit memory error  = 2.483e-16
+a0p5_J2p0_CONT            CV=3.622359 (+/- 0.316937) lambda=100     rank=12/12 Val=5.495619
+a0p5_J2p0_RWP_W1          CV=3.608948 (+/- 0.330159) lambda=100     rank= 8/12 Val=5.478648
+a0p5_J2p0_RWP_W2          CV=3.615819 (+/- 0.337225) lambda=100     rank=11/12 Val=5.476877
+a0p5_J2p0_RWP_W5          CV=3.610837 (+/- 0.352945) lambda=100     rank=12/12 Val=5.495440
+a0p5_J2p0_RWP_W7          CV=3.616281 (+/- 0.360071) lambda=100     rank=12/12 Val=5.495282
+a0p5_J2p0_RWP_W14         CV=3.620444 (+/- 0.324696) lambda=100     rank=12/12 Val=5.466236
+a0p5_J2p0_RWP_W21         CV=3.662061 (+/- 0.307855) lambda=100     rank=12/12 Val=5.474103
+a0p5_J2p0_RWP_W28         CV=3.656819 (+/- 0.295528) lambda=100     rank=12/12 Val=5.487747
+
+================================================================================
+DYNAMICS = a0p75_J1p0
+================================================================================
+alpha  = 0.75
+J mult = 1.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.454521, +0.401630]
+RX per-step angle   = +0.400000
+Unitarity error = 4.991e-15
+Direct audit feature error = 3.237e-16
+Direct audit memory error  = 1.678e-16
+a0p75_J1p0_CONT           CV=3.618426 (+/- 0.297970) lambda=100     rank=12/12 Val=5.223323
+a0p75_J1p0_RWP_W1         CV=3.613338 (+/- 0.307390) lambda=100     rank= 9/12 Val=5.225690
+a0p75_J1p0_RWP_W2         CV=3.620751 (+/- 0.310307) lambda=100     rank=11/12 Val=5.228176
+a0p75_J1p0_RWP_W5         CV=3.613461 (+/- 0.334880) lambda=100     rank=12/12 Val=5.239399
+a0p75_J1p0_RWP_W7         CV=3.619888 (+/- 0.332363) lambda=100     rank=12/12 Val=5.234019
+a0p75_J1p0_RWP_W14        CV=3.635054 (+/- 0.310661) lambda=100     rank=12/12 Val=5.236193
+a0p75_J1p0_RWP_W21        CV=3.640424 (+/- 0.277106) lambda=100     rank=12/12 Val=5.229762
+a0p75_J1p0_RWP_W28        CV=3.655054 (+/- 0.267213) lambda=100     rank=12/12 Val=5.238020
+
+================================================================================
+DYNAMICS = a0p75_J1p5
+================================================================================
+alpha  = 0.75
+J mult = 1.5
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.681782, +0.602445]
+RX per-step angle   = +0.400000
+Unitarity error = 3.977e-15
+Direct audit feature error = 4.456e-16
+Direct audit memory error  = 1.388e-16
+a0p75_J1p5_CONT           CV=3.603329 (+/- 0.310103) lambda=100     rank=12/12 Val=5.303091
+a0p75_J1p5_RWP_W1         CV=3.607705 (+/- 0.308822) lambda=100     rank= 9/12 Val=5.320616
+a0p75_J1p5_RWP_W2         CV=3.615651 (+/- 0.312762) lambda=100     rank=11/12 Val=5.317939
+a0p75_J1p5_RWP_W5         CV=3.610832 (+/- 0.336269) lambda=100     rank=12/12 Val=5.336137
+a0p75_J1p5_RWP_W7         CV=3.617316 (+/- 0.335388) lambda=100     rank=12/12 Val=5.331600
+a0p75_J1p5_RWP_W14        CV=3.622509 (+/- 0.299230) lambda=100     rank=12/12 Val=5.325013
+a0p75_J1p5_RWP_W21        CV=3.626794 (+/- 0.265347) lambda=100     rank=12/12 Val=5.349467
+a0p75_J1p5_RWP_W28        CV=3.643376 (+/- 0.264232) lambda=100     rank=12/12 Val=5.348742
+
+================================================================================
+DYNAMICS = a0p75_J2p0
+================================================================================
+alpha  = 0.75
+J mult = 2.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.909043, +0.803259]
+RX per-step angle   = +0.400000
+Unitarity error = 4.331e-15
+Direct audit feature error = 5.120e-16
+Direct audit memory error  = 3.608e-16
+a0p75_J2p0_CONT           CV=3.632106 (+/- 0.324125) lambda=100     rank=12/12 Val=5.577575
+a0p75_J2p0_RWP_W1         CV=3.617708 (+/- 0.336111) lambda=100     rank= 8/12 Val=5.568545
+a0p75_J2p0_RWP_W2         CV=3.624478 (+/- 0.343399) lambda=100     rank=11/12 Val=5.568613
+a0p75_J2p0_RWP_W5         CV=3.620167 (+/- 0.359197) lambda=100     rank=12/12 Val=5.589720
+a0p75_J2p0_RWP_W7         CV=3.625680 (+/- 0.366931) lambda=100     rank=12/12 Val=5.588636
+a0p75_J2p0_RWP_W14        CV=3.629767 (+/- 0.332750) lambda=100     rank=12/12 Val=5.561721
+a0p75_J2p0_RWP_W21        CV=3.671447 (+/- 0.317212) lambda=100     rank=12/12 Val=5.566674
+a0p75_J2p0_RWP_W28        CV=3.666122 (+/- 0.304723) lambda=100     rank=12/12 Val=5.579620
+
+================================================================================
+DYNAMICS = baseline_a1_J1
+================================================================================
+alpha  = 1.0
+J mult = 1.0
+hx     = 0.5
+dt     = 0.8
+RZZ per-step range = [-0.454521, +0.401630]
+RX per-step angle   = +0.400000
+Unitarity error = 4.991e-15
+Direct audit feature error = 5.566e-16
+Direct audit memory error  = 1.665e-16
+
+6.4B baseline audit:
+  CONT    max error = 9.975e-17
+  RWP_W7  max error = 1.110e-16
+baseline_a1_J1_CONT       CV=3.627797 (+/- 0.305588) lambda=100     rank=12/12 Val=5.271719
+baseline_a1_J1_RWP_W1     CV=3.622253 (+/- 0.314586) lambda=100     rank= 9/12 Val=5.265572
+baseline_a1_J1_RWP_W2     CV=3.629886 (+/- 0.318050) lambda=100     rank=11/12 Val=5.271840
+baseline_a1_J1_RWP_W5     CV=3.622056 (+/- 0.343629) lambda=100     rank=12/12 Val=5.284469
+baseline_a1_J1_RWP_W7     CV=3.629042 (+/- 0.342126) lambda=100     rank=12/12 Val=5.281254
+baseline_a1_J1_RWP_W14    CV=3.644135 (+/- 0.320336) lambda=100     rank=12/12 Val=5.281235
+baseline_a1_J1_RWP_W21    CV=3.648360 (+/- 0.284404) lambda=100     rank=12/12 Val=5.279016
+baseline_a1_J1_RWP_W28    CV=3.661861 (+/- 0.277509) lambda=100     rank=12/12 Val=5.286784
+
+================================================================================
+BEST TEMPORAL PROTOCOL FOR EACH ALPHA x J SETTING
+================================================================================
+
+a0p0_J1p0          CONT     CV=3.698923 (+/- 0.503072) Val=6.276529
+
+a0p0_J1p5          CONT     CV=3.702235 (+/- 0.501699) Val=6.198094
+
+a0p0_J2p0          CONT     CV=3.673241 (+/- 0.433369) Val=6.046659
+
+a0p005_J1p0        RWP_W1   CV=3.577811 (+/- 0.311015) Val=5.128391
+
+a0p005_J1p5        RWP_W1   CV=3.581573 (+/- 0.306075) Val=5.196761
+
+a0p005_J2p0        RWP_W1   CV=3.611735 (+/- 0.360244) Val=5.310372
+
+a0p01_J1p0         RWP_W1   CV=3.581522 (+/- 0.338133) Val=5.170687
+
+a0p01_J1p5         RWP_W1   CV=3.582308 (+/- 0.331516) Val=5.218194
+
+a0p01_J2p0         RWP_W1   CV=3.596989 (+/- 0.310245) Val=5.160573
+
+a0p02_J1p0         RWP_W1   CV=3.579320 (+/- 0.301872) Val=5.108362
+
+a0p02_J1p5         RWP_W1   CV=3.580488 (+/- 0.301802) Val=5.170182
+
+a0p02_J2p0         RWP_W1   CV=3.603026 (+/- 0.340187) Val=5.231487
+
+a0p05_J1p0         RWP_W1   CV=3.579959 (+/- 0.354915) Val=5.348601
+
+a0p05_J1p5         RWP_W1   CV=3.581075 (+/- 0.314596) Val=5.155318
+
+a0p05_J2p0         RWP_W1   CV=3.595901 (+/- 0.385960) Val=5.448763
+
+a0p1_J1p0          RWP_W1   CV=3.587603 (+/- 0.328746) Val=5.300010
+
+a0p1_J1p5          RWP_W1   CV=3.584817 (+/- 0.345013) Val=5.352794
+
+a0p1_J2p0          RWP_W1   CV=3.586713 (+/- 0.340096) Val=5.332179
+
+a0p15_J1p0         RWP_W1   CV=3.591295 (+/- 0.318521) Val=5.267040
+
+a0p15_J1p5         RWP_W1   CV=3.590120 (+/- 0.331375) Val=5.341142
+
+a0p15_J2p0         RWP_W1   CV=3.590240 (+/- 0.346754) Val=5.378411
+
+a0p2_J1p0          RWP_W1   CV=3.593423 (+/- 0.312445) Val=5.240658
+
+a0p2_J1p5          CONT     CV=3.592745 (+/- 0.328112) Val=5.322772
+
+a0p2_J2p0          RWP_W1   CV=3.594365 (+/- 0.338345) Val=5.383982
+
+a0p25_J1p0         RWP_W1   CV=3.595174 (+/- 0.308518) Val=5.222056
+
+a0p25_J1p5         CONT     CV=3.594444 (+/- 0.323065) Val=5.315003
+
+a0p25_J2p0         RWP_W1   CV=3.597735 (+/- 0.333976) Val=5.396285
+
+a0p5_J1p0          RWP_W1   CV=3.604090 (+/- 0.303455) Val=5.200690
+
+a0p5_J1p5          CONT     CV=3.599025 (+/- 0.311502) Val=5.288498
+
+a0p5_J2p0          RWP_W1   CV=3.608948 (+/- 0.330159) Val=5.478648
+
+a0p75_J1p0         RWP_W1   CV=3.613338 (+/- 0.307390) Val=5.225690
+
+a0p75_J1p5         CONT     CV=3.603329 (+/- 0.310103) Val=5.303091
+
+a0p75_J2p0         RWP_W1   CV=3.617708 (+/- 0.336111) Val=5.568545
+
+baseline_a1_J1     RWP_W5   CV=3.622056 (+/- 0.343629) Val=5.284469
+
+================================================================================
+OVERALL JOINT-DYNAMICS x TEMPORAL RANKING
+PRIMARY RANKING = TRAINING-ONLY CV
+================================================================================
+
+ 1. a0p005_J1p0_RWP_W1        CV=3.577811 (+/- 0.311015) Val=5.128391
+ 2. a0p02_J1p0_RWP_W1         CV=3.579320 (+/- 0.301872) Val=5.108362
+ 3. a0p05_J1p0_RWP_W1         CV=3.579959 (+/- 0.354915) Val=5.348601
+ 4. a0p02_J1p5_RWP_W1         CV=3.580488 (+/- 0.301802) Val=5.170182
+ 5. a0p05_J1p5_RWP_W1         CV=3.581075 (+/- 0.314596) Val=5.155318
+ 6. a0p01_J1p0_RWP_W1         CV=3.581522 (+/- 0.338133) Val=5.170687
+ 7. a0p005_J1p5_RWP_W1        CV=3.581573 (+/- 0.306075) Val=5.196761
+ 8. a0p01_J1p5_RWP_W1         CV=3.582308 (+/- 0.331516) Val=5.218194
+ 9. a0p05_J1p0_RWP_W5         CV=3.583378 (+/- 0.383966) Val=5.351156
+10. a0p005_J1p0_RWP_W2        CV=3.584427 (+/- 0.309966) Val=5.129457
+11. a0p1_J1p5_RWP_W1          CV=3.584817 (+/- 0.345013) Val=5.352794
+12. a0p05_J1p0_CONT           CV=3.585936 (+/- 0.350600) Val=5.347327
+13. a0p1_J1p5_CONT            CV=3.586705 (+/- 0.350031) Val=5.345504
+14. a0p1_J2p0_RWP_W1          CV=3.586713 (+/- 0.340096) Val=5.332179
+15. a0p02_J1p0_RWP_W2         CV=3.586982 (+/- 0.301754) Val=5.108792
+16. a0p05_J1p0_RWP_W2         CV=3.587305 (+/- 0.358577) Val=5.343747
+17. a0p1_J1p0_RWP_W1          CV=3.587603 (+/- 0.328746) Val=5.300010
+18. a0p05_J1p0_RWP_W7         CV=3.587706 (+/- 0.380185) Val=5.343155
+19. a0p05_J1p5_CONT           CV=3.588047 (+/- 0.316348) Val=5.157679
+20. a0p02_J1p5_CONT           CV=3.588192 (+/- 0.308990) Val=5.175210
+21. a0p02_J1p0_CONT           CV=3.588306 (+/- 0.310423) Val=5.123401
+22. a0p005_J1p0_CONT          CV=3.588632 (+/- 0.324454) Val=5.156031
+23. a0p01_J1p0_RWP_W2         CV=3.588640 (+/- 0.337237) Val=5.175013
+24. a0p1_J1p0_RWP_W5          CV=3.589800 (+/- 0.359393) Val=5.306872
+25. a0p05_J1p5_RWP_W2         CV=3.590063 (+/- 0.315729) Val=5.156549
+26. a0p15_J1p5_RWP_W1         CV=3.590120 (+/- 0.331375) Val=5.341142
+27. a0p15_J1p5_CONT           CV=3.590194 (+/- 0.335770) Val=5.330779
+28. a0p15_J2p0_RWP_W1         CV=3.590240 (+/- 0.346754) Val=5.378411
+29. a0p1_J1p5_RWP_W5          CV=3.590520 (+/- 0.372596) Val=5.355717
+30. a0p01_J1p5_CONT           CV=3.590678 (+/- 0.288112) Val=5.175860
+31. a0p15_J1p0_RWP_W1         CV=3.591295 (+/- 0.318521) Val=5.267040
+32. a0p1_J2p0_RWP_W5          CV=3.591469 (+/- 0.378980) Val=5.404291
+33. a0p01_J1p0_CONT           CV=3.591502 (+/- 0.288545) Val=5.107220
+34. a0p005_J1p5_CONT          CV=3.592030 (+/- 0.315627) Val=5.208994
+35. a0p1_J1p0_CONT            CV=3.592725 (+/- 0.323416) Val=5.296108
+36. a0p2_J1p5_CONT            CV=3.592745 (+/- 0.328112) Val=5.322772
+37. a0p05_J1p5_RWP_W5         CV=3.592863 (+/- 0.404671) Val=5.423914
+38. a0p15_J2p0_RWP_W5         CV=3.592921 (+/- 0.364426) Val=5.388663
+39. a0p15_J1p0_RWP_W5         CV=3.593180 (+/- 0.349011) Val=5.277350
+40. a0p1_J1p5_RWP_W2          CV=3.593292 (+/- 0.348425) Val=5.346689
+41. a0p2_J1p0_RWP_W1          CV=3.593423 (+/- 0.312445) Val=5.240658
+42. a0p2_J1p5_RWP_W1          CV=3.593583 (+/- 0.324265) Val=5.334433
+43. a0p2_J2p0_RWP_W1          CV=3.594365 (+/- 0.338345) Val=5.383982
+44. a0p1_J1p0_RWP_W7          CV=3.594441 (+/- 0.354559) Val=5.295652
+45. a0p25_J1p5_CONT           CV=3.594444 (+/- 0.323065) Val=5.315003
+46. a0p1_J2p0_RWP_W2          CV=3.594720 (+/- 0.367715) Val=5.393271
+47. a0p1_J1p0_RWP_W2          CV=3.594753 (+/- 0.332823) Val=5.294326
+48. a0p15_J1p5_RWP_W5         CV=3.594876 (+/- 0.360129) Val=5.345983
+49. a0p2_J1p0_RWP_W5          CV=3.595103 (+/- 0.342377) Val=5.252368
+50. a0p25_J1p0_RWP_W1         CV=3.595174 (+/- 0.308518) Val=5.222056
+51. a0p05_J2p0_RWP_W1         CV=3.595901 (+/- 0.385960) Val=5.448763
+52. a0p25_J1p5_RWP_W1         CV=3.595912 (+/- 0.319607) Val=5.327401
+53. a0p02_J1p5_RWP_W2         CV=3.595977 (+/- 0.356551) Val=5.255639
+54. a0p15_J1p0_CONT           CV=3.596117 (+/- 0.312306) Val=5.262606
+55. a0p2_J2p0_RWP_W5          CV=3.596411 (+/- 0.357506) Val=5.394973
+56. a0p1_J2p0_RWP_W7          CV=3.596608 (+/- 0.387510) Val=5.406795
+57. a0p25_J1p0_RWP_W5         CV=3.596635 (+/- 0.337808) Val=5.233948
+58. a0p01_J2p0_RWP_W1         CV=3.596989 (+/- 0.310245) Val=5.160573
+59. a0p1_J2p0_CONT            CV=3.597130 (+/- 0.343713) Val=5.422213
+60. a0p15_J2p0_RWP_W2         CV=3.597268 (+/- 0.351182) Val=5.376184
+61. a0p1_J1p5_RWP_W7          CV=3.597364 (+/- 0.371108) Val=5.358510
+62. a0p25_J2p0_RWP_W1         CV=3.597735 (+/- 0.333976) Val=5.396285
+63. a0p2_J1p5_RWP_W5          CV=3.597874 (+/- 0.353627) Val=5.341760
+64. a0p15_J2p0_RWP_W7         CV=3.597975 (+/- 0.372504) Val=5.390357
+65. a0p2_J1p0_CONT            CV=3.598115 (+/- 0.305597) Val=5.235386
+66. a0p15_J1p0_RWP_W7         CV=3.598169 (+/- 0.343834) Val=5.265171
+67. a0p15_J1p0_RWP_W2         CV=3.598339 (+/- 0.322594) Val=5.261948
+68. a0p15_J1p5_RWP_W2         CV=3.598472 (+/- 0.335249) Val=5.334023
+69. a0p5_J1p5_CONT            CV=3.599025 (+/- 0.311502) Val=5.288498
+70. a0p25_J2p0_RWP_W5         CV=3.599521 (+/- 0.354158) Val=5.408085
+71. a0p25_J1p0_CONT           CV=3.599798 (+/- 0.301168) Val=5.215778
+72. a0p25_J1p5_RWP_W5         CV=3.599952 (+/- 0.349251) Val=5.337084
+73. a0p05_J1p5_RWP_W7         CV=3.600158 (+/- 0.402052) Val=5.427299
+74. a0p15_J2p0_CONT           CV=3.600186 (+/- 0.330212) Val=5.405437
+75. a0p2_J1p0_RWP_W7          CV=3.600273 (+/- 0.337310) Val=5.240179
+76. a0p2_J1p0_RWP_W2          CV=3.600414 (+/- 0.316264) Val=5.236346
+77. a0p1_J2p0_RWP_W14         CV=3.600819 (+/- 0.350539) Val=5.376780
+78. a0p2_J2p0_RWP_W2          CV=3.601328 (+/- 0.343323) Val=5.381485
+79. a0p2_J2p0_RWP_W7          CV=3.601468 (+/- 0.365172) Val=5.396148
+80. a0p15_J1p5_RWP_W7         CV=3.601807 (+/- 0.358485) Val=5.348200
+81. a0p2_J1p5_RWP_W2          CV=3.601848 (+/- 0.328479) Val=5.326950
+82. a0p25_J1p0_RWP_W7         CV=3.601914 (+/- 0.333022) Val=5.222145
+83. a0p25_J1p0_RWP_W2         CV=3.602139 (+/- 0.312040) Val=5.218446
+84. a0p15_J2p0_RWP_W14        CV=3.602301 (+/- 0.335981) Val=5.360728
+85. a0p5_J1p5_RWP_W1          CV=3.602405 (+/- 0.309430) Val=5.304788
+86. a0p05_J2p0_CONT           CV=3.602718 (+/- 0.357127) Val=5.482622
+87. a0p02_J1p0_RWP_W5         CV=3.602769 (+/- 0.431922) Val=5.526177
+88. a0p05_J2p0_RWP_W2         CV=3.602898 (+/- 0.382871) Val=5.447963
+89. a0p02_J2p0_RWP_W1         CV=3.603026 (+/- 0.340187) Val=5.231487
+90. a0p75_J1p5_CONT           CV=3.603329 (+/- 0.310103) Val=5.303091
+91. a0p1_J1p5_RWP_W14         CV=3.604062 (+/- 0.336987) Val=5.351442
+92. a0p5_J1p0_RWP_W1          CV=3.604090 (+/- 0.303455) Val=5.200690
+93. a0p25_J1p5_RWP_W2         CV=3.604099 (+/- 0.323999) Val=5.319918
+94. a0p05_J1p0_RWP_W14        CV=3.604330 (+/- 0.360634) Val=5.354668
+95. a0p25_J2p0_RWP_W7         CV=3.604639 (+/- 0.361524) Val=5.408910
+96. a0p25_J2p0_RWP_W2         CV=3.604673 (+/- 0.339462) Val=5.393688
+97. a0p5_J1p0_RWP_W5          CV=3.604710 (+/- 0.330748) Val=5.211878
+98. a0p005_J1p0_RWP_W5        CV=3.604740 (+/- 0.354538) Val=5.168780
+99. a0p2_J2p0_CONT            CV=3.604761 (+/- 0.323104) Val=5.409766
+100. a0p2_J1p5_RWP_W7          CV=3.604942 (+/- 0.351807) Val=5.343558
+101. a0p05_J1p5_RWP_W14        CV=3.605313 (+/- 0.371409) Val=5.421319
+102. a0p5_J1p5_RWP_W5          CV=3.605809 (+/- 0.338123) Val=5.319316
+103. a0p2_J2p0_RWP_W14         CV=3.605813 (+/- 0.329033) Val=5.366640
+104. a0p01_J1p0_RWP_W5         CV=3.606732 (+/- 0.322293) Val=5.123034
+105. a0p25_J1p5_RWP_W7         CV=3.607081 (+/- 0.347362) Val=5.338471
+106. a0p02_J1p0_RWP_W7         CV=3.607481 (+/- 0.428517) Val=5.522443
+107. a0p75_J1p5_RWP_W1         CV=3.607705 (+/- 0.308822) Val=5.320616
+108. a0p1_J1p5_RWP_W21         CV=3.608075 (+/- 0.297133) Val=5.374909
+109. a0p05_J2p0_RWP_W5         CV=3.608406 (+/- 0.388822) Val=5.458788
+110. a0p15_J1p5_RWP_W14        CV=3.608678 (+/- 0.323543) Val=5.340735
+111. a0p25_J2p0_CONT           CV=3.608761 (+/- 0.319293) Val=5.420692
+112. a0p5_J1p0_CONT            CV=3.608796 (+/- 0.294554) Val=5.193430
+113. a0p5_J2p0_RWP_W1          CV=3.608948 (+/- 0.330159) Val=5.478648
+114. a0p25_J2p0_RWP_W14        CV=3.608966 (+/- 0.325598) Val=5.379414
+115. a0p5_J1p5_RWP_W2          CV=3.610308 (+/- 0.313517) Val=5.298920
+116. a0p5_J1p0_RWP_W7          CV=3.610534 (+/- 0.327283) Val=5.203245
+117. a0p75_J1p5_RWP_W5         CV=3.610832 (+/- 0.336269) Val=5.336137
+118. a0p5_J2p0_RWP_W5          CV=3.610837 (+/- 0.352945) Val=5.495440
+119. a0p5_J1p0_RWP_W2          CV=3.611216 (+/- 0.306249) Val=5.200019
+120. a0p1_J1p0_RWP_W14         CV=3.611411 (+/- 0.333958) Val=5.308508
+121. a0p2_J1p5_RWP_W14         CV=3.611624 (+/- 0.316366) Val=5.335876
+122. a0p005_J2p0_RWP_W1        CV=3.611735 (+/- 0.360244) Val=5.310372
+123. a0p15_J1p5_RWP_W21        CV=3.611898 (+/- 0.285257) Val=5.362444
+124. a0p05_J1p5_RWP_W21        CV=3.612060 (+/- 0.329007) Val=5.448296
+125. a0p5_J1p5_RWP_W7          CV=3.612571 (+/- 0.336685) Val=5.317834
+126. a0p75_J1p0_RWP_W1         CV=3.613338 (+/- 0.307390) Val=5.225690
+127. a0p75_J1p0_RWP_W5         CV=3.613461 (+/- 0.334880) Val=5.239399
+128. a0p25_J1p5_RWP_W14        CV=3.613528 (+/- 0.311560) Val=5.330681
+129. a0p02_J1p5_RWP_W5         CV=3.613613 (+/- 0.336266) Val=5.186209
+130. a0p2_J1p5_RWP_W21         CV=3.614711 (+/- 0.278800) Val=5.356633
+131. a0p05_J2p0_RWP_W7         CV=3.614874 (+/- 0.421335) Val=5.538777
+132. a0p15_J1p0_RWP_W14        CV=3.615041 (+/- 0.322685) Val=5.277778
+133. a0p75_J1p5_RWP_W2         CV=3.615651 (+/- 0.312762) Val=5.317939
+134. a0p05_J2p0_RWP_W14        CV=3.615793 (+/- 0.355855) Val=5.423997
+135. a0p5_J2p0_RWP_W2          CV=3.615819 (+/- 0.337225) Val=5.476877
+136. a0p5_J2p0_RWP_W7          CV=3.616281 (+/- 0.360071) Val=5.495282
+137. a0p25_J1p5_RWP_W21        CV=3.616692 (+/- 0.274428) Val=5.351051
+138. a0p02_J1p5_RWP_W21        CV=3.616833 (+/- 0.259689) Val=5.230277
+139. a0p2_J1p0_RWP_W14         CV=3.616939 (+/- 0.315779) Val=5.251836
+140. a0p005_J1p0_RWP_W7        CV=3.617304 (+/- 0.329778) Val=5.159828
+141. a0p75_J1p5_RWP_W7         CV=3.617316 (+/- 0.335388) Val=5.331600
+142. a0p02_J1p0_RWP_W14        CV=3.617604 (+/- 0.312544) Val=5.139330
+143. a0p05_J1p0_RWP_W21        CV=3.617627 (+/- 0.323339) Val=5.342637
+144. a0p75_J2p0_RWP_W1         CV=3.617708 (+/- 0.336111) Val=5.568545
+145. a0p5_J1p5_RWP_W14         CV=3.618146 (+/- 0.300507) Val=5.310256
+146. a0p25_J1p0_RWP_W14        CV=3.618319 (+/- 0.311292) Val=5.232693
+147. a0p75_J1p0_CONT           CV=3.618426 (+/- 0.297970) Val=5.223323
+148. a0p01_J1p0_RWP_W7         CV=3.618896 (+/- 0.297238) Val=5.116558
+149. a0p75_J1p0_RWP_W7         CV=3.619888 (+/- 0.332363) Val=5.234019
+150. a0p75_J2p0_RWP_W5         CV=3.620167 (+/- 0.359197) Val=5.589720
+151. a0p5_J2p0_RWP_W14         CV=3.620444 (+/- 0.324696) Val=5.466236
+152. a0p75_J1p0_RWP_W2         CV=3.620751 (+/- 0.310307) Val=5.228176
+153. a0p005_J1p5_RWP_W5        CV=3.621095 (+/- 0.335172) Val=5.216431
+154. a0p1_J1p0_RWP_W21         CV=3.621707 (+/- 0.299580) Val=5.295006
+155. a0p02_J2p0_CONT           CV=3.621931 (+/- 0.389369) Val=5.744131
+156. baseline_a1_J1_RWP_W5     CV=3.622056 (+/- 0.343629) Val=5.284469
+157. a0p5_J1p5_RWP_W21         CV=3.622146 (+/- 0.265020) Val=5.332311
+158. baseline_a1_J1_RWP_W1     CV=3.622253 (+/- 0.314586) Val=5.265572
+159. a0p5_J2p0_CONT            CV=3.622359 (+/- 0.316937) Val=5.495619
+160. a0p75_J1p5_RWP_W14        CV=3.622509 (+/- 0.299230) Val=5.325013
+161. a0p005_J1p0_RWP_W14       CV=3.622905 (+/- 0.323322) Val=5.169476
+162. a0p005_J1p5_RWP_W21       CV=3.623363 (+/- 0.268179) Val=5.262800
+163. a0p01_J1p5_RWP_W5         CV=3.623398 (+/- 0.311881) Val=5.187078
+164. a0p15_J1p0_RWP_W21        CV=3.624236 (+/- 0.289636) Val=5.264459
+165. a0p75_J2p0_RWP_W2         CV=3.624478 (+/- 0.343399) Val=5.568613
+166. a0p02_J1p0_RWP_W21        CV=3.625270 (+/- 0.272576) Val=5.125364
+167. a0p01_J1p0_RWP_W14        CV=3.625429 (+/- 0.287101) Val=5.123959
+168. a0p2_J1p0_RWP_W21         CV=3.625603 (+/- 0.283535) Val=5.239104
+169. a0p75_J2p0_RWP_W7         CV=3.625680 (+/- 0.366931) Val=5.588636
+170. a0p5_J1p0_RWP_W14         CV=3.625965 (+/- 0.305555) Val=5.209090
+171. a0p25_J1p0_RWP_W21        CV=3.626632 (+/- 0.279540) Val=5.220531
+172. a0p75_J1p5_RWP_W21        CV=3.626794 (+/- 0.265347) Val=5.349467
+173. a0p1_J1p5_RWP_W28         CV=3.627254 (+/- 0.297035) Val=5.369563
+174. baseline_a1_J1_CONT       CV=3.627797 (+/- 0.305588) Val=5.271719
+175. a0p01_J1p5_RWP_W21        CV=3.627915 (+/- 0.242302) Val=5.231918
+176. a0p01_J2p0_CONT           CV=3.628134 (+/- 0.398991) Val=5.855229
+177. baseline_a1_J1_RWP_W7     CV=3.629042 (+/- 0.342126) Val=5.281254
+178. a0p02_J1p5_RWP_W14        CV=3.629626 (+/- 0.278489) Val=5.191205
+179. a0p75_J2p0_RWP_W14        CV=3.629767 (+/- 0.332750) Val=5.561721
+180. baseline_a1_J1_RWP_W2     CV=3.629886 (+/- 0.318050) Val=5.271840
+181. a0p005_J2p0_CONT          CV=3.630211 (+/- 0.401962) Val=5.889996
+182. a0p05_J1p5_RWP_W28        CV=3.630455 (+/- 0.333410) Val=5.442396
+183. a0p005_J1p5_RWP_W14       CV=3.630708 (+/- 0.285865) Val=5.221588
+184. a0p15_J1p5_RWP_W28        CV=3.630991 (+/- 0.283138) Val=5.358091
+185. a0p02_J1p5_RWP_W7         CV=3.631691 (+/- 0.367938) Val=5.295148
+186. a0p01_J1p5_RWP_W2         CV=3.631739 (+/- 0.404515) Val=5.502182
+187. a0p75_J2p0_CONT           CV=3.632106 (+/- 0.324125) Val=5.577575
+188. a0p5_J1p0_RWP_W21         CV=3.632738 (+/- 0.273796) Val=5.199390
+189. a0p05_J1p0_RWP_W28        CV=3.632835 (+/- 0.311203) Val=5.351536
+190. a0p2_J1p5_RWP_W28         CV=3.633484 (+/- 0.276018) Val=5.353310
+191. a0p75_J1p0_RWP_W14        CV=3.635054 (+/- 0.310661) Val=5.236193
+192. a0p25_J1p5_RWP_W28        CV=3.635136 (+/- 0.271509) Val=5.348623
+193. a0p01_J1p0_RWP_W21        CV=3.635690 (+/- 0.253266) Val=5.108715
+194. a0p01_J1p5_RWP_W14        CV=3.635824 (+/- 0.314817) Val=5.257284
+195. a0p005_J1p5_RWP_W2        CV=3.637147 (+/- 0.359791) Val=5.374678
+196. a0p005_J1p0_RWP_W21       CV=3.638049 (+/- 0.285285) Val=5.155071
+197. a0p1_J1p0_RWP_W28         CV=3.638489 (+/- 0.284896) Val=5.305540
+198. a0p1_J2p0_RWP_W28         CV=3.638555 (+/- 0.320935) Val=5.404694
+199. a0p15_J2p0_RWP_W28        CV=3.639374 (+/- 0.305420) Val=5.386407
+200. a0p5_J1p5_RWP_W28         CV=3.639498 (+/- 0.262903) Val=5.331680
+201. a0p75_J1p0_RWP_W21        CV=3.640424 (+/- 0.277106) Val=5.229762
+202. a0p15_J1p0_RWP_W28        CV=3.641200 (+/- 0.274715) Val=5.275914
+203. a0p02_J2p0_RWP_W2         CV=3.642298 (+/- 0.416783) Val=5.600952
+204. a0p2_J1p0_RWP_W28         CV=3.642491 (+/- 0.268774) Val=5.250763
+205. a0p2_J2p0_RWP_W28         CV=3.642548 (+/- 0.298328) Val=5.391271
+206. a0p75_J1p5_RWP_W28        CV=3.643376 (+/- 0.264232) Val=5.348742
+207. a0p25_J1p0_RWP_W28        CV=3.643384 (+/- 0.265019) Val=5.231994
+208. baseline_a1_J1_RWP_W14    CV=3.644135 (+/- 0.320336) Val=5.281235
+209. a0p1_J2p0_RWP_W21         CV=3.644405 (+/- 0.330203) Val=5.389695
+210. a0p02_J1p5_RWP_W28        CV=3.644423 (+/- 0.276192) Val=5.222759
+211. a0p15_J2p0_RWP_W21        CV=3.644909 (+/- 0.315686) Val=5.371574
+212. a0p25_J2p0_RWP_W28        CV=3.645526 (+/- 0.295028) Val=5.403422
+213. a0p2_J2p0_RWP_W21         CV=3.647917 (+/- 0.309304) Val=5.376552
+214. baseline_a1_J1_RWP_W21    CV=3.648360 (+/- 0.284404) Val=5.279016
+215. a0p5_J1p0_RWP_W28         CV=3.648538 (+/- 0.261121) Val=5.208920
+216. a0p005_J1p5_RWP_W28       CV=3.650584 (+/- 0.286136) Val=5.256002
+217. a0p02_J2p0_RWP_W5         CV=3.650646 (+/- 0.463068) Val=5.893533
+218. a0p25_J2p0_RWP_W21        CV=3.650807 (+/- 0.306464) Val=5.388819
+219. a0p02_J1p0_RWP_W28        CV=3.652284 (+/- 0.366784) Val=5.531678
+220. a0p01_J1p5_RWP_W28        CV=3.653574 (+/- 0.260535) Val=5.224888
+221. a0p75_J1p0_RWP_W28        CV=3.655054 (+/- 0.267213) Val=5.238020
+222. a0p05_J2p0_RWP_W28        CV=3.655093 (+/- 0.343146) Val=5.463084
+223. a0p02_J2p0_RWP_W7         CV=3.655218 (+/- 0.471343) Val=5.893579
+224. a0p5_J2p0_RWP_W28         CV=3.656819 (+/- 0.295528) Val=5.487747
+225. a0p02_J2p0_RWP_W14        CV=3.658852 (+/- 0.413002) Val=5.786028
+226. baseline_a1_J1_RWP_W28    CV=3.661861 (+/- 0.277509) Val=5.286784
+227. a0p5_J2p0_RWP_W21         CV=3.662061 (+/- 0.307855) Val=5.474103
+228. a0p01_J1p5_RWP_W7         CV=3.662810 (+/- 0.484521) Val=5.980145
+229. a0p05_J2p0_RWP_W21        CV=3.663625 (+/- 0.367713) Val=5.526730
+230. a0p01_J2p0_RWP_W2         CV=3.663720 (+/- 0.452593) Val=5.899213
+231. a0p005_J1p5_RWP_W7        CV=3.665888 (+/- 0.301973) Val=5.209151
+232. a0p75_J2p0_RWP_W28        CV=3.666122 (+/- 0.304723) Val=5.579620
+233. a0p01_J2p0_RWP_W5         CV=3.667157 (+/- 0.483745) Val=6.074154
+234. a0p005_J2p0_RWP_W2        CV=3.670291 (+/- 0.472835) Val=6.127232
+235. a0p75_J2p0_RWP_W21        CV=3.671447 (+/- 0.317212) Val=5.566674
+236. a0p01_J2p0_RWP_W7         CV=3.671582 (+/- 0.491802) Val=6.072523
+237. a0p0_J2p0_CONT            CV=3.673241 (+/- 0.433369) Val=6.046659
+238. a0p005_J2p0_RWP_W5        CV=3.674269 (+/- 0.492212) Val=6.144699
+239. a0p01_J2p0_RWP_W14        CV=3.676179 (+/- 0.459323) Val=6.047894
+240. a0p005_J2p0_RWP_W7        CV=3.678614 (+/- 0.500136) Val=6.142299
+241. a0p01_J1p0_RWP_W28        CV=3.683014 (+/- 0.411557) Val=5.811442
+242. a0p005_J2p0_RWP_W14       CV=3.683448 (+/- 0.468325) Val=6.119935
+243. a0p02_J2p0_RWP_W28        CV=3.694700 (+/- 0.412102) Val=5.896323
+244. a0p005_J1p0_RWP_W28       CV=3.696277 (+/- 0.286001) Val=5.156583
+245. a0p0_J1p0_CONT            CV=3.698923 (+/- 0.503072) Val=6.276529
+246. a0p02_J2p0_RWP_W21        CV=3.701912 (+/- 0.421214) Val=5.885815
+247. a0p0_J1p5_CONT            CV=3.702235 (+/- 0.501699) Val=6.198094
+248. a0p0_J1p0_RWP_W5          CV=3.704393 (+/- 0.538564) Val=6.307358
+249. a0p0_J1p0_RWP_W1          CV=3.704845 (+/- 0.517551) Val=6.318650
+250. a0p0_J2p0_RWP_W1          CV=3.707452 (+/- 0.506562) Val=6.307569
+251. a0p0_J1p5_RWP_W1          CV=3.707517 (+/- 0.506194) Val=6.306725
+252. a0p0_J1p5_RWP_W5          CV=3.708559 (+/- 0.534249) Val=6.306923
+253. a0p01_J2p0_RWP_W28        CV=3.709037 (+/- 0.431869) Val=6.070096
+254. a0p0_J1p0_RWP_W7          CV=3.709301 (+/- 0.537267) Val=6.303231
+255. a0p0_J1p0_RWP_W2          CV=3.710032 (+/- 0.519812) Val=6.316605
+256. a0p0_J2p0_RWP_W5          CV=3.712095 (+/- 0.523572) Val=6.318359
+257. a0p0_J2p0_RWP_W2          CV=3.713943 (+/- 0.505228) Val=6.306861
+258. a0p0_J1p5_RWP_W2          CV=3.714340 (+/- 0.519062) Val=6.319359
+259. a0p005_J2p0_RWP_W28       CV=3.714489 (+/- 0.429744) Val=6.116954
+260. a0p01_J2p0_RWP_W21        CV=3.716354 (+/- 0.441026) Val=6.062656
+261. a0p0_J1p5_RWP_W7          CV=3.716403 (+/- 0.532020) Val=6.306845
+262. a0p0_J2p0_RWP_W7          CV=3.717253 (+/- 0.530847) Val=6.315276
+263. a0p0_J1p5_RWP_W14         CV=3.720482 (+/- 0.511833) Val=6.303518
+264. a0p005_J2p0_RWP_W21       CV=3.722293 (+/- 0.448691) Val=6.130525
+265. a0p0_J2p0_RWP_W14         CV=3.723509 (+/- 0.500945) Val=6.295568
+266. a0p0_J1p0_RWP_W14         CV=3.724837 (+/- 0.523457) Val=6.310123
+267. a0p0_J1p5_RWP_W21         CV=3.724991 (+/- 0.473648) Val=6.332060
+268. a0p0_J1p0_RWP_W21         CV=3.737416 (+/- 0.491822) Val=6.304087
+269. a0p0_J1p5_RWP_W28         CV=3.738691 (+/- 0.475748) Val=6.318798
+270. a0p0_J1p0_RWP_W28         CV=3.746667 (+/- 0.483547) Val=6.303742
+271. a0p0_J2p0_RWP_W28         CV=3.750483 (+/- 0.475796) Val=6.310170
+272. a0p0_J2p0_RWP_W21         CV=3.759128 (+/- 0.485321) Val=6.303258
+
+Best 6.5B configuration:
+  a0p005_J1p0_RWP_W1
+  alpha = 0.005
+  J multiplier = 1.0
+  protocol = RWP_W1
+  CV RMSE = 3.577811
+  Validation RMSE = 5.128391
+
+IMPORTANT:
+  alpha and J were jointly varied.
+  hx=0.5 and dt=0.8 remain frozen.
+  Trotter depth remains r=2.
+  F4 + softsign + M=2 remain frozen.
+  All temporal protocols were tested.
+  Primary selection uses training-only CV.
+  2025 validation is diagnostic.
+  2026 test remains untouched.

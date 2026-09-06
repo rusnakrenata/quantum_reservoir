@@ -1,0 +1,69 @@
+================================================================================
+WEEK 5 - STEP 5.3B
+REWINDING IDEAL-QRC FEATURE GENERATION
+REFERENCE WINDOW W = 7
+================================================================================
+
+Loaded samples             = 1692
+Reference window           = 7
+Full-window output samples = 1686
+Daily continuity audit     = PASS
+
+Architecture:
+  F4 injection qubits = 4
+  memory qubits       = 2
+  total qubits        = 6
+  window W            = 7
+  alpha               = 1.0
+  h_x                 = 0.5
+  Delta_t             = 0.8
+  Trotter steps       = 2
+  Y_memory            = OFF
+
+Loaded fixed CONT couplings:
+  J(0, 1) = +0.383538467978
+  J(1, 2) = -0.085570184347
+  J(2, 3) = +0.502037087876
+  J(3, 4) = +0.276315240683
+  J(4, 5) = -0.568151712957
+
+Reservoir-unitary check:
+  ||U^dagger U - I||_F = 4.991208084570e-15
+
+Reference observables:
+  X0, Z0, X1, Z1, X2, Z2, X3, Z3, X4, Z4, X5, Z5
+
+Generated  250/1686 rewound windows...
+Generated  500/1686 rewound windows...
+Generated  750/1686 rewound windows...
+Generated 1000/1686 rewound windows...
+Generated 1250/1686 rewound windows...
+Generated 1500/1686 rewound windows...
+Generated 1686/1686 rewound windows...
+
+================================================================================
+RWP W=7 SUMMARY
+================================================================================
+Feature matrix shape       = (1686, 12)
+Expected shape             = (1686, 12)
+Shape check                = PASS
+All features finite        = PASS
+Window-length audit        = PASS
+Output split counts        = {'train': 1089, 'validation': 365, 'test': 232}
+
+First output target date   = 2022-01-08 00:00:00
+Last output target date    = 2026-08-20 00:00:00
+
+Maximum memory trace error = 2.222605458751e-15
+Maximum memory Hermiticity = 1.191082636969e-15
+Maximum feature imaginary  = 6.302029699698e-16
+Maximum bound violation    = 0.000000000000e+00
+
+Minimum final memory purity= 0.978919276547
+Mean final memory purity   = 0.979111934457
+Maximum final memory purity= 0.984562486084
+
+QRC feature range          = [-0.968876, +0.855002]
+
+Saved rewinding features to:
+  results\05_03b_rwp_w7_qrc_features.csv

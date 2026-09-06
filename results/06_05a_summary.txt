@@ -1,0 +1,312 @@
+================================================================================
+WEEK 6 - STEP 6.5A
+RESERVOIR-DYNAMICS SCREEN
+F4 + SOFTSIGN + M=2 + ALL WINDOWS
+================================================================================
+
+
+================================================================================
+DYNAMICS = baseline
+================================================================================
+alpha   = 1.0
+J mult  = 1.0
+hx      = 0.5
+dt      = 0.8
+RZZ per-step angle range = [-0.454521, +0.401630]
+RX per-step angle        = +0.400000
+Unitarity error = 4.991e-15
+Direct audit feature error = 5.566e-16
+Direct audit memory error  = 1.665e-16
+
+6.4B softsign reference audit:
+  CONT    max error = 9.975e-17
+  RWP_W7  max error = 1.110e-16
+baseline_CONT          CV=3.627797 (+/- 0.305588) lambda=100     rank=12/12 Val=5.271719
+baseline_RWP_W1        CV=3.622253 (+/- 0.314586) lambda=100     rank= 9/12 Val=5.265572
+baseline_RWP_W2        CV=3.629886 (+/- 0.318050) lambda=100     rank=11/12 Val=5.271840
+baseline_RWP_W5        CV=3.622056 (+/- 0.343629) lambda=100     rank=12/12 Val=5.284469
+baseline_RWP_W7        CV=3.629042 (+/- 0.342126) lambda=100     rank=12/12 Val=5.281254
+baseline_RWP_W14       CV=3.644135 (+/- 0.320336) lambda=100     rank=12/12 Val=5.281235
+baseline_RWP_W21       CV=3.648360 (+/- 0.284404) lambda=100     rank=12/12 Val=5.279016
+baseline_RWP_W28       CV=3.661861 (+/- 0.277509) lambda=100     rank=12/12 Val=5.286784
+
+================================================================================
+DYNAMICS = alpha_0p5
+================================================================================
+alpha   = 0.5
+J mult  = 1.0
+hx      = 0.5
+dt      = 0.8
+RZZ per-step angle range = [-0.454521, +0.401630]
+RX per-step angle        = +0.400000
+Unitarity error = 4.991e-15
+Direct audit feature error = 4.454e-16
+Direct audit memory error  = 1.688e-16
+alpha_0p5_CONT         CV=3.608796 (+/- 0.294554) lambda=100     rank=12/12 Val=5.193430
+alpha_0p5_RWP_W1       CV=3.604090 (+/- 0.303455) lambda=100     rank= 9/12 Val=5.200690
+alpha_0p5_RWP_W2       CV=3.611216 (+/- 0.306249) lambda=100     rank=11/12 Val=5.200019
+alpha_0p5_RWP_W5       CV=3.604710 (+/- 0.330748) lambda=100     rank=12/12 Val=5.211878
+alpha_0p5_RWP_W7       CV=3.610534 (+/- 0.327283) lambda=100     rank=12/12 Val=5.203245
+alpha_0p5_RWP_W14      CV=3.625965 (+/- 0.305555) lambda=100     rank=12/12 Val=5.209090
+alpha_0p5_RWP_W21      CV=3.632738 (+/- 0.273796) lambda=100     rank=12/12 Val=5.199390
+alpha_0p5_RWP_W28      CV=3.648538 (+/- 0.261121) lambda=100     rank=12/12 Val=5.208920
+
+================================================================================
+DYNAMICS = alpha_1p5
+================================================================================
+alpha   = 1.5
+J mult  = 1.0
+hx      = 0.5
+dt      = 0.8
+RZZ per-step angle range = [-0.454521, +0.401630]
+RX per-step angle        = +0.400000
+Unitarity error = 4.991e-15
+Direct audit feature error = 3.397e-16
+Direct audit memory error  = 2.289e-16
+alpha_1p5_CONT         CV=3.645371 (+/- 0.329745) lambda=100     rank=12/12 Val=5.383896
+alpha_1p5_RWP_W1       CV=3.638510 (+/- 0.334832) lambda=100     rank= 9/12 Val=5.355379
+alpha_1p5_RWP_W2       CV=3.646554 (+/- 0.340191) lambda=100     rank=11/12 Val=5.369356
+alpha_1p5_RWP_W5       CV=3.638629 (+/- 0.369461) lambda=100     rank=12/12 Val=5.388571
+alpha_1p5_RWP_W7       CV=3.646778 (+/- 0.370427) lambda=100     rank=12/12 Val=5.377536
+alpha_1p5_RWP_W14      CV=3.661499 (+/- 0.348371) lambda=100     rank=12/12 Val=5.387978
+alpha_1p5_RWP_W21      CV=3.663989 (+/- 0.307217) lambda=100     rank=12/12 Val=5.394014
+alpha_1p5_RWP_W28      CV=3.675754 (+/- 0.305962) lambda=100     rank=12/12 Val=5.403843
+
+================================================================================
+DYNAMICS = J_0p5
+================================================================================
+alpha   = 1.0
+J mult  = 0.5
+hx      = 0.5
+dt      = 0.8
+RZZ per-step angle range = [-0.227261, +0.200815]
+RX per-step angle        = +0.400000
+Unitarity error = 4.143e-15
+Direct audit feature error = 2.843e-16
+Direct audit memory error  = 1.522e-16
+J_0p5_CONT             CV=3.688056 (+/- 0.329990) lambda=300     rank=12/12 Val=5.467466
+J_0p5_RWP_W1           CV=3.648472 (+/- 0.345839) lambda=100     rank= 9/12 Val=5.275372
+J_0p5_RWP_W2           CV=3.655522 (+/- 0.349105) lambda=100     rank=11/12 Val=5.277114
+J_0p5_RWP_W5           CV=3.646126 (+/- 0.379270) lambda=100     rank=12/12 Val=5.294985
+J_0p5_RWP_W7           CV=3.651562 (+/- 0.367189) lambda=100     rank=12/12 Val=5.291872
+J_0p5_RWP_W14          CV=3.659337 (+/- 0.340685) lambda=100     rank=12/12 Val=5.304088
+J_0p5_RWP_W21          CV=3.668821 (+/- 0.324944) lambda=100     rank=12/12 Val=5.294216
+J_0p5_RWP_W28          CV=3.674036 (+/- 0.306221) lambda=100     rank=12/12 Val=5.304193
+
+================================================================================
+DYNAMICS = J_1p5
+================================================================================
+alpha   = 1.0
+J mult  = 1.5
+hx      = 0.5
+dt      = 0.8
+RZZ per-step angle range = [-0.681782, +0.602445]
+RX per-step angle        = +0.400000
+Unitarity error = 3.977e-15
+Direct audit feature error = 3.367e-16
+Direct audit memory error  = 2.267e-16
+J_1p5_CONT             CV=3.608366 (+/- 0.313871) lambda=100     rank=12/12 Val=5.349122
+J_1p5_RWP_W1           CV=3.613196 (+/- 0.312542) lambda=100     rank= 9/12 Val=5.362319
+J_1p5_RWP_W2           CV=3.621401 (+/- 0.316796) lambda=100     rank=11/12 Val=5.364746
+J_1p5_RWP_W5           CV=3.616443 (+/- 0.339666) lambda=100     rank=12/12 Val=5.380895
+J_1p5_RWP_W7           CV=3.622927 (+/- 0.339160) lambda=100     rank=12/12 Val=5.373124
+J_1p5_RWP_W14          CV=3.628089 (+/- 0.302790) lambda=100     rank=12/12 Val=5.368808
+J_1p5_RWP_W21          CV=3.632195 (+/- 0.269936) lambda=100     rank=12/12 Val=5.394726
+J_1p5_RWP_W28          CV=3.647947 (+/- 0.270026) lambda=100     rank=12/12 Val=5.393800
+
+================================================================================
+DYNAMICS = hx_0p25
+================================================================================
+alpha   = 1.0
+J mult  = 1.0
+hx      = 0.25
+dt      = 0.8
+RZZ per-step angle range = [-0.454521, +0.401630]
+RX per-step angle        = +0.200000
+Unitarity error = 1.376e-14
+Direct audit feature error = 4.575e-16
+Direct audit memory error  = 3.502e-16
+hx_0p25_CONT           CV=3.665877 (+/- 0.367965) lambda=100     rank=12/12 Val=5.314778
+hx_0p25_RWP_W1         CV=3.646800 (+/- 0.369596) lambda=100     rank= 9/12 Val=5.309565
+hx_0p25_RWP_W2         CV=3.654244 (+/- 0.373484) lambda=100     rank=11/12 Val=5.308800
+hx_0p25_RWP_W5         CV=3.644923 (+/- 0.399983) lambda=100     rank=12/12 Val=5.305171
+hx_0p25_RWP_W7         CV=3.654712 (+/- 0.394219) lambda=100     rank=12/12 Val=5.310976
+hx_0p25_RWP_W14        CV=3.662985 (+/- 0.363878) lambda=100     rank=12/12 Val=5.314293
+hx_0p25_RWP_W21        CV=3.659476 (+/- 0.341624) lambda=100     rank=12/12 Val=5.325245
+hx_0p25_RWP_W28        CV=3.668526 (+/- 0.348260) lambda=100     rank=12/12 Val=5.331258
+
+================================================================================
+DYNAMICS = hx_0p75
+================================================================================
+alpha   = 1.0
+J mult  = 1.0
+hx      = 0.75
+dt      = 0.8
+RZZ per-step angle range = [-0.454521, +0.401630]
+RX per-step angle        = +0.600000
+Unitarity error = 4.526e-15
+Direct audit feature error = 3.365e-16
+Direct audit memory error  = 2.269e-16
+hx_0p75_CONT           CV=3.639110 (+/- 0.279767) lambda=100     rank=12/12 Val=5.231329
+hx_0p75_RWP_W1         CV=3.630585 (+/- 0.281933) lambda=100     rank= 9/12 Val=5.233546
+hx_0p75_RWP_W2         CV=3.637312 (+/- 0.283976) lambda=100     rank=11/12 Val=5.243070
+hx_0p75_RWP_W5         CV=3.636214 (+/- 0.305364) lambda=100     rank=12/12 Val=5.267357
+hx_0p75_RWP_W7         CV=3.637412 (+/- 0.303420) lambda=100     rank=12/12 Val=5.244128
+hx_0p75_RWP_W14        CV=3.654314 (+/- 0.288599) lambda=100     rank=12/12 Val=5.220383
+hx_0p75_RWP_W21        CV=3.670642 (+/- 0.266998) lambda=100     rank=12/12 Val=5.232149
+hx_0p75_RWP_W28        CV=3.678998 (+/- 0.269933) lambda=100     rank=12/12 Val=5.235201
+
+================================================================================
+DYNAMICS = dt_0p4
+================================================================================
+alpha   = 1.0
+J mult  = 1.0
+hx      = 0.5
+dt      = 0.4
+RZZ per-step angle range = [-0.227261, +0.200815]
+RX per-step angle        = +0.200000
+Unitarity error = 1.063e-14
+Direct audit feature error = 2.326e-16
+Direct audit memory error  = 2.256e-16
+dt_0p4_CONT            CV=3.688298 (+/- 0.396529) lambda=100     rank=12/12 Val=5.305324
+dt_0p4_RWP_W1          CV=3.686197 (+/- 0.428466) lambda=100     rank= 9/12 Val=5.217666
+dt_0p4_RWP_W2          CV=3.691949 (+/- 0.430163) lambda=100     rank=11/12 Val=5.210893
+dt_0p4_RWP_W5          CV=3.678995 (+/- 0.458869) lambda=100     rank=12/12 Val=5.197560
+dt_0p4_RWP_W7          CV=3.688564 (+/- 0.455843) lambda=100     rank=12/12 Val=5.200216
+dt_0p4_RWP_W14         CV=3.702561 (+/- 0.441371) lambda=100     rank=12/12 Val=5.218729
+dt_0p4_RWP_W21         CV=3.701894 (+/- 0.376714) lambda=100     rank=12/12 Val=5.212958
+dt_0p4_RWP_W28         CV=3.690534 (+/- 0.412742) lambda=100     rank=12/12 Val=5.226756
+
+================================================================================
+DYNAMICS = dt_1p2
+================================================================================
+alpha   = 1.0
+J mult  = 1.0
+hx      = 0.5
+dt      = 1.2
+RZZ per-step angle range = [-0.681782, +0.602445]
+RX per-step angle        = +0.600000
+Unitarity error = 8.661e-15
+Direct audit feature error = 3.332e-16
+Direct audit memory error  = 1.755e-16
+dt_1p2_CONT            CV=3.640562 (+/- 0.278503) lambda=100     rank=12/12 Val=5.323078
+dt_1p2_RWP_W1          CV=3.631855 (+/- 0.253622) lambda=10      rank= 8/12 Val=5.215733
+dt_1p2_RWP_W2          CV=3.639121 (+/- 0.286721) lambda=100     rank=11/12 Val=5.331846
+dt_1p2_RWP_W5          CV=3.635250 (+/- 0.273864) lambda=10      rank=12/12 Val=5.252147
+dt_1p2_RWP_W7          CV=3.641391 (+/- 0.307530) lambda=100     rank=12/12 Val=5.334005
+dt_1p2_RWP_W14         CV=3.662881 (+/- 0.240383) lambda=10      rank=12/12 Val=5.209783
+dt_1p2_RWP_W21         CV=3.664550 (+/- 0.203096) lambda=10      rank=12/12 Val=5.210963
+dt_1p2_RWP_W28         CV=3.672103 (+/- 0.217586) lambda=10      rank=12/12 Val=5.216948
+
+================================================================================
+BEST TEMPORAL PROTOCOL WITHIN EACH DYNAMICS SETTING
+================================================================================
+
+baseline  : RWP_W5 CV=3.622056 (+/- 0.343629) Val=5.284469
+
+alpha_0p5 : RWP_W1 CV=3.604090 (+/- 0.303455) Val=5.200690
+
+alpha_1p5 : RWP_W1 CV=3.638510 (+/- 0.334832) Val=5.355379
+
+J_0p5     : RWP_W5 CV=3.646126 (+/- 0.379270) Val=5.294985
+
+J_1p5     : CONT CV=3.608366 (+/- 0.313871) Val=5.349122
+
+hx_0p25   : RWP_W5 CV=3.644923 (+/- 0.399983) Val=5.305171
+
+hx_0p75   : RWP_W1 CV=3.630585 (+/- 0.281933) Val=5.233546
+
+dt_0p4    : RWP_W5 CV=3.678995 (+/- 0.458869) Val=5.197560
+
+dt_1p2    : RWP_W1 CV=3.631855 (+/- 0.253622) Val=5.215733
+
+================================================================================
+OVERALL DYNAMICS x TEMPORAL RANKING
+PRIMARY RANKING = TRAINING-ONLY CV
+================================================================================
+
+ 1. alpha_0p5_RWP_W1       CV=3.604090 (+/- 0.303455) Val=5.200690
+ 2. alpha_0p5_RWP_W5       CV=3.604710 (+/- 0.330748) Val=5.211878
+ 3. J_1p5_CONT             CV=3.608366 (+/- 0.313871) Val=5.349122
+ 4. alpha_0p5_CONT         CV=3.608796 (+/- 0.294554) Val=5.193430
+ 5. alpha_0p5_RWP_W7       CV=3.610534 (+/- 0.327283) Val=5.203245
+ 6. alpha_0p5_RWP_W2       CV=3.611216 (+/- 0.306249) Val=5.200019
+ 7. J_1p5_RWP_W1           CV=3.613196 (+/- 0.312542) Val=5.362319
+ 8. J_1p5_RWP_W5           CV=3.616443 (+/- 0.339666) Val=5.380895
+ 9. J_1p5_RWP_W2           CV=3.621401 (+/- 0.316796) Val=5.364746
+10. baseline_RWP_W5        CV=3.622056 (+/- 0.343629) Val=5.284469
+11. baseline_RWP_W1        CV=3.622253 (+/- 0.314586) Val=5.265572
+12. J_1p5_RWP_W7           CV=3.622927 (+/- 0.339160) Val=5.373124
+13. alpha_0p5_RWP_W14      CV=3.625965 (+/- 0.305555) Val=5.209090
+14. baseline_CONT          CV=3.627797 (+/- 0.305588) Val=5.271719
+15. J_1p5_RWP_W14          CV=3.628089 (+/- 0.302790) Val=5.368808
+16. baseline_RWP_W7        CV=3.629042 (+/- 0.342126) Val=5.281254
+17. baseline_RWP_W2        CV=3.629886 (+/- 0.318050) Val=5.271840
+18. hx_0p75_RWP_W1         CV=3.630585 (+/- 0.281933) Val=5.233546
+19. dt_1p2_RWP_W1          CV=3.631855 (+/- 0.253622) Val=5.215733
+20. J_1p5_RWP_W21          CV=3.632195 (+/- 0.269936) Val=5.394726
+21. alpha_0p5_RWP_W21      CV=3.632738 (+/- 0.273796) Val=5.199390
+22. dt_1p2_RWP_W5          CV=3.635250 (+/- 0.273864) Val=5.252147
+23. hx_0p75_RWP_W5         CV=3.636214 (+/- 0.305364) Val=5.267357
+24. hx_0p75_RWP_W2         CV=3.637312 (+/- 0.283976) Val=5.243070
+25. hx_0p75_RWP_W7         CV=3.637412 (+/- 0.303420) Val=5.244128
+26. alpha_1p5_RWP_W1       CV=3.638510 (+/- 0.334832) Val=5.355379
+27. alpha_1p5_RWP_W5       CV=3.638629 (+/- 0.369461) Val=5.388571
+28. hx_0p75_CONT           CV=3.639110 (+/- 0.279767) Val=5.231329
+29. dt_1p2_RWP_W2          CV=3.639121 (+/- 0.286721) Val=5.331846
+30. dt_1p2_CONT            CV=3.640562 (+/- 0.278503) Val=5.323078
+31. dt_1p2_RWP_W7          CV=3.641391 (+/- 0.307530) Val=5.334005
+32. baseline_RWP_W14       CV=3.644135 (+/- 0.320336) Val=5.281235
+33. hx_0p25_RWP_W5         CV=3.644923 (+/- 0.399983) Val=5.305171
+34. alpha_1p5_CONT         CV=3.645371 (+/- 0.329745) Val=5.383896
+35. J_0p5_RWP_W5           CV=3.646126 (+/- 0.379270) Val=5.294985
+36. alpha_1p5_RWP_W2       CV=3.646554 (+/- 0.340191) Val=5.369356
+37. alpha_1p5_RWP_W7       CV=3.646778 (+/- 0.370427) Val=5.377536
+38. hx_0p25_RWP_W1         CV=3.646800 (+/- 0.369596) Val=5.309565
+39. J_1p5_RWP_W28          CV=3.647947 (+/- 0.270026) Val=5.393800
+40. baseline_RWP_W21       CV=3.648360 (+/- 0.284404) Val=5.279016
+41. J_0p5_RWP_W1           CV=3.648472 (+/- 0.345839) Val=5.275372
+42. alpha_0p5_RWP_W28      CV=3.648538 (+/- 0.261121) Val=5.208920
+43. J_0p5_RWP_W7           CV=3.651562 (+/- 0.367189) Val=5.291872
+44. hx_0p25_RWP_W2         CV=3.654244 (+/- 0.373484) Val=5.308800
+45. hx_0p75_RWP_W14        CV=3.654314 (+/- 0.288599) Val=5.220383
+46. hx_0p25_RWP_W7         CV=3.654712 (+/- 0.394219) Val=5.310976
+47. J_0p5_RWP_W2           CV=3.655522 (+/- 0.349105) Val=5.277114
+48. J_0p5_RWP_W14          CV=3.659337 (+/- 0.340685) Val=5.304088
+49. hx_0p25_RWP_W21        CV=3.659476 (+/- 0.341624) Val=5.325245
+50. alpha_1p5_RWP_W14      CV=3.661499 (+/- 0.348371) Val=5.387978
+51. baseline_RWP_W28       CV=3.661861 (+/- 0.277509) Val=5.286784
+52. dt_1p2_RWP_W14         CV=3.662881 (+/- 0.240383) Val=5.209783
+53. hx_0p25_RWP_W14        CV=3.662985 (+/- 0.363878) Val=5.314293
+54. alpha_1p5_RWP_W21      CV=3.663989 (+/- 0.307217) Val=5.394014
+55. dt_1p2_RWP_W21         CV=3.664550 (+/- 0.203096) Val=5.210963
+56. hx_0p25_CONT           CV=3.665877 (+/- 0.367965) Val=5.314778
+57. hx_0p25_RWP_W28        CV=3.668526 (+/- 0.348260) Val=5.331258
+58. J_0p5_RWP_W21          CV=3.668821 (+/- 0.324944) Val=5.294216
+59. hx_0p75_RWP_W21        CV=3.670642 (+/- 0.266998) Val=5.232149
+60. dt_1p2_RWP_W28         CV=3.672103 (+/- 0.217586) Val=5.216948
+61. J_0p5_RWP_W28          CV=3.674036 (+/- 0.306221) Val=5.304193
+62. alpha_1p5_RWP_W28      CV=3.675754 (+/- 0.305962) Val=5.403843
+63. dt_0p4_RWP_W5          CV=3.678995 (+/- 0.458869) Val=5.197560
+64. hx_0p75_RWP_W28        CV=3.678998 (+/- 0.269933) Val=5.235201
+65. dt_0p4_RWP_W1          CV=3.686197 (+/- 0.428466) Val=5.217666
+66. J_0p5_CONT             CV=3.688056 (+/- 0.329990) Val=5.467466
+67. dt_0p4_CONT            CV=3.688298 (+/- 0.396529) Val=5.305324
+68. dt_0p4_RWP_W7          CV=3.688564 (+/- 0.455843) Val=5.200216
+69. dt_0p4_RWP_W28         CV=3.690534 (+/- 0.412742) Val=5.226756
+70. dt_0p4_RWP_W2          CV=3.691949 (+/- 0.430163) Val=5.210893
+71. dt_0p4_RWP_W21         CV=3.701894 (+/- 0.376714) Val=5.212958
+72. dt_0p4_RWP_W14         CV=3.702561 (+/- 0.441371) Val=5.218729
+
+Best 6.5A configuration:
+  alpha_0p5_RWP_W1
+
+IMPORTANT:
+  This is a one-factor dynamics screen.
+  Parameters were NOT yet jointly optimized.
+  F4 + softsign + M=2 were frozen.
+  All temporal protocols were tested.
+  Trotter depth remains r=2.
+  Primary ranking uses training-only CV.
+  2025 validation remains diagnostic.
+  2026 test remains untouched.

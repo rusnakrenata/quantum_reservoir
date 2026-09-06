@@ -1,0 +1,111 @@
+================================================================================
+WEEK 5 - STEP 5.2C
+RESERVOIR OBSERVABLE / FEATURE EXTRACTION CORRECTNESS
+================================================================================
+
+Reference feature vector:
+  r_t = [X0, Z0, X1, Z1, X2, Z2]
+
+Diagnostic observables:
+  Y1, Y2, Z0Z1, Z1Z2, Z0X1, Y1X2
+
+--------------------------------------------------------------------------------
+TIME STEP t=1, theta=+0.200
+--------------------------------------------------------------------------------
+
+Reference features:
+  X0    = +0.412732321699    manual-vs-Qiskit error = 0.000e+00
+  Z0    = +0.783982171544    manual-vs-Qiskit error = 0.000e+00
+  X1    = +0.154931670689    manual-vs-Qiskit error = 0.000e+00
+  Z1    = +0.707764361204    manual-vs-Qiskit error = 0.000e+00
+  X2    = -0.199646990415    manual-vs-Qiskit error = 0.000e+00
+  Z2    = +0.706811281383    manual-vs-Qiskit error = 0.000e+00
+
+Diagnostic observables:
+  Y1     = -0.654163291204    manual-vs-Qiskit error = 0.000e+00
+  Y2     = -0.668805027811    manual-vs-Qiskit error = 0.000e+00
+  Z0Z1   = +0.570913069402    manual-vs-Qiskit error = 0.000e+00
+  Z1Z2   = +0.495665949204    manual-vs-Qiskit error = 0.000e+00
+  Z0X1   = +0.234597728710    manual-vs-Qiskit error = 0.000e+00
+  Y1X2   = +0.058825355368    manual-vs-Qiskit error = 0.000e+00
+
+--------------------------------------------------------------------------------
+TIME STEP t=2, theta=-0.700
+--------------------------------------------------------------------------------
+
+Reference features:
+  X0    = -0.229129619376    manual-vs-Qiskit error = 0.000e+00
+  Z0    = +0.434826090384    manual-vs-Qiskit error = 0.000e+00
+  X1    = +0.358406280293    manual-vs-Qiskit error = 0.000e+00
+  Z1    = +0.161935689828    manual-vs-Qiskit error = 0.000e+00
+  X2    = -0.364897801982    manual-vs-Qiskit error = 0.000e+00
+  Z2    = +0.098371449485    manual-vs-Qiskit error = 0.000e+00
+
+Diagnostic observables:
+  Y1     = -0.509561237448    manual-vs-Qiskit error = 0.000e+00
+  Y2     = -0.731553044070    manual-vs-Qiskit error = 0.000e+00
+  Z0Z1   = -0.101043112543    manual-vs-Qiskit error = 0.000e+00
+  Z1Z2   = -0.061843739057    manual-vs-Qiskit error = 0.000e+00
+  Z0X1   = +0.572862795991    manual-vs-Qiskit error = 0.000e+00
+  Y1X2   = +0.297803383046    manual-vs-Qiskit error = 0.000e+00
+
+--------------------------------------------------------------------------------
+TIME STEP t=3, theta=+1.000
+--------------------------------------------------------------------------------
+
+Reference features:
+  X0    = +0.417337776606    manual-vs-Qiskit error = 0.000e+00
+  Z0    = +0.402664019081    manual-vs-Qiskit error = 0.000e+00
+  X1    = +0.238951304559    manual-vs-Qiskit error = 0.000e+00
+  Z1    = -0.043905843506    manual-vs-Qiskit error = 0.000e+00
+  X2    = -0.137891825510    manual-vs-Qiskit error = 0.000e+00
+  Z2    = -0.308972076444    manual-vs-Qiskit error = 0.000e+00
+
+Diagnostic observables:
+  Y1     = +0.030055746353    manual-vs-Qiskit error = 0.000e+00
+  Y2     = -0.234118122414    manual-vs-Qiskit error = 0.000e+00
+  Z0Z1   = +0.324567333070    manual-vs-Qiskit error = 0.000e+00
+  Z1Z2   = -0.042693562094    manual-vs-Qiskit error = 0.000e+00
+  Z0X1   = +0.183291085815    manual-vs-Qiskit error = 0.000e+00
+  Y1X2   = +0.476625517406    manual-vs-Qiskit error = 0.000e+00
+
+--------------------------------------------------------------------------------
+TIME STEP t=4, theta=+0.400
+--------------------------------------------------------------------------------
+
+Reference features:
+  X0    = +0.205526075566    manual-vs-Qiskit error = 0.000e+00
+  Z0    = +0.667062863006    manual-vs-Qiskit error = 0.000e+00
+  X1    = -0.203027729238    manual-vs-Qiskit error = 0.000e+00
+  Z1    = +0.075957641023    manual-vs-Qiskit error = 0.000e+00
+  X2    = +0.213565612063    manual-vs-Qiskit error = 0.000e+00
+  Z2    = -0.274753001528    manual-vs-Qiskit error = 0.000e+00
+
+Diagnostic observables:
+  Y1     = +0.105703454263    manual-vs-Qiskit error = 0.000e+00
+  Y2     = +0.275560823579    manual-vs-Qiskit error = 0.000e+00
+  Z0Z1   = +0.174091979096    manual-vs-Qiskit error = 0.000e+00
+  Z1Z2   = -0.010279997625    manual-vs-Qiskit error = 0.000e+00
+  Z0X1   = -0.227057371743    manual-vs-Qiskit error = 0.000e+00
+  Y1X2   = +0.229862116702    manual-vs-Qiskit error = 0.000e+00
+
+================================================================================
+QRC FEATURE MATRIX
+================================================================================
+
+Columns:
+  X0, Z0, X1, Z1, X2, Z2
+
+[[ 0.412732  0.783982  0.154932  0.707764 -0.199647  0.706811]
+ [-0.22913   0.434826  0.358406  0.161936 -0.364898  0.098371]
+ [ 0.417338  0.402664  0.238951 -0.043906 -0.137892 -0.308972]
+ [ 0.205526  0.667063 -0.203028  0.075958  0.213566 -0.274753]]
+
+Feature matrix shape = (4, 6)
+
+================================================================================
+CORRECTNESS SUMMARY
+================================================================================
+Maximum manual-vs-Qiskit expectation error = 0.000000000000e+00
+Maximum imaginary component = 1.519972099002e-16
+Maximum [-1,+1] bound violation = 0.000000000000e+00

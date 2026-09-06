@@ -1,0 +1,170 @@
+================================================================================
+WEEK 6 - STEP 6.3
+MEMORY-QUBIT SEARCH
+M={1,2,3,4} x CONT + ALL WINDOWS
+================================================================================
+
+Nested fixed couplings:
+  J(0, 1) = +0.383538467978
+  J(1, 2) = -0.085570184347
+  J(2, 3) = +0.502037087876
+  J(3, 4) = +0.276315240683
+  J(4, 5) = -0.568151712957
+  J(5, 6) = +0.665871292291
+  J(6, 7) = +0.365595582786
+
+================================================================================
+MEMORY QUBITS = 1
+================================================================================
+Total qubits = 5
+Unitarity error = 2.366e-15
+QRC features = 10
+  M=1: processed  250/1692 days...
+  M=1: processed  500/1692 days...
+  M=1: processed  750/1692 days...
+  M=1: processed 1000/1692 days...
+  M=1: processed 1250/1692 days...
+  M=1: processed 1500/1692 days...
+  M=1: processed 1692/1692 days...
+Direct audit feature error = 5.555e-16
+Direct audit memory error  = 2.223e-16
+M1_CONT        N=1095 CV=3.642643 (+/- 0.296526) lambda=100     rank=10/10 Val=5.334005
+M1_RWP_W1      N=1095 CV=3.626999 (+/- 0.319097) lambda=100     rank= 8/10 Val=5.305545
+M1_RWP_W2      N=1094 CV=3.631339 (+/- 0.328196) lambda=100     rank=10/10 Val=5.301790
+M1_RWP_W5      N=1091 CV=3.630516 (+/- 0.360795) lambda=100     rank=10/10 Val=5.307159
+M1_RWP_W7      N=1089 CV=3.637296 (+/- 0.350235) lambda=100     rank=10/10 Val=5.315486
+M1_RWP_W14     N=1082 CV=3.650493 (+/- 0.309552) lambda=100     rank=10/10 Val=5.291624
+M1_RWP_W21     N=1075 CV=3.655706 (+/- 0.282891) lambda=100     rank=10/10 Val=5.301648
+M1_RWP_W28     N=1068 CV=3.658696 (+/- 0.280550) lambda=100     rank=10/10 Val=5.299161
+
+================================================================================
+MEMORY QUBITS = 2
+================================================================================
+Total qubits = 6
+Unitarity error = 4.991e-15
+QRC features = 12
+  M=2: processed  250/1692 days...
+  M=2: processed  500/1692 days...
+  M=2: processed  750/1692 days...
+  M=2: processed 1000/1692 days...
+  M=2: processed 1250/1692 days...
+  M=2: processed 1500/1692 days...
+  M=2: processed 1692/1692 days...
+Direct audit feature error = 3.916e-16
+Direct audit memory error  = 1.666e-16
+M2_CONT        N=1095 CV=3.633137 (+/- 0.315009) lambda=100     rank=12/12 Val=5.325743
+M2_RWP_W1      N=1095 CV=3.626512 (+/- 0.322139) lambda=100     rank= 9/12 Val=5.297046
+M2_RWP_W2      N=1094 CV=3.634047 (+/- 0.327915) lambda=100     rank=11/12 Val=5.309981
+M2_RWP_W5      N=1091 CV=3.626630 (+/- 0.357725) lambda=100     rank=12/12 Val=5.327890
+M2_RWP_W7      N=1089 CV=3.633922 (+/- 0.357675) lambda=100     rank=12/12 Val=5.308175
+M2_RWP_W14     N=1082 CV=3.648535 (+/- 0.333928) lambda=100     rank=12/12 Val=5.330509
+M2_RWP_W21     N=1075 CV=3.650020 (+/- 0.287281) lambda=100     rank=12/12 Val=5.332919
+M2_RWP_W28     N=1068 CV=3.661829 (+/- 0.289366) lambda=100     rank=12/12 Val=5.344487
+
+================================================================================
+MEMORY QUBITS = 3
+================================================================================
+Total qubits = 7
+Unitarity error = 7.687e-15
+QRC features = 14
+  M=3: processed  250/1692 days...
+  M=3: processed  500/1692 days...
+  M=3: processed  750/1692 days...
+  M=3: processed 1000/1692 days...
+  M=3: processed 1250/1692 days...
+  M=3: processed 1500/1692 days...
+  M=3: processed 1692/1692 days...
+Direct audit feature error = 3.573e-16
+Direct audit memory error  = 1.628e-16
+M3_CONT        N=1095 CV=3.657816 (+/- 0.306503) lambda=100     rank=14/14 Val=5.346229
+M3_RWP_W1      N=1095 CV=3.626512 (+/- 0.322139) lambda=100     rank= 9/14 Val=5.297046
+M3_RWP_W2      N=1094 CV=3.634653 (+/- 0.326208) lambda=100     rank=12/14 Val=5.296594
+M3_RWP_W5      N=1091 CV=3.632997 (+/- 0.357967) lambda=100     rank=14/14 Val=5.328009
+M3_RWP_W7      N=1089 CV=3.639875 (+/- 0.358800) lambda=100     rank=14/14 Val=5.318156
+M3_RWP_W14     N=1082 CV=3.641215 (+/- 0.318300) lambda=100     rank=14/14 Val=5.310162
+M3_RWP_W21     N=1075 CV=3.662229 (+/- 0.309691) lambda=100     rank=14/14 Val=5.353877
+M3_RWP_W28     N=1068 CV=3.669511 (+/- 0.284266) lambda=100     rank=14/14 Val=5.325512
+
+================================================================================
+MEMORY QUBITS = 4
+================================================================================
+Total qubits = 8
+Unitarity error = 1.120e-14
+QRC features = 16
+  M=4: processed  250/1692 days...
+  M=4: processed  500/1692 days...
+  M=4: processed  750/1692 days...
+  M=4: processed 1000/1692 days...
+  M=4: processed 1250/1692 days...
+  M=4: processed 1500/1692 days...
+  M=4: processed 1692/1692 days...
+Direct audit feature error = 3.332e-16
+Direct audit memory error  = 1.613e-16
+M4_CONT        N=1095 CV=3.650333 (+/- 0.309527) lambda=100     rank=16/16 Val=5.335097
+M4_RWP_W1      N=1095 CV=3.626512 (+/- 0.322139) lambda=100     rank= 9/16 Val=5.297046
+M4_RWP_W2      N=1094 CV=3.634450 (+/- 0.325886) lambda=100     rank=13/16 Val=5.292651
+M4_RWP_W5      N=1091 CV=3.635240 (+/- 0.355755) lambda=100     rank=16/16 Val=5.329622
+M4_RWP_W7      N=1089 CV=3.634970 (+/- 0.357116) lambda=100     rank=16/16 Val=5.307944
+M4_RWP_W14     N=1082 CV=3.636746 (+/- 0.344826) lambda=100     rank=16/16 Val=5.324372
+M4_RWP_W21     N=1075 CV=3.645823 (+/- 0.304532) lambda=100     rank=16/16 Val=5.333145
+M4_RWP_W28     N=1068 CV=3.676860 (+/- 0.288268) lambda=100     rank=16/16 Val=5.348027
+
+================================================================================
+BEST TEMPORAL PROTOCOL WITHIN EACH MEMORY SIZE
+================================================================================
+
+M=1: RWP_W1 CV=3.626999 (+/- 0.319097) Val=5.305545
+
+M=2: RWP_W1 CV=3.626512 (+/- 0.322139) Val=5.297046
+
+M=3: RWP_W1 CV=3.626512 (+/- 0.322139) Val=5.297046
+
+M=4: RWP_W1 CV=3.626512 (+/- 0.322139) Val=5.297046
+
+================================================================================
+OVERALL MEMORY x TEMPORAL RANKING
+PRIMARY RANKING = TRAINING-ONLY CV
+================================================================================
+
+ 1. M4_RWP_W1      Q=8 F=16 N=1095 CV=3.626512 (+/- 0.322139) Val=5.297046
+ 2. M2_RWP_W1      Q=6 F=12 N=1095 CV=3.626512 (+/- 0.322139) Val=5.297046
+ 3. M3_RWP_W1      Q=7 F=14 N=1095 CV=3.626512 (+/- 0.322139) Val=5.297046
+ 4. M2_RWP_W5      Q=6 F=12 N=1091 CV=3.626630 (+/- 0.357725) Val=5.327890
+ 5. M1_RWP_W1      Q=5 F=10 N=1095 CV=3.626999 (+/- 0.319097) Val=5.305545
+ 6. M1_RWP_W5      Q=5 F=10 N=1091 CV=3.630516 (+/- 0.360795) Val=5.307159
+ 7. M1_RWP_W2      Q=5 F=10 N=1094 CV=3.631339 (+/- 0.328196) Val=5.301790
+ 8. M3_RWP_W5      Q=7 F=14 N=1091 CV=3.632997 (+/- 0.357967) Val=5.328009
+ 9. M2_CONT        Q=6 F=12 N=1095 CV=3.633137 (+/- 0.315009) Val=5.325743
+10. M2_RWP_W7      Q=6 F=12 N=1089 CV=3.633922 (+/- 0.357675) Val=5.308175
+11. M2_RWP_W2      Q=6 F=12 N=1094 CV=3.634047 (+/- 0.327915) Val=5.309981
+12. M4_RWP_W2      Q=8 F=16 N=1094 CV=3.634450 (+/- 0.325886) Val=5.292651
+13. M3_RWP_W2      Q=7 F=14 N=1094 CV=3.634653 (+/- 0.326208) Val=5.296594
+14. M4_RWP_W7      Q=8 F=16 N=1089 CV=3.634970 (+/- 0.357116) Val=5.307944
+15. M4_RWP_W5      Q=8 F=16 N=1091 CV=3.635240 (+/- 0.355755) Val=5.329622
+16. M4_RWP_W14     Q=8 F=16 N=1082 CV=3.636746 (+/- 0.344826) Val=5.324372
+17. M1_RWP_W7      Q=5 F=10 N=1089 CV=3.637296 (+/- 0.350235) Val=5.315486
+18. M3_RWP_W7      Q=7 F=14 N=1089 CV=3.639875 (+/- 0.358800) Val=5.318156
+19. M3_RWP_W14     Q=7 F=14 N=1082 CV=3.641215 (+/- 0.318300) Val=5.310162
+20. M1_CONT        Q=5 F=10 N=1095 CV=3.642643 (+/- 0.296526) Val=5.334005
+21. M4_RWP_W21     Q=8 F=16 N=1075 CV=3.645823 (+/- 0.304532) Val=5.333145
+22. M2_RWP_W14     Q=6 F=12 N=1082 CV=3.648535 (+/- 0.333928) Val=5.330509
+23. M2_RWP_W21     Q=6 F=12 N=1075 CV=3.650020 (+/- 0.287281) Val=5.332919
+24. M4_CONT        Q=8 F=16 N=1095 CV=3.650333 (+/- 0.309527) Val=5.335097
+25. M1_RWP_W14     Q=5 F=10 N=1082 CV=3.650493 (+/- 0.309552) Val=5.291624
+26. M1_RWP_W21     Q=5 F=10 N=1075 CV=3.655706 (+/- 0.282891) Val=5.301648
+27. M3_CONT        Q=7 F=14 N=1095 CV=3.657816 (+/- 0.306503) Val=5.346229
+28. M1_RWP_W28     Q=5 F=10 N=1068 CV=3.658696 (+/- 0.280550) Val=5.299161
+29. M2_RWP_W28     Q=6 F=12 N=1068 CV=3.661829 (+/- 0.289366) Val=5.344487
+30. M3_RWP_W21     Q=7 F=14 N=1075 CV=3.662229 (+/- 0.309691) Val=5.353877
+31. M3_RWP_W28     Q=7 F=14 N=1068 CV=3.669511 (+/- 0.284266) Val=5.325512
+32. M4_RWP_W28     Q=8 F=16 N=1068 CV=3.676860 (+/- 0.288268) Val=5.348027
+
+Best overall configuration by training CV:
+  M4_RWP_W1
+
+IMPORTANT:
+  All windows were tested for every memory size.
+  Each W uses its maximum legitimate training data.
+  All configurations retain 365 validation days.
+  2025 validation is diagnostic only.
+  2026 test set remains untouched.

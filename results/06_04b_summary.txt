@@ -1,0 +1,143 @@
+================================================================================
+WEEK 6 - STEP 6.4B
+POLICY ENCODING SEARCH
+F4 + M=2 + ALL TEMPORAL WINDOWS
+================================================================================
+
+Policy encoding diagnostics:
+  clip3      train      N=1095 raw=[-1.266,2.841] encoded=[-0.4221,0.9469] std=0.3333 +1=   0 unique=1060
+  clip3      validation N= 365 raw=[2.852,5.583] encoded=[0.9507,1.0000] std=0.0055 +1= 352 unique=  14
+  clip3      test       N= 232 raw=[5.591,9.898] encoded=[1.0000,1.0000] std=0.0000 +1= 232 unique=   1
+  tanh3      train      N=1095 raw=[-1.266,2.841] encoded=[-0.3987,0.7384] std=0.3006 +1=   0 unique=1060
+  tanh3      validation N= 365 raw=[2.852,5.583] encoded=[0.7401,0.9528] std=0.0544 +1=   0 unique= 365
+  tanh3      test       N= 232 raw=[5.591,9.898] encoded=[0.9530,0.9973] std=0.0137 +1=   0 unique= 232
+  arctan     train      N=1095 raw=[-1.266,2.841] encoded=[-0.3728,0.6232] std=0.2763 +1=   0 unique=1060
+  arctan     validation N= 365 raw=[2.852,5.583] encoded=[0.6244,0.7902] std=0.0424 +1=   0 unique= 365
+  arctan     test       N= 232 raw=[5.591,9.898] encoded=[0.7905,0.8787] std=0.0269 +1=   0 unique= 232
+  softsign3  train      N=1095 raw=[-1.266,2.841] encoded=[-0.2968,0.4864] std=0.2232 +1=   0 unique=1060
+  softsign3  validation N= 365 raw=[2.852,5.583] encoded=[0.4874,0.6505] std=0.0422 +1=   0 unique= 365
+  softsign3  test       N= 232 raw=[5.591,9.898] encoded=[0.6508,0.7674] std=0.0355 +1=   0 unique= 232
+
+Unitarity error = 4.991e-15
+
+================================================================================
+POLICY ENCODING = clip3
+================================================================================
+Direct audit feature error = 3.916e-16
+Direct audit memory error  = 1.666e-16
+
+Week-5 baseline reference audit:
+  CONT    max feature error = 9.437e-15
+  RWP_W7  max feature error = 1.887e-15
+clip3_CONT           N=1095 CV=3.633137 (+/- 0.315009) lambda=100     rank=12/12 Val=5.325743 Bias=-2.010041
+clip3_RWP_W1         N=1095 CV=3.626512 (+/- 0.322139) lambda=100     rank= 9/12 Val=5.297046 Bias=-1.923576
+clip3_RWP_W2         N=1094 CV=3.634047 (+/- 0.327915) lambda=100     rank=11/12 Val=5.309981 Bias=-1.960629
+clip3_RWP_W5         N=1091 CV=3.626630 (+/- 0.357725) lambda=100     rank=12/12 Val=5.327890 Bias=-1.998600
+clip3_RWP_W7         N=1089 CV=3.633922 (+/- 0.357675) lambda=100     rank=12/12 Val=5.308175 Bias=-1.946622
+clip3_RWP_W14        N=1082 CV=3.648535 (+/- 0.333928) lambda=100     rank=12/12 Val=5.330509 Bias=-1.997701
+clip3_RWP_W21        N=1075 CV=3.650020 (+/- 0.287281) lambda=100     rank=12/12 Val=5.332919 Bias=-2.031619
+clip3_RWP_W28        N=1068 CV=3.661829 (+/- 0.289366) lambda=100     rank=12/12 Val=5.344487 Bias=-2.049866
+
+================================================================================
+POLICY ENCODING = tanh3
+================================================================================
+Direct audit feature error = 4.573e-16
+Direct audit memory error  = 1.677e-16
+tanh3_CONT           N=1095 CV=3.630908 (+/- 0.310087) lambda=100     rank=12/12 Val=5.310771 Bias=-1.992675
+tanh3_RWP_W1         N=1095 CV=3.624640 (+/- 0.317908) lambda=100     rank= 9/12 Val=5.283589 Bias=-1.916599
+tanh3_RWP_W2         N=1094 CV=3.632127 (+/- 0.323000) lambda=100     rank=11/12 Val=5.297391 Bias=-1.953981
+tanh3_RWP_W5         N=1091 CV=3.624358 (+/- 0.351728) lambda=100     rank=12/12 Val=5.314681 Bias=-1.991009
+tanh3_RWP_W7         N=1089 CV=3.631601 (+/- 0.351344) lambda=100     rank=12/12 Val=5.304133 Bias=-1.966863
+tanh3_RWP_W14        N=1082 CV=3.646326 (+/- 0.327980) lambda=100     rank=12/12 Val=5.313802 Bias=-1.977842
+tanh3_RWP_W21        N=1075 CV=3.649404 (+/- 0.285731) lambda=100     rank=12/12 Val=5.318748 Bias=-2.015795
+tanh3_RWP_W28        N=1068 CV=3.660977 (+/- 0.285267) lambda=100     rank=12/12 Val=5.329143 Bias=-2.030116
+
+================================================================================
+POLICY ENCODING = arctan
+================================================================================
+Direct audit feature error = 2.483e-16
+Direct audit memory error  = 1.862e-16
+arctan_CONT          N=1095 CV=3.630351 (+/- 0.309320) lambda=100     rank=12/12 Val=5.312957 Bias=-2.017447
+arctan_RWP_W1        N=1095 CV=3.624301 (+/- 0.317477) lambda=100     rank= 9/12 Val=5.296813 Bias=-1.969559
+arctan_RWP_W2        N=1094 CV=3.631868 (+/- 0.322052) lambda=100     rank=11/12 Val=5.307065 Bias=-1.997553
+arctan_RWP_W5        N=1091 CV=3.624046 (+/- 0.349956) lambda=100     rank=12/12 Val=5.322570 Bias=-2.030806
+arctan_RWP_W7        N=1089 CV=3.631247 (+/- 0.349242) lambda=100     rank=12/12 Val=5.316968 Bias=-2.020196
+arctan_RWP_W14       N=1082 CV=3.646085 (+/- 0.326417) lambda=100     rank=12/12 Val=5.319479 Bias=-2.011735
+arctan_RWP_W21       N=1075 CV=3.649850 (+/- 0.286793) lambda=100     rank=12/12 Val=5.320490 Bias=-2.039802
+arctan_RWP_W28       N=1068 CV=3.661725 (+/- 0.284344) lambda=100     rank=12/12 Val=5.328931 Bias=-2.049632
+
+================================================================================
+POLICY ENCODING = softsign3
+================================================================================
+Direct audit feature error = 5.566e-16
+Direct audit memory error  = 1.665e-16
+softsign3_CONT       N=1095 CV=3.627797 (+/- 0.305588) lambda=100     rank=12/12 Val=5.271719 Bias=-1.927788
+softsign3_RWP_W1     N=1095 CV=3.622253 (+/- 0.314586) lambda=100     rank= 9/12 Val=5.265572 Bias=-1.903606
+softsign3_RWP_W2     N=1094 CV=3.629886 (+/- 0.318050) lambda=100     rank=11/12 Val=5.271840 Bias=-1.922383
+softsign3_RWP_W5     N=1091 CV=3.622056 (+/- 0.343629) lambda=100     rank=12/12 Val=5.284469 Bias=-1.950342
+softsign3_RWP_W7     N=1089 CV=3.629042 (+/- 0.342126) lambda=100     rank=12/12 Val=5.281254 Bias=-1.946620
+softsign3_RWP_W14    N=1082 CV=3.644135 (+/- 0.320336) lambda=100     rank=12/12 Val=5.281235 Bias=-1.929840
+softsign3_RWP_W21    N=1075 CV=3.648360 (+/- 0.284404) lambda=100     rank=12/12 Val=5.279016 Bias=-1.950467
+softsign3_RWP_W28    N=1068 CV=3.661861 (+/- 0.277509) lambda=100     rank=12/12 Val=5.286784 Bias=-1.958537
+
+================================================================================
+BEST TEMPORAL PROTOCOL WITHIN EACH POLICY ENCODING
+================================================================================
+
+clip3     : RWP_W1 CV=3.626512 (+/- 0.322139) Val=5.297046
+
+tanh3     : RWP_W5 CV=3.624358 (+/- 0.351728) Val=5.314681
+
+arctan    : RWP_W5 CV=3.624046 (+/- 0.349956) Val=5.322570
+
+softsign3 : RWP_W5 CV=3.622056 (+/- 0.343629) Val=5.284469
+
+================================================================================
+OVERALL POLICY-ENCODING x TEMPORAL RANKING
+PRIMARY RANKING = TRAINING-ONLY CV
+================================================================================
+
+ 1. softsign3_RWP_W5     N=1091 CV=3.622056 (+/- 0.343629) Val=5.284469 Bias=-1.950342
+ 2. softsign3_RWP_W1     N=1095 CV=3.622253 (+/- 0.314586) Val=5.265572 Bias=-1.903606
+ 3. arctan_RWP_W5        N=1091 CV=3.624046 (+/- 0.349956) Val=5.322570 Bias=-2.030806
+ 4. arctan_RWP_W1        N=1095 CV=3.624301 (+/- 0.317477) Val=5.296813 Bias=-1.969559
+ 5. tanh3_RWP_W5         N=1091 CV=3.624358 (+/- 0.351728) Val=5.314681 Bias=-1.991009
+ 6. tanh3_RWP_W1         N=1095 CV=3.624640 (+/- 0.317908) Val=5.283589 Bias=-1.916599
+ 7. clip3_RWP_W1         N=1095 CV=3.626512 (+/- 0.322139) Val=5.297046 Bias=-1.923576
+ 8. clip3_RWP_W5         N=1091 CV=3.626630 (+/- 0.357725) Val=5.327890 Bias=-1.998600
+ 9. softsign3_CONT       N=1095 CV=3.627797 (+/- 0.305588) Val=5.271719 Bias=-1.927788
+10. softsign3_RWP_W7     N=1089 CV=3.629042 (+/- 0.342126) Val=5.281254 Bias=-1.946620
+11. softsign3_RWP_W2     N=1094 CV=3.629886 (+/- 0.318050) Val=5.271840 Bias=-1.922383
+12. arctan_CONT          N=1095 CV=3.630351 (+/- 0.309320) Val=5.312957 Bias=-2.017447
+13. tanh3_CONT           N=1095 CV=3.630908 (+/- 0.310087) Val=5.310771 Bias=-1.992675
+14. arctan_RWP_W7        N=1089 CV=3.631247 (+/- 0.349242) Val=5.316968 Bias=-2.020196
+15. tanh3_RWP_W7         N=1089 CV=3.631601 (+/- 0.351344) Val=5.304133 Bias=-1.966863
+16. arctan_RWP_W2        N=1094 CV=3.631868 (+/- 0.322052) Val=5.307065 Bias=-1.997553
+17. tanh3_RWP_W2         N=1094 CV=3.632127 (+/- 0.323000) Val=5.297391 Bias=-1.953981
+18. clip3_CONT           N=1095 CV=3.633137 (+/- 0.315009) Val=5.325743 Bias=-2.010041
+19. clip3_RWP_W7         N=1089 CV=3.633922 (+/- 0.357675) Val=5.308175 Bias=-1.946622
+20. clip3_RWP_W2         N=1094 CV=3.634047 (+/- 0.327915) Val=5.309981 Bias=-1.960629
+21. softsign3_RWP_W14    N=1082 CV=3.644135 (+/- 0.320336) Val=5.281235 Bias=-1.929840
+22. arctan_RWP_W14       N=1082 CV=3.646085 (+/- 0.326417) Val=5.319479 Bias=-2.011735
+23. tanh3_RWP_W14        N=1082 CV=3.646326 (+/- 0.327980) Val=5.313802 Bias=-1.977842
+24. softsign3_RWP_W21    N=1075 CV=3.648360 (+/- 0.284404) Val=5.279016 Bias=-1.950467
+25. clip3_RWP_W14        N=1082 CV=3.648535 (+/- 0.333928) Val=5.330509 Bias=-1.997701
+26. tanh3_RWP_W21        N=1075 CV=3.649404 (+/- 0.285731) Val=5.318748 Bias=-2.015795
+27. arctan_RWP_W21       N=1075 CV=3.649850 (+/- 0.286793) Val=5.320490 Bias=-2.039802
+28. clip3_RWP_W21        N=1075 CV=3.650020 (+/- 0.287281) Val=5.332919 Bias=-2.031619
+29. tanh3_RWP_W28        N=1068 CV=3.660977 (+/- 0.285267) Val=5.329143 Bias=-2.030116
+30. arctan_RWP_W28       N=1068 CV=3.661725 (+/- 0.284344) Val=5.328931 Bias=-2.049632
+31. clip3_RWP_W28        N=1068 CV=3.661829 (+/- 0.289366) Val=5.344487 Bias=-2.049866
+32. softsign3_RWP_W28    N=1068 CV=3.661861 (+/- 0.277509) Val=5.286784 Bias=-1.958537
+
+Best configuration by training CV:
+  softsign3_RWP_W5
+
+IMPORTANT:
+  Only policy encoding was changed.
+  F4, M=2, reservoir topology and dynamics were frozen.
+  All temporal windows were tested.
+  Soft encodings preserve ordering beyond z=3 instead of collapsing all values to +1.
+  Primary ranking remains training-only CV.
+  2025 validation is an out-of-distribution diagnostic.
+  2026 test remains untouched.

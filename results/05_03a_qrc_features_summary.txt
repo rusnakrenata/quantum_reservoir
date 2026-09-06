@@ -1,0 +1,75 @@
+================================================================================
+WEEK 5 - STEP 5.3A
+REAL INSURANCE IDEAL-QRC FEATURE GENERATION
+================================================================================
+
+Loaded samples       = 1692
+Target column        = target_property_damage_claim_count
+First target date    = 2022-01-02
+Last target date     = 2026-08-20
+Split counts         = {'train': 1095, 'validation': 365, 'test': 232}
+
+Reference architecture:
+  F4 injection qubits = 4
+  memory qubits       = 2
+  total qubits        = 6
+  topology            = [(0, 1), (1, 2), (2, 3), (3, 4), (4, 5)]
+  alpha               = 1.0
+  h_x                 = 0.5
+  Delta_t             = 0.8
+  Trotter steps       = 2
+  reservoir seed      = 42
+  Y_memory            = OFF
+
+Fixed J_ij couplings:
+  J(0,1) = +0.383538467978
+  J(1,2) = -0.085570184347
+  J(2,3) = +0.502037087876
+  J(3,4) = +0.276315240683
+  J(4,5) = -0.568151712957
+
+Reservoir-unitary check:
+  ||U^dagger U - I||_F = 4.830375363476e-15
+
+Reference observables:
+  X0, Z0, X1, Z1, X2, Z2, X3, Z3, X4, Z4, X5, Z5
+
+Processed  250/1692 samples...
+Processed  500/1692 samples...
+Processed  750/1692 samples...
+Processed 1000/1692 samples...
+Processed 1250/1692 samples...
+Processed 1500/1692 samples...
+Processed 1692/1692 samples...
+
+================================================================================
+REAL-DATA QRC FEATURE SUMMARY
+================================================================================
+Feature matrix shape       = (1692, 12)
+Expected shape             = (1692, 12)
+Shape check                = PASS
+All features finite        = PASS
+
+Claim observations clipped = 71
+Policy observations clipped= 584
+
+Maximum global trace error = 1.865223642290e-13
+Maximum memory trace error = 1.865223642290e-13
+Maximum global Hermiticity = 3.384446870272e-15
+Maximum memory Hermiticity = 3.351450850241e-15
+
+Maximum feature imaginary  = 1.985724470645e-15
+Maximum bound violation    = 0.000000000000e+00
+
+Initial memory purity      = 0.999447235789
+Minimum memory purity      = 0.252893964835
+Final memory purity        = 0.252893964835
+
+Train QRC feature range    = [-0.891483, +0.855002]
+Validation feature range   = [-0.866143, +0.829669]
+Test QRC feature range     = [-0.864632, +0.829669]
+
+Saved feature table to:
+  results\05_03a_qrc_features.csv
+Saved couplings to:
+  results\05_03a_reservoir_couplings.csv

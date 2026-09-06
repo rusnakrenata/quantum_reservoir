@@ -1,0 +1,191 @@
+================================================================================
+WEEK 6 - STEP 6.1
+RIDGE READOUT CALIBRATION + QRC FEATURE GEOMETRY
+================================================================================
+
+Aligned rows        = 1686
+Train rows          = 1089
+Validation rows     = 365
+Test rows           = 232 (NOT evaluated)
+Maximum target diff = 0.000e+00
+
+================================================================================
+CONT
+================================================================================
+Training matrix shape   = (1089, 12)
+Numerical rank          = 12
+sigma_max               = 50.582779012218
+sigma_min               = 4.936234551084e+00
+kappa(X)                = 1.024724e+01
+
+lambda_max(C)           = 2.349511049218
+lambda_min(C)           = 2.237503355676e-02
+rho(C)                  = 2.349511049218
+kappa(C)                = 1.050059e+02
+
+Identity check:
+  max |lambda_i(C) - sigma_i^2/N| = 2.665e-15
+  max |diag(C)-1| = 1.221e-15
+
+Singular values:
+  sigma_01 = 50.582779012218
+  sigma_02 = 48.113663956811
+  sigma_03 = 39.440502003175
+  sigma_04 = 39.052825105872
+  sigma_05 = 33.550681192937
+  sigma_06 = 32.520097931486
+  sigma_07 = 30.956332585108
+  sigma_08 = 24.731984009293
+  sigma_09 = 23.235924201718
+  sigma_10 = 22.189967698494
+  sigma_11 = 17.433923006289
+  sigma_12 = 4.936234551084
+
+Eigenvalues of C:
+  lambda_01 = 2.349511049218
+  lambda_02 = 2.125734306106
+  lambda_03 = 1.428423506210
+  lambda_04 = 1.400480393710
+  lambda_05 = 1.033653084031
+  lambda_06 = 0.971126510077
+  lambda_07 = 0.879976608925
+  lambda_08 = 0.561681389381
+  lambda_09 = 0.495783446747
+  lambda_10 = 0.452153045418
+  lambda_11 = 0.279101626620
+  lambda_12 = 0.022375033557
+
+Expanded Ridge CV:
+  lambda=1e-06      CV RMSE=3.730261 (+/- 0.417172)
+  lambda=0.0001     CV RMSE=3.730259 (+/- 0.417171)
+  lambda=0.001      CV RMSE=3.730240 (+/- 0.417164)
+  lambda=0.01       CV RMSE=3.730055 (+/- 0.417091)
+  lambda=0.1        CV RMSE=3.728260 (+/- 0.416405)
+  lambda=1          CV RMSE=3.714708 (+/- 0.411834)
+  lambda=10         CV RMSE=3.676217 (+/- 0.386305)
+  lambda=100        CV RMSE=3.631570 (+/- 0.333811)
+  lambda=150        CV RMSE=3.635991 (+/- 0.334597)
+  lambda=200        CV RMSE=3.644171 (+/- 0.337445)
+  lambda=250        CV RMSE=3.653676 (+/- 0.340721)
+  lambda=300        CV RMSE=3.663536 (+/- 0.343977)
+  lambda=1000       CV RMSE=3.769290 (+/- 0.375113)
+  lambda=3000       CV RMSE=3.891489 (+/- 0.415284)
+  lambda=10000      CV RMSE=3.990006 (+/- 0.459236)
+  lambda=30000      CV RMSE=4.032766 (+/- 0.482579)
+  lambda=100000     CV RMSE=4.050229 (+/- 0.492893)
+
+Selected lambda*        = 100
+Condition number of X^T X + lambda* I = 2.137730e+01
+
+2025 validation:
+  RMSE  = 5.323048
+  MAE   = 4.114185
+  NRMSE = 1.332752
+  Bias  = -2.006013
+
+================================================================================
+RWP_W7
+================================================================================
+Training matrix shape   = (1089, 12)
+Numerical rank          = 12
+sigma_max               = 58.627987812190
+sigma_min               = 5.487446108347e+00
+kappa(X)                = 1.068402e+01
+
+lambda_max(C)           = 3.156327782283
+lambda_min(C)           = 2.765111551149e-02
+rho(C)                  = 3.156327782283
+kappa(C)                = 1.141483e+02
+
+Identity check:
+  max |lambda_i(C) - sigma_i^2/N| = 2.220e-15
+  max |diag(C)-1| = 1.543e-14
+
+Singular values:
+  sigma_01 = 58.627987812190
+  sigma_02 = 45.659368207565
+  sigma_03 = 41.244583557906
+  sigma_04 = 39.343443770406
+  sigma_05 = 33.947833543808
+  sigma_06 = 33.208721242108
+  sigma_07 = 31.292549425809
+  sigma_08 = 23.252977911410
+  sigma_09 = 17.486814847047
+  sigma_10 = 11.328186499263
+  sigma_11 = 7.584927921956
+  sigma_12 = 5.487446108347
+
+Eigenvalues of C:
+  lambda_01 = 3.156327782283
+  lambda_02 = 1.914396607084
+  lambda_03 = 1.562089690418
+  lambda_04 = 1.421401806901
+  lambda_05 = 1.058269423616
+  lambda_06 = 1.012689776433
+  lambda_07 = 0.899195270493
+  lambda_08 = 0.496511461661
+  lambda_09 = 0.280797698342
+  lambda_10 = 0.117840045328
+  lambda_11 = 0.052829321930
+  lambda_12 = 0.027651115511
+
+Expanded Ridge CV:
+  lambda=1e-06      CV RMSE=3.754064 (+/- 0.399175)
+  lambda=0.0001     CV RMSE=3.754059 (+/- 0.399175)
+  lambda=0.001      CV RMSE=3.754010 (+/- 0.399174)
+  lambda=0.01       CV RMSE=3.753528 (+/- 0.399167)
+  lambda=0.1        CV RMSE=3.749010 (+/- 0.399138)
+  lambda=1          CV RMSE=3.721805 (+/- 0.400469)
+  lambda=10         CV RMSE=3.677796 (+/- 0.394682)
+  lambda=100        CV RMSE=3.633922 (+/- 0.357675)
+  lambda=150        CV RMSE=3.637608 (+/- 0.359616)
+  lambda=200        CV RMSE=3.645198 (+/- 0.363151)
+  lambda=250        CV RMSE=3.654224 (+/- 0.366895)
+  lambda=300        CV RMSE=3.663688 (+/- 0.370485)
+  lambda=1000       CV RMSE=3.767071 (+/- 0.401291)
+  lambda=3000       CV RMSE=3.887786 (+/- 0.434118)
+  lambda=10000      CV RMSE=3.987011 (+/- 0.467354)
+  lambda=30000      CV RMSE=4.031311 (+/- 0.485516)
+  lambda=100000     CV RMSE=4.049724 (+/- 0.493790)
+
+Selected lambda*        = 100
+Condition number of X^T X + lambda* I = 2.718611e+01
+
+2025 validation:
+  RMSE  = 5.308175
+  MAE   = 4.109555
+  NRMSE = 1.329029
+  Bias  = -1.946622
+
+================================================================================
+STEP 6.1 FINAL SUMMARY
+================================================================================
+
+CONT:
+  rank        = 12
+  kappa(X)    = 1.024724e+01
+  rho(C)      = 2.349511
+  lambda*     = 100
+  Ridge kappa = 2.137730e+01
+  Val RMSE    = 5.323048
+
+RWP_W7:
+  rank        = 12
+  kappa(X)    = 1.068402e+01
+  rho(C)      = 3.156328
+  lambda*     = 100
+  Ridge kappa = 2.718611e+01
+  Val RMSE    = 5.308175
+
+IMPORTANT: 2026 test set remains untouched.
+
+Saved CV results to:
+  results\06_01_ridge_cv_results.csv
+Saved geometry results to:
+  results\06_01_feature_geometry.csv
+Saved singular values to:
+  results\06_01_singular_values.csv
+Saved correlation eigenvalues to:
+  results\06_01_correlation_eigenvalues.csv
+Saved validation results to:
+  results\06_01_validation_results.csv

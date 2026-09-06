@@ -1,0 +1,56 @@
+================================================================================
+WEEK 5 - STEP 5.3C
+FIRST IDEAL-QRC FORECASTING COMPARISON
+CONTINUOUS vs REWINDING W=7
+================================================================================
+
+Aligned samples       = 1686
+First target date     = 2022-01-08
+Last target date      = 2026-08-20
+Maximum target diff   = 0.000e+00
+
+Train rows            = 1089
+Validation rows       = 365
+Test rows              = 232 (NOT evaluated)
+
+Aligned train target mean = 8.890725
+Aligned train target std  = 3.994026
+
+================================================================================
+RIDGE READOUT - TRAINING-ONLY CHRONOLOGICAL CV
+================================================================================
+
+CONT:
+  lambda=1e-06      CV RMSE=3.730261 (+/- 0.417172)
+  lambda=0.0001     CV RMSE=3.730259 (+/- 0.417171)
+  lambda=0.001      CV RMSE=3.730240 (+/- 0.417164)
+  lambda=0.01       CV RMSE=3.730055 (+/- 0.417091)
+  lambda=0.1        CV RMSE=3.728260 (+/- 0.416405)
+  lambda=1          CV RMSE=3.714708 (+/- 0.411834)
+  lambda=10         CV RMSE=3.676217 (+/- 0.386305)
+  lambda=100        CV RMSE=3.631570 (+/- 0.333811)
+
+RWP_W7:
+  lambda=1e-06      CV RMSE=3.754064 (+/- 0.399175)
+  lambda=0.0001     CV RMSE=3.754059 (+/- 0.399175)
+  lambda=0.001      CV RMSE=3.754010 (+/- 0.399174)
+  lambda=0.01       CV RMSE=3.753528 (+/- 0.399167)
+  lambda=0.1        CV RMSE=3.749010 (+/- 0.399138)
+  lambda=1          CV RMSE=3.721805 (+/- 0.400469)
+  lambda=10         CV RMSE=3.677796 (+/- 0.394682)
+  lambda=100        CV RMSE=3.633922 (+/- 0.357675)
+
+================================================================================
+2025 VALIDATION RESULTS
+================================================================================
+
+Protocol    lambda        RMSE       MAE        NRMSE      Bias
+CONT        100           5.323048   4.114185   1.332752   -2.006013
+RWP_W7      100           5.308175   4.109555   1.329029   -1.946622
+
+RWP(7) - CONT:
+  Delta RMSE          = -0.014873
+  Relative Delta RMSE = -0.279%
+  Interpretation      = RWP(7) is better on validation.
+
+IMPORTANT: 2026 test set was not evaluated.

@@ -1,0 +1,115 @@
+================================================================================
+WEEK 6 - STEP 6.4A
+FEATURE-INFORMATION ABLATION
+FIXED SIX-QUBIT TOPOLOGY
+F2 vs F3 vs F4 x ALL TEMPORAL PROTOCOLS
+================================================================================
+
+Current +/-3 z clipping:
+  C_t_z  all        N=1692 clipped=  71 (4.20%) range=[-2.213, 8.526]
+  C_t_z  train      N=1095 clipped=   5 (0.46%) range=[-2.213, 4.031]
+  C_t_z  validation N= 365 clipped=  28 (7.67%) range=[-1.964, 5.529]
+  C_t_z  test       N= 232 clipped=  38 (16.38%) range=[-1.714, 8.526]
+  P_t_z  all        N=1692 clipped= 584 (34.52%) range=[-1.266, 9.898]
+  P_t_z  train      N=1095 clipped=   0 (0.00%) range=[-1.266, 2.841]
+  P_t_z  validation N= 365 clipped= 352 (96.44%) range=[2.852, 5.583]
+  P_t_z  test       N= 232 clipped= 232 (100.00%) range=[5.591, 9.898]
+
+Unitarity error = 4.991e-15
+
+================================================================================
+FEATURE SET = F2
+================================================================================
+Direct audit feature error = 2.239e-16
+Direct audit memory error  = 1.666e-16
+F2_CONT        N=1095 CV=3.824597 (+/- 0.453854) lambda=100     rank=11/12 Val=6.029167
+F2_RWP_W1      N=1095 CV=3.831644 (+/- 0.475198) lambda=100     rank= 5/12 Val=6.138781
+F2_RWP_W2      N=1094 CV=3.831468 (+/- 0.473456) lambda=100     rank= 5/12 Val=6.136777
+F2_RWP_W5      N=1091 CV=3.834546 (+/- 0.468764) lambda=100     rank= 5/12 Val=6.132938
+F2_RWP_W7      N=1089 CV=3.833323 (+/- 0.468563) lambda=100     rank= 5/12 Val=6.137466
+F2_RWP_W14     N=1082 CV=3.840666 (+/- 0.472898) lambda=100     rank= 5/12 Val=6.140849
+F2_RWP_W21     N=1075 CV=3.855460 (+/- 0.469188) lambda=100     rank= 5/12 Val=6.145705
+F2_RWP_W28     N=1068 CV=3.863421 (+/- 0.466982) lambda=100     rank= 5/12 Val=6.141512
+
+================================================================================
+FEATURE SET = F3
+================================================================================
+Direct audit feature error = 3.916e-16
+Direct audit memory error  = 1.666e-16
+F3_CONT        N=1095 CV=3.791419 (+/- 0.306398) lambda=100     rank=12/12 Val=5.274991
+F3_RWP_W1      N=1095 CV=3.804490 (+/- 0.338160) lambda=100     rank= 7/12 Val=5.210373
+F3_RWP_W2      N=1094 CV=3.801444 (+/- 0.333387) lambda=100     rank= 8/12 Val=5.205160
+F3_RWP_W5      N=1091 CV=3.788177 (+/- 0.326850) lambda=100     rank= 8/12 Val=5.186510
+F3_RWP_W7      N=1089 CV=3.782529 (+/- 0.318898) lambda=100     rank= 8/12 Val=5.179080
+F3_RWP_W14     N=1082 CV=3.795793 (+/- 0.338116) lambda=100     rank= 8/12 Val=5.188811
+F3_RWP_W21     N=1075 CV=3.824114 (+/- 0.354644) lambda=100     rank= 8/12 Val=5.199546
+F3_RWP_W28     N=1068 CV=3.826713 (+/- 0.366758) lambda=100     rank= 8/12 Val=5.201930
+
+================================================================================
+FEATURE SET = F4
+================================================================================
+Direct audit feature error = 3.916e-16
+Direct audit memory error  = 1.666e-16
+
+F4 reference audits:
+  CONT    max feature error = 9.437e-15
+  RWP_W7  max feature error = 1.887e-15
+F4_CONT        N=1095 CV=3.633137 (+/- 0.315009) lambda=100     rank=12/12 Val=5.325743
+F4_RWP_W1      N=1095 CV=3.626512 (+/- 0.322139) lambda=100     rank= 9/12 Val=5.297046
+F4_RWP_W2      N=1094 CV=3.634047 (+/- 0.327915) lambda=100     rank=11/12 Val=5.309981
+F4_RWP_W5      N=1091 CV=3.626630 (+/- 0.357725) lambda=100     rank=12/12 Val=5.327890
+F4_RWP_W7      N=1089 CV=3.633922 (+/- 0.357675) lambda=100     rank=12/12 Val=5.308175
+F4_RWP_W14     N=1082 CV=3.648535 (+/- 0.333928) lambda=100     rank=12/12 Val=5.330509
+F4_RWP_W21     N=1075 CV=3.650020 (+/- 0.287281) lambda=100     rank=12/12 Val=5.332919
+F4_RWP_W28     N=1068 CV=3.661829 (+/- 0.289366) lambda=100     rank=12/12 Val=5.344487
+
+================================================================================
+BEST TEMPORAL PROTOCOL WITHIN EACH FEATURE SET
+================================================================================
+
+F2: CONT CV=3.824597 (+/- 0.453854) Val=6.029167
+
+F3: RWP_W7 CV=3.782529 (+/- 0.318898) Val=5.179080
+
+F4: RWP_W1 CV=3.626512 (+/- 0.322139) Val=5.297046
+
+================================================================================
+OVERALL F2/F3/F4 x TEMPORAL RANKING
+PRIMARY RANKING = TRAINING-ONLY CV
+================================================================================
+
+ 1. F4_RWP_W1      N=1095 CV=3.626512 (+/- 0.322139) Val=5.297046
+ 2. F4_RWP_W5      N=1091 CV=3.626630 (+/- 0.357725) Val=5.327890
+ 3. F4_CONT        N=1095 CV=3.633137 (+/- 0.315009) Val=5.325743
+ 4. F4_RWP_W7      N=1089 CV=3.633922 (+/- 0.357675) Val=5.308175
+ 5. F4_RWP_W2      N=1094 CV=3.634047 (+/- 0.327915) Val=5.309981
+ 6. F4_RWP_W14     N=1082 CV=3.648535 (+/- 0.333928) Val=5.330509
+ 7. F4_RWP_W21     N=1075 CV=3.650020 (+/- 0.287281) Val=5.332919
+ 8. F4_RWP_W28     N=1068 CV=3.661829 (+/- 0.289366) Val=5.344487
+ 9. F3_RWP_W7      N=1089 CV=3.782529 (+/- 0.318898) Val=5.179080
+10. F3_RWP_W5      N=1091 CV=3.788177 (+/- 0.326850) Val=5.186510
+11. F3_CONT        N=1095 CV=3.791419 (+/- 0.306398) Val=5.274991
+12. F3_RWP_W14     N=1082 CV=3.795793 (+/- 0.338116) Val=5.188811
+13. F3_RWP_W2      N=1094 CV=3.801444 (+/- 0.333387) Val=5.205160
+14. F3_RWP_W1      N=1095 CV=3.804490 (+/- 0.338160) Val=5.210373
+15. F3_RWP_W21     N=1075 CV=3.824114 (+/- 0.354644) Val=5.199546
+16. F2_CONT        N=1095 CV=3.824597 (+/- 0.453854) Val=6.029167
+17. F3_RWP_W28     N=1068 CV=3.826713 (+/- 0.366758) Val=5.201930
+18. F2_RWP_W2      N=1094 CV=3.831468 (+/- 0.473456) Val=6.136777
+19. F2_RWP_W1      N=1095 CV=3.831644 (+/- 0.475198) Val=6.138781
+20. F2_RWP_W7      N=1089 CV=3.833323 (+/- 0.468563) Val=6.137466
+21. F2_RWP_W5      N=1091 CV=3.834546 (+/- 0.468764) Val=6.132938
+22. F2_RWP_W14     N=1082 CV=3.840666 (+/- 0.472898) Val=6.140849
+23. F2_RWP_W21     N=1075 CV=3.855460 (+/- 0.469188) Val=6.145705
+24. F2_RWP_W28     N=1068 CV=3.863421 (+/- 0.466982) Val=6.141512
+
+Best configuration by training CV:
+  F4_RWP_W1
+
+IMPORTANT:
+  Six-qubit topology was kept fixed for F2/F3/F4.
+  F2/F3 inactive inputs were prepared as |0> via Ry(0).
+  Therefore this is an INFORMATION ABLATION, not yet a hardware-resource comparison.
+  All temporal windows were tested.
+  2025 validation is diagnostic only.
+  2026 test remains untouched.
