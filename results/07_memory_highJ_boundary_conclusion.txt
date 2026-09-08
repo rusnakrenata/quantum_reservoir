@@ -1,0 +1,40 @@
+FINAL HIGH-J MEMORY BOUNDARY TEST
+====================================================================================================
+
+Reference MC/ch = 1.212763
+Reference MC total = 4.851052
+Reference Tw(.01) = 44
+
+Best high-J result:
+dt                          1.600000e+00
+J24                        -9.072760e-01
+J34                        -4.444140e-01
+J35                        -2.000000e+00
+J45                        -1.000000e+00
+unitarity_error             7.249744e-15
+MC_burnin                   1.190000e+02
+MC_per_channel_corrected    1.270545e+00
+MC_total_corrected          5.082182e+00
+MC_delay1_mean              2.152831e-01
+MC_delay2_mean              2.052450e-01
+MC_delay5_mean              8.602246e-02
+MC_delay10_mean             5.874077e-02
+MC_delay20_mean             1.774902e-02
+Tw_0.01                     9.900000e+01
+tau_mem                     2.267355e+01
+D_final                     3.066991e-15
+kappa_eff                   9.568542e-01
+washout_valid               1.000000e+00
+rank                        1.000000e+00
+
+Gain over reference = +4.76%
+MODEST FINAL GAIN: freeze the best high-J configuration. The extension is useful but the memory search is now complete.
+The winner is inside the tested J35 interval, so the high-J boundary is resolved cleanly.
+
+Top-memory finalist forecasting diagnostics:
+ dt  J35  J45  MC_per_channel_corrected  MC_total_corrected  Tw_0.01  level_CV_RMSE_mean  delta_CV_RMSE_mean
+1.6 -2.0 -1.0                  1.270545            5.082182     99.0            3.763125            3.772768
+1.5 -1.6 -1.2                  1.218195            4.872780     44.0            3.695506            3.701533
+1.5 -2.6 -1.2                  1.201848            4.807393     27.0            3.737387            3.743972
+1.5 -2.0 -1.2                  1.181048            4.724192    121.0            3.771413            3.776354
+1.6 -2.6 -1.2                  1.179901            4.719602     19.0            3.793350            3.803761

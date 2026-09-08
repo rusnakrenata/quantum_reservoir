@@ -1,0 +1,41 @@
+WEEK 7 STEP 7.4B.1 REVISED - CONT WASHOUT
+========================================================================================
+
+alpha=0.75, seed=42, MC=100
+feature family=XZinj_plus_YX45
+
+Modes:
+0 ideal/unmeasured
+1 direct local Y4/X5 selective
+2 ancilla joint YX non-selective
+3 ancilla joint YX selective
+
+Operator audits:
+joint_projector_completeness: 0.000000e+00
+joint_projector_orthogonality: 0.000000e+00
+local_projector_completeness: 0.000000e+00
+local_projector_orthogonality: 0.000000e+00
+local_parity_plus_vs_joint_plus: 0.000000e+00
+local_parity_minus_vs_joint_minus: 0.000000e+00
+
+Deterministic thresholds:
+                         mode  epsilon  trace_distance_washout_t  feature_distance_washout_t
+             ideal_unmeasured    0.100                       NaN                         NaN
+             ideal_unmeasured    0.050                       NaN                         NaN
+             ideal_unmeasured    0.010                       NaN                         NaN
+             ideal_unmeasured    0.001                       NaN                         NaN
+ancilla_joint_YX_nonselective    0.100                      15.0                         4.0
+ancilla_joint_YX_nonselective    0.050                      21.0                         5.0
+ancilla_joint_YX_nonselective    0.010                      35.0                         9.0
+ancilla_joint_YX_nonselective    0.001                      54.0                        24.0
+
+Selective thresholds:
+                        mode  epsilon  trace_achieved_fraction  trace_washout_median_t  trace_washout_p90_t  feature_achieved_fraction  feature_washout_median_t  feature_washout_p90_t
+direct_local_Y4_X5_selective    0.100                     1.00                     3.0                  6.0                        1.0                       4.0                    7.0
+direct_local_Y4_X5_selective    0.050                     1.00                     3.0                  6.0                        1.0                       4.0                    7.0
+direct_local_Y4_X5_selective    0.010                     1.00                     3.0                  6.0                        1.0                       4.0                    7.0
+direct_local_Y4_X5_selective    0.001                     1.00                     3.0                  6.0                        1.0                       4.0                    7.0
+  ancilla_joint_YX_selective    0.100                     1.00                  1179.5               1289.0                        1.0                       1.0                    3.0
+  ancilla_joint_YX_selective    0.050                     0.14                  1404.0               1457.7                        1.0                      40.0                   87.1
+  ancilla_joint_YX_selective    0.010                     0.00                     NaN                  NaN                        1.0                     887.0                  973.5
+  ancilla_joint_YX_selective    0.001                     0.00                     NaN                  NaN                        0.0                       NaN                    NaN

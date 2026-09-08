@@ -1,0 +1,32 @@
+WEEK 7 STEP 7.4C.6 - MEMORY INFLUENCE AUDIT
+==========================================================================================
+
+                    metric         mean       median          max          p90
+D_memory_pre_CONT_vs_reset 2.482706e-14 2.506328e-14 4.848899e-14 4.438672e-14
+D_injection_out_CONT_vs_W1 2.491049e-14 2.523326e-14 4.865907e-14 4.449986e-14
+   D_memory_out_CONT_vs_W1 2.482930e-14 2.504247e-14 4.850287e-14 4.441170e-14
+           XZ_max_abs_diff 3.961778e-14 3.863576e-14 8.537615e-14 7.284173e-14
+               XZ_rms_diff 2.684483e-14 2.624465e-14 5.946494e-14 4.951135e-14
+
+CONTROLLED BY STEP:
+   t  max_D_memory_input  max_D_injection_output  max_D_memory_output  max_XZ_abs_diff  max_XZ_rms_diff
+   0                 1.0                0.078642                  1.0         0.144769         0.051709
+   1                 1.0                0.078642                  1.0         0.144769         0.051711
+   5                 1.0                0.078642                  1.0         0.144769         0.051699
+  10                 1.0                0.078642                  1.0         0.144769         0.051704
+  50                 1.0                0.078642                  1.0         0.144769         0.051716
+ 100                 1.0                0.078642                  1.0         0.144769         0.051723
+ 500                 1.0                0.078642                  1.0         0.144769         0.051745
+1094                 1.0                0.078642                  1.0         0.144769         0.051759
+1459                 1.0                0.078642                  1.0         0.144769         0.051732
+
+DECISION NUMBERS:
+chron max memory pre diff = 4.848899060050e-14
+chron max injection out D = 4.865906526002e-14
+chron max XZ diff = 8.537615059367e-14
+controlled max injection out D = 7.864243337167e-02
+controlled max memory out D = 1.000000000000e+00
+controlled max XZ diff = 1.447689467014e-01
+
+VERDICT:
+The incoming memory influences XZ_injection. The exact CONT/W1 equality from Step 7.4C.5 therefore needs a protocol/construction audit.

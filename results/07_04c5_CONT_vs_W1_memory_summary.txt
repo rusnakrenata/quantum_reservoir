@@ -1,0 +1,15 @@
+WEEK 7 STEP 7.4C.5 - CONT VERSUS W1 TEMPORAL MEMORY
+====================================================================================================
+
+W1 resets I/4 before each input; CONT carries memory.
+Both use XZ_injection only and the same chronological input.
+
+Delta_MC_CONT_vs_W1 = MC_CONT - MC_W1
+Delta_MC_memory_add = MC_current+CONT - MC_current+W1
+
+channel  sum_MC_current  sum_MC_W1  sum_MC_CONT  sum_MC_current_plus_W1  sum_MC_current_plus_CONT  sum_Delta_CONT_vs_W1  sum_Delta_memory_add  n_delays_CONT_better_than_W1  n_delays_memory_add_positive  max_Delta_CONT_vs_W1  delay_max_Delta_CONT_vs_W1  max_Delta_memory_add  delay_max_Delta_memory_add
+      0        2.785272   4.733137     4.733137                5.844537                  5.844537          5.645484e-14          4.429790e-14                            23                            17          6.133982e-15                        14.0          1.657008e-14                        18.0
+      1        8.791155  19.028150    19.028150               21.657580                 21.657580         -1.865175e-13         -2.708944e-14                            20                            12          5.551115e-16                         5.0          1.332268e-15                         4.0
+      2       27.957883  11.452587    11.452587               27.746558                 27.746558          1.444789e-12         -1.455502e-13                            28                             2          6.289413e-14                        28.0          5.995204e-15                        19.0
+      3        0.126461   0.122343     0.122343                0.115090                  0.115090          2.487261e-15         -1.120634e-14                            18                            14          2.114628e-15                        15.0          2.921274e-15                        28.0
+    ALL       39.660771  35.336217    35.336217               55.363764                 55.363764          1.317213e-12         -1.395481e-13                            89                            45          6.289413e-14                         NaN          1.657008e-14                         NaN

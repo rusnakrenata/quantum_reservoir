@@ -1,0 +1,18 @@
+WEEK 7 STEP 7.4C.2 - XZ_INJECTION MEMORY CAPACITY
+==========================================================================================
+
+Ideal/unmeasured CONT; no YX45 measurement back-action.
+Feature families: XZ_injection vs XZ_injection+YX45.
+Burn-in=100, K_MAX=100, N_NULL=200.
+
+        feature_family channel  raw_MC_sum  null_mean_sum  corrected_MC_sum  n_significant_delays_95  max_significant_delay_95  max_raw_MC  max_corrected_MC
+          XZ_injection       0    0.315439       0.276897          0.175869                        9                      95.0    0.030591          0.027479
+          XZ_injection       1    0.275885       0.273856          0.133418                        5                      86.0    0.021872          0.019348
+          XZ_injection       2    0.303350       0.275375          0.161425                        8                      97.0    0.019360          0.016545
+          XZ_injection       3    0.304296       0.271342          0.165932                        7                      94.0    0.028844          0.026111
+          XZ_injection     ALL    1.198969       1.097471          0.636643                       29                       NaN    0.030591          0.027479
+XZ_injection_plus_YX45       0    0.315439       0.273988          0.175893                        9                      95.0    0.030591          0.027967
+XZ_injection_plus_YX45       1    0.275885       0.275174          0.133657                        5                      86.0    0.021872          0.018958
+XZ_injection_plus_YX45       2    0.303350       0.275918          0.160785                        8                      97.0    0.019360          0.016821
+XZ_injection_plus_YX45       3    0.304296       0.271993          0.165289                        7                      84.0    0.028844          0.026128
+XZ_injection_plus_YX45     ALL    1.198969       1.097073          0.635624                       29                       NaN    0.030591          0.027967

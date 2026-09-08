@@ -1,0 +1,17 @@
+WEEK 7 STEP 7.4C.4 - REAL CHRONOLOGICAL TASK-CONDITIONED MEMORY
+====================================================================================================
+
+Delta_MC_add = MC_current+QRC - MC_current
+Positive Delta_MC_add means QRC features add delayed-history information beyond current inputs.
+
+        feature_family channel  sum_MC_current  sum_MC_QRC  sum_MC_current_plus_QRC  sum_Delta_MC_QRC_vs_current  sum_Delta_MC_add  n_delays_QRC_better_than_current  n_delays_combined_better_than_current  max_positive_Delta_MC_add  delay_of_max_Delta_MC_add
+          XZ_injection       0        2.785272    4.733137                 5.844537                     1.947865          3.059265                                23                                     28                   0.209563                        2.0
+          XZ_injection       1        8.791155   19.028150                21.657580                    10.236995         12.866425                                24                                     24                   0.627398                        5.0
+          XZ_injection       2       27.957883   11.452587                27.746558                   -16.505296         -0.211325                                 0                                      0                   0.000000                        1.0
+          XZ_injection       3        0.126461    0.122343                 0.115090                    -0.004119         -0.011372                                14                                     13                   0.010870                       21.0
+          XZ_injection     ALL       39.660771   35.336217                55.363764                    -4.324554         15.702993                                61                                     65                   0.627398                        NaN
+XZ_injection_plus_YX45       0        2.785272    4.733137                 5.844537                     1.947865          3.059265                                23                                     28                   0.209563                        2.0
+XZ_injection_plus_YX45       1        8.791155   19.028150                21.657580                    10.236995         12.866425                                24                                     24                   0.627398                        5.0
+XZ_injection_plus_YX45       2       27.957883   11.452587                27.746558                   -16.505296         -0.211325                                 0                                      0                   0.000000                        1.0
+XZ_injection_plus_YX45       3        0.126461    0.122343                 0.115090                    -0.004119         -0.011372                                14                                     13                   0.010870                       21.0
+XZ_injection_plus_YX45     ALL       39.660771   35.336217                55.363764                    -4.324554         15.702993                                61                                     65                   0.627398                        NaN

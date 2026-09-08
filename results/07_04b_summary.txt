@@ -1,0 +1,28 @@
+WEEK 7 STEP 7.4B - ANCILLA JOINT YX_45 MEASUREMENT
+================================================================================
+
+alpha=0.75, seed=42, shots=1024, protocol=CONT
+
+Ancilla measurement algebra:
+max p formula error = 5.551115e-16
+max expectation error = 1.327063e-16
+max projector probability error = 3.330669e-16
+max conditional + state error = 8.326673e-17
+max conditional - state error = 1.110223e-16
+max nonselective error = 8.333898e-17
+max dephasing-formula error = 1.665335e-16
+
+Disturbance:
+ mean_trace_distance  median_trace_distance  max_trace_distance  mean_purity_pre  mean_purity_post_nonselective  mean_purity_change
+             0.00144           1.552095e-16            0.498891         0.251106                       0.250595           -0.000511
+
+Forecast comparison:
+                               case  ridge_alpha  cv_rmse  validation_rmse  delta_cv_vs_unmeasured  relative_cv_change_pct
+          CONT_unmeasured_reference        100.0 3.620272         5.213141                0.000000                0.000000
+CONT_joint_YX_projective_backaction        100.0 3.617900         5.235357               -0.002371               -0.065504
+
+Shot summary:
+ shots  mc_repeats  exact_backaction_cv_rmse  shot_cv_rmse_mean  shot_cv_rmse_std  relative_shot_degradation_pct  exact_backaction_validation_rmse  shot_validation_rmse_mean  shot_validation_rmse_std  yx_estimation_rmse_mean
+  1024          20                    3.6179             3.6174          0.003669                      -0.013821                          5.235357                   5.223281                   0.00509                 0.031128
+
+feature trajectory RMSE vs unmeasured CONT = 7.856574e-02

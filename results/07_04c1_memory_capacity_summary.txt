@@ -1,0 +1,28 @@
+WEEK 7 STEP 7.4C.1 - INTRINSIC MEMORY CAPACITY
+================================================================================================
+
+MC_{j,k}=Corr^2[u_j(t-k), uhat_{j,k}(t)]
+Probe: independently permuted actual F4 injection angles
+Burn-in=100, K_MAX=100, selective MC=20, Ridge alpha=1e-06
+
+                         mode channel  MC_sum_mean  MC_sum_median  MC_sum_p10  MC_sum_p90  n_replicates  horizon_MC_ge_0.5_median  horizon_MC_ge_0.5_p90  horizon_MC_ge_0.1_median  horizon_MC_ge_0.1_p90
+             ideal_unmeasured       0     0.315439       0.315439    0.315439    0.315439             1                       0.0                    0.0                       0.0                    0.0
+             ideal_unmeasured       1     0.275885       0.275885    0.275885    0.275885             1                       0.0                    0.0                       0.0                    0.0
+             ideal_unmeasured       2     0.303350       0.303350    0.303350    0.303350             1                       0.0                    0.0                       0.0                    0.0
+             ideal_unmeasured       3     0.304296       0.304296    0.304296    0.304296             1                       0.0                    0.0                       0.0                    0.0
+             ideal_unmeasured     ALL     1.198969       1.198969    1.198969    1.198969             1                       NaN                    NaN                       NaN                    NaN
+ancilla_joint_YX_nonselective       0     0.315439       0.315439    0.315439    0.315439             1                       0.0                    0.0                       0.0                    0.0
+ancilla_joint_YX_nonselective       1     0.275885       0.275885    0.275885    0.275885             1                       0.0                    0.0                       0.0                    0.0
+ancilla_joint_YX_nonselective       2     0.303350       0.303350    0.303350    0.303350             1                       0.0                    0.0                       0.0                    0.0
+ancilla_joint_YX_nonselective       3     0.304296       0.304296    0.304296    0.304296             1                       0.0                    0.0                       0.0                    0.0
+ancilla_joint_YX_nonselective     ALL     1.198969       1.198969    1.198969    1.198969             1                       NaN                    NaN                       NaN                    NaN
+ direct_local_Y4_X5_selective       0     0.283295       0.282788    0.254673    0.305458            20                       0.0                    0.0                       0.0                    0.0
+ direct_local_Y4_X5_selective       1     0.272642       0.264636    0.237868    0.304924            20                       0.0                    0.0                       0.0                    0.0
+ direct_local_Y4_X5_selective       2     0.325460       0.320668    0.288720    0.371234            20                       0.0                    0.0                       0.0                    0.0
+ direct_local_Y4_X5_selective       3     0.290388       0.286056    0.262321    0.321997            20                       0.0                    0.0                       0.0                    0.0
+ direct_local_Y4_X5_selective     ALL     1.171785       1.149798    1.113969    1.265750            20                       NaN                    NaN                       NaN                    NaN
+   ancilla_joint_YX_selective       0     0.310746       0.313243    0.288614    0.330746            20                       0.0                    0.0                       0.0                    0.0
+   ancilla_joint_YX_selective       1     0.273603       0.269721    0.257035    0.294033            20                       0.0                    0.0                       0.0                    0.0
+   ancilla_joint_YX_selective       2     0.308271       0.309069    0.278827    0.330940            20                       0.0                    0.0                       0.0                    0.0
+   ancilla_joint_YX_selective       3     0.299034       0.301696    0.277066    0.316493            20                       0.0                    0.0                       0.0                    0.0
+   ancilla_joint_YX_selective     ALL     1.191654       1.190867    1.170423    1.218207            20                       NaN                    NaN                       NaN                    NaN

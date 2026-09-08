@@ -1,0 +1,7 @@
+def fit_predict_ridge(X_train, y_train, X_eval, alpha):
+    scaler = StandardScaler()
+    Xtr = scaler.fit_transform(X_train)
+    Xev = scaler.transform(X_eval)
+    model = Ridge(alpha=float(alpha), fit_intercept=True)
+    model.fit(Xtr, y_train)
+    return model.predict(Xev)

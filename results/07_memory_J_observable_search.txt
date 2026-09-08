@@ -1,0 +1,59 @@
+FOCUSED MEMORY SEARCH: COUPLING + J + OBSERVABLES
+====================================================================================================
+
+Frozen: seed=42, hx=0.5, dt=0.8, r=2, alpha=0.75
+
+TOP 20:
+ rank         topology  J_cross  J45                  family  MC_per_channel_corrected  Tw_0.01   tau_mem
+    1 T2_dual_boundary     -1.0 -1.0                 XYZ_all                  0.600088    192.0 44.206197
+    2 T2_dual_boundary     -1.0  1.0                 XYZ_all                  0.595031    196.0 45.120553
+    3 T2_dual_boundary      1.0 -1.0                 XYZ_all                  0.585577    192.0 44.206196
+    4 T2_dual_boundary      1.0  1.0                 XYZ_all                  0.578323    196.0 45.120553
+    5 T2_dual_boundary     -1.0  1.0              XYZ_memory                  0.525799    196.0 45.120553
+    6 T2_dual_boundary     -1.0 -1.0              XYZ_memory                  0.524848    192.0 44.206197
+    7 T2_dual_boundary      1.0 -1.0              XYZ_memory                  0.520619    192.0 44.206196
+    8 T2_dual_boundary      1.0  1.0              XYZ_memory                  0.513785    196.0 45.120553
+    9 T2_dual_boundary     -1.0  0.5                 XYZ_all                  0.477601    189.0 29.991452
+   10 T2_dual_boundary      1.0 -0.5                 XYZ_all                  0.475458    194.0 31.026616
+   11 T2_dual_boundary      1.0 -0.5              XYZ_memory                  0.473517    194.0 31.026616
+   12 T2_dual_boundary     -1.0  0.5              XYZ_memory                  0.468096    189.0 29.991452
+   13 T2_dual_boundary     -1.0  1.0 XZinj_plus_memory_pairs                  0.466435    196.0 45.120553
+   14 T2_dual_boundary     -1.0 -1.0 XZinj_plus_memory_pairs                  0.459693    192.0 44.206197
+   15 T2_dual_boundary      1.0  0.5                 XYZ_all                  0.456861    189.0 29.991455
+   16 T2_dual_boundary      1.0  1.0 XZinj_plus_memory_pairs                  0.455152    196.0 45.120553
+   17 T2_dual_boundary      1.0 -1.0 XZinj_plus_memory_pairs                  0.449146    192.0 44.206196
+   18 T2_dual_boundary      1.0 -0.5 XZinj_plus_memory_pairs                  0.442147    194.0 31.026616
+   19 T2_dual_boundary      1.0  0.5              XYZ_memory                  0.434737    189.0 29.991455
+   20 T2_dual_boundary     -1.0  0.5 XZinj_plus_memory_pairs                  0.430769    189.0 29.991452
+
+BEST PER OBSERVABLE:
+                 family         topology  n_cross_edges  J_cross  J45  n_features  unitarity_error  MC_total_raw  MC_total_corrected  MC_per_channel_raw  MC_per_channel_corrected  MC_delay1_mean  MC_delay5_mean  MC_delay10_mean  MC_delay20_mean  Tw_0.01      D_final  kappa_eff   tau_mem  kappa_fit_R2
+                XYZ_all T2_dual_boundary              3     -1.0 -1.0          18     6.226793e-15      2.566570            2.400350            0.641643                  0.600088        0.147697        0.058048         0.019145         0.003096    192.0 1.734541e-14   0.977633 44.206197      0.990619
+             XYZ_memory T2_dual_boundary              3     -1.0  1.0           6     5.706417e-15      2.258304            2.103194            0.564576                  0.525799        0.105901        0.043822         0.019193         0.003268    196.0 2.655860e-14   0.978081 45.120553      0.988288
+XZinj_plus_memory_pairs T2_dual_boundary              3     -1.0  1.0          12     5.706417e-15      2.016256            1.865740            0.504064                  0.466435        0.090850        0.060966         0.015920         0.004039    196.0 2.655860e-14   0.978081 45.120553      0.988288
+              XZ_memory T2_dual_boundary              3     -1.0  1.0           4     5.706417e-15      1.427983            1.274664            0.356996                  0.318666        0.067680        0.008658         0.020923         0.004603    196.0 2.655860e-14   0.978081 45.120553      0.988288
+                 XZ_all T2_dual_boundary              3     -1.0  1.0          12     5.706417e-15      1.282826            1.129605            0.320707                  0.282401        0.065632        0.010492         0.018622         0.002620    196.0 2.655860e-14   0.978081 45.120553      0.988288
+           XZ_injection  T3_memory_fanin              5     -1.0  1.0           8     8.477951e-15      0.402549            0.274566            0.100637                  0.068642        0.019749        0.001071         0.002548         0.003915    206.0 3.418641e-13   0.979495 48.265934      0.996607
+
+FIRST-PASS WINNER:
+topology                    T2_dual_boundary
+n_cross_edges                              3
+J_cross                                 -1.0
+J45                                     -1.0
+family                               XYZ_all
+n_features                                18
+unitarity_error                          0.0
+MC_total_raw                         2.56657
+MC_total_corrected                   2.40035
+MC_per_channel_raw                  0.641643
+MC_per_channel_corrected            0.600088
+MC_delay1_mean                      0.147697
+MC_delay5_mean                      0.058048
+MC_delay10_mean                     0.019145
+MC_delay20_mean                     0.003096
+Tw_0.01                                192.0
+D_final                                  0.0
+kappa_eff                           0.977633
+tau_mem                            44.206197
+kappa_fit_R2                        0.990619
+rank                                       1

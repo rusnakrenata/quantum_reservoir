@@ -1,0 +1,13 @@
+WEEK 7 STEP 7.4C.7 - I/4 FIXED-POINT AUDIT
+==========================================================================================
+
+                         group  n_cases  mean_trace_distance  median_trace_distance  max_trace_distance  max_frobenius_distance  max_abs_entry_diff  purity_min  purity_max  max_trace_error  max_hermiticity_error
+            real_chronological     1460         1.486288e-16           1.458543e-16        2.914335e-16            3.359313e-16        2.775558e-16        0.25    0.250000     6.661338e-16                    0.0
+random_uniform_empirical_range      500         2.156194e-03           2.382293e-03        3.355003e-03            3.355003e-03        1.631557e-03        0.25    0.250011     6.661338e-16                    0.0
+      empirical_minmax_corners       16         1.338084e-16           1.384954e-16        1.992725e-16            2.306858e-16        1.665335e-16        0.25    0.250000     4.440892e-16                    0.0
+
+global max trace distance = 3.355003247803e-03
+global max entry difference = 1.631557263125e-03
+
+VERDICT:
+I/4 is NOT a fixed point for all tested inputs. The previous CONT/W1 equality must therefore be explained by another implementation or trajectory effect.

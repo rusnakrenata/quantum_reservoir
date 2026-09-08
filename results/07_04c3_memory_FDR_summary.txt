@@ -1,0 +1,18 @@
+WEEK 7 STEP 7.4C.3 - MULTIPLE-COMPARISON MEMORY TEST
+================================================================================================
+
+N_PERM=10000, FDR alpha=0.05, short K<= 20
+
+        feature_family  n_tests_full  n_uncorrected_p_lt_0.05_full  n_FDR_significant_full  max_FDR_significant_delay_full  sum_corrected_MC_full  n_tests_short  n_uncorrected_p_lt_0.05_short  n_FDR_significant_short  max_FDR_significant_delay_short  sum_corrected_MC_short
+          XZ_injection           400                            25                       0                               0               0.635311             80                              4                        0                                0                0.102313
+XZ_injection_plus_YX45           400                            25                       0                               0               0.635405             80                              4                        0                                0                0.102538
+
+FULL-RANGE FDR SIGNIFICANT:
+Empty DataFrame
+Columns: [feature_family, channel, delay, MC_raw, MC_null_mean, MC_corrected, p_perm, null_max_seen, q_FDR_full, significant_FDR_full, q_FDR_short, significant_FDR_short]
+Index: []
+
+SHORT-RANGE FDR SIGNIFICANT:
+Empty DataFrame
+Columns: [feature_family, channel, delay, MC_raw, MC_null_mean, MC_corrected, p_perm, null_max_seen, q_FDR_full, significant_FDR_full, q_FDR_short, significant_FDR_short]
+Index: []
