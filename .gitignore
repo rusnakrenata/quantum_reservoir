@@ -20,6 +20,8 @@ datasets/*.png
 results/*.csv
 results/*.png
 results/*.npz
+results/*.txt
+results/*.json
 
 # Distribution / packaging
 dist/

@@ -2,6 +2,7 @@
 ibm_account.py
 --------------
 IBM Quantum account setup, backend selection and Aer simulator helpers
+PRIMARY authentication now uses a hardcoded IBM Cloud API key when configured.
 for Quantum Reservoir Computing (QRC) experiments.
 
 First-time setup
@@ -42,6 +43,22 @@ DEFAULT_CHANNEL = "ibm_quantum_platform"
 
 # Environment variable that can optionally contain the IBM Cloud API key.
 ENV_API_KEY = "IBM_QUANTUM_API_KEY"
+
+# ---------------------------------------------------------------------------
+# PRIMARY IBM CLOUD API KEY
+# ---------------------------------------------------------------------------
+# Put the NEW IBM Cloud API key here.
+#
+# Authentication priority is now:
+#   1. PRIMARY_API_KEY below
+#   2. environment variable IBM_QUANTUM_API_KEY
+#   3. previously saved Qiskit Runtime credentials
+#
+# IMPORTANT:
+# - Do not commit a real API key to Git/source control.
+# - Never print the key itself.
+# - Leave this as an empty string if you want to disable the hardcoded key.
+PRIMARY_API_KEY = "MQ00QFkABL3UPFe1S0nVQeX0VKccSlbAy4J0IGBsZU6x"
 
 
 # ---------------------------------------------------------------------------
@@ -93,8 +110,9 @@ def get_service():
 
     Authentication priority
     -----------------------
-    1. Environment variable IBM_QUANTUM_API_KEY
-    2. Previously saved Qiskit Runtime credentials
+    1. PRIMARY_API_KEY hardcoded in this file
+    2. Environment variable IBM_QUANTUM_API_KEY
+    3. Previously saved Qiskit Runtime credentials
 
     Returns
     -------
@@ -113,6 +131,40 @@ def get_service():
 
     # ---------------------------------------------------------------
     # Option 1:
+    # Hardcoded PRIMARY API key
+    # ---------------------------------------------------------------
+
+    primary_key = str(PRIMARY_API_KEY).strip()
+
+    # Treat the placeholder as "not configured".
+    primary_is_configured = (
+        bool(primary_key)
+        and primary_key != "PASTE_NEW_IBM_CLOUD_API_KEY_HERE"
+    )
+
+    if primary_is_configured:
+        print(
+            "[ibm_account] Using PRIMARY_API_KEY hardcoded in ibm_account.py."
+        )
+
+        try:
+            return QiskitRuntimeService(
+                token=primary_key,
+                channel=DEFAULT_CHANNEL,
+                instance="auto",
+                plans_preference=["open"],
+            )
+        except Exception as exc:
+            raise RuntimeError(
+                "The hardcoded PRIMARY_API_KEY was found, but IBM Quantum "
+                "authentication failed. Because this key is configured as "
+                "PRIMARY, the script will not silently fall back to another "
+                "account.\n\n"
+                f"Original error:\n{exc}"
+            ) from exc
+
+    # ---------------------------------------------------------------
+    # Option 2:
     # API key provided through environment variable
     # ---------------------------------------------------------------
 
@@ -120,8 +172,8 @@ def get_service():
 
     if api_key:
         print(
-            f"[ibm_account] Using API key from environment variable "
-            f"{ENV_API_KEY}."
+            f"[ibm_account] PRIMARY_API_KEY is not configured. "
+            f"Using API key from environment variable {ENV_API_KEY}."
         )
 
         return QiskitRuntimeService(
@@ -132,21 +184,27 @@ def get_service():
         )
 
     # ---------------------------------------------------------------
-    # Option 2:
+    # Option 3:
     # Load saved account
     # ---------------------------------------------------------------
 
+    print(
+        "[ibm_account] PRIMARY_API_KEY and environment API key are not "
+        "configured. Loading saved Qiskit Runtime credentials."
+    )
+
     try:
         service = QiskitRuntimeService(
-            instance = "auto",
-            channel = DEFAULT_CHANNEL,
+            instance="auto",
+            channel=DEFAULT_CHANNEL,
             plans_preference=["open"],
         )
 
     except Exception as exc:
         raise RuntimeError(
             "IBM Quantum credentials could not be loaded.\n\n"
-            "Run first:\n"
+            "Configure PRIMARY_API_KEY in ibm_account.py, set "
+            "IBM_QUANTUM_API_KEY, or run:\n"
             "    python ibm_account.py --save YOUR_API_KEY\n\n"
             f"Original error:\n{exc}"
         ) from exc
