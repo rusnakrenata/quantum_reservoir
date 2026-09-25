@@ -51,7 +51,7 @@ RESULTS = Path("results")
 RESULTS.mkdir(exist_ok=True)
 
 COMMON_FILE = HERE / "09_04_rwp_common.py"
-SELECTOR_FILE = HERE / "11_0A_fresh_full_hardware_reselection.py"
+SELECTOR_FILE = HERE / "11_0A_live_embedding_reselection.py"
 MANIFEST_FILE = RESULTS / "10_05_rule1_to_rule5_candidate_manifest_ENRICHED.csv"
 
 CANDIDATE_KEY = "RWP_H3_R1R3"

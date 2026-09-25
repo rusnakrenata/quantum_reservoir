@@ -2,6 +2,7 @@
 venv/
 .venv/
 env/
+iqm_venv/
 
 # Python cache
 __pycache__/

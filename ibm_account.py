@@ -56,9 +56,26 @@ ENV_API_KEY = "IBM_QUANTUM_API_KEY"
 #
 # IMPORTANT:
 # - Do not commit a real API key to Git/source control.
-# - Never print the key itself.
+# - Never print the key tself.
 # - Leave this as an empty string if you want to disable the hardcoded key.
-PRIMARY_API_KEY = "MQ00QFkABL3UPFe1S0nVQeX0VKccSlbAy4J0IGBsZU6x"
+PRIMARY_API_KEY = "Vodv8jByhgs2--F6cwMgEWM0pG1bQLtfghEMJuU1fHhB"
+
+# Vodv8jByhgs2--F6cwMgEWM0pG1bQLtfghEMJuU1fHhB 67s
+
+# 36MTCA53jiN64hxlGdSfyWLW064qUW3pVqrInTmaZeQJ fully used
+# w6t5oqXi36Jdbber3zSUfcVr8nq8m5GjUI1Sr5Pjh_7B fully used
+# 0rP9oU6xheZshCqborT_BlmqXpRBSfegpO1KSScivU_B Matus Dopiriak fully used
+# Fq-Qx-0B9OGP3-4PtAiM40ipc7jE9ZNBCv8kF8zKd6WG fully used
+# l6J1Ayhcvw3sugvNIATp_zm9RUgxYOylD4DmL2oA6lWK fully used
+# sLIp1ApiTf7i7m2KLYpjl7nYWWnYl5I6EHJTYL-dulno fully used
+#"bwOtSnsPpTtu-DIondcqpP6B2UbJXpN1wmFnxerDb1m1" fully used
+#"jCcRQXq_5vp-uR8tQlVjX7RXWaFhhW_NNEh8Z9RqFVKz" fully used
+#"mB1eKKDOOP-WPT12uncbeadUhzX_lFUF5Sp7wh6xHWlf" fully used
+# HamW942qH52QM2_dZEIZgg_xO0WOvR73dW929FEQ8Ebf Daniel Solc fully used
+#"XIM7smiUgPwwD-Hev0iqTUfogGe1ZIv-pFPOvRW7hhwr" fully used
+#"SMGtMS79-OTL5mclG0Ube2iwSdyN9b6v0y4mNIjtzI1b" #Marek Mescan fully used
+# TdtjmGBJdnqmaWVaLIiP7Pi_z0-BgKTxiMqysPjW1pBr Rene Ivancak fully used
+#"KMtsgFz7Xydh_jqYQ1_siBSwEMC53Lj0pE0SlU6fOtvU" fully used
 
 
 # ---------------------------------------------------------------------------

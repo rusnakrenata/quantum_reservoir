@@ -38,6 +38,10 @@ ipykernel==7.3.0
 
 # Quantum computing
 # qiskit-ibm-runtime 0.49.0 requires qiskit 2.x, so qiskit is capped below 3.0.
-qiskit>=2.0,<3.0
+qiskit==2.5.2
 qiskit-aer==0.17.2
 qiskit-ibm-runtime==0.49.0
+pydantic>=2.13,<3
+
+### in iqm_venv
+# iqm_client==35.0.3
